@@ -98,7 +98,7 @@
         android:layout_alignParentBottom="true"
         android:layout_marginStart="0dp"
         android:layout_marginLeft="0dp"
-        android:layout_marginBottom="77dp"
+        android:layout_marginBottom="76dp"
         android:background="#ffbf40"
         android:text="@string/buttonPlay"
         tools:layout_editor_absoluteX="417sp"
