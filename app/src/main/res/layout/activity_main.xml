@@ -9,39 +9,39 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
-<ImageView
-    android:background="#ffffff"
-    android:layout_height="140dp"
-    android:layout_width="194dp"
-    tools:layout_editor_absoluteY="132sp"
-    tools:layout_editor_absoluteX="114sp"
-    tools:ignore="ContentDescription"
-    app:srcCompat="@drawable/cedica"
-    android:layout_marginTop="148dp"
-    android:layout_marginLeft="128dp"
-    android:layout_marginStart="128dp"
-    android:layout_alignParentTop="true"
-    android:layout_alignParentLeft="true"
-    android:layout_alignParentStart="true"
-    android:id="@+id/imageCedica"/>
+    <ImageView
+        android:id="@+id/imageCedica"
+        android:layout_width="194dp"
+        android:layout_height="140dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="128dp"
+        android:layout_marginLeft="128dp"
+        android:layout_marginTop="132dp"
+        android:background="#ffffff"
+        app:srcCompat="@drawable/cedica"
+        tools:ignore="ContentDescription"
+        tools:layout_editor_absoluteX="114sp"
+        tools:layout_editor_absoluteY="132sp" />
 
-<TextView
-    android:layout_height="wrap_content"
-    android:layout_width="wrap_content"
-    tools:layout_editor_absoluteY="68sp"
-    tools:layout_editor_absoluteX="100sp"
-    android:layout_marginTop="96dp"
-    android:layout_marginLeft="-16dp"
-    android:layout_marginStart="-16dp"
-    android:layout_alignParentTop="true"
-    android:id="@+id/title"
-    app:fontFamily="serif"
-    android:textStyle="bold"
-    android:textSize="30sp"
-    android:textColor="#000000"
-    android:text="@string/title"
-    android:layout_alignLeft="@+id/imageCedica"
-    android:layout_alignStart="@+id/imageCedica"/>
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/imageCedica"
+        android:layout_alignLeft="@+id/imageCedica"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="-7dp"
+        android:layout_marginLeft="-7dp"
+        android:layout_marginTop="81dp"
+        android:text="@string/title"
+        android:textColor="#000000"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:fontFamily="serif"
+        tools:layout_editor_absoluteX="100sp"
+        tools:layout_editor_absoluteY="68sp" />
 
 <ImageButton android:background="#ffffff"
     android:layout_height="wrap_content"
@@ -74,34 +74,34 @@
     android:id="@+id/imageHelp"
     android:contentDescription="@string/imageHelp"/>
 
-<Button
-    android:background="#ffbf40"
-    android:layout_height="51dp"
-    android:layout_width="183dp"
-    tools:layout_editor_absoluteY="155sp"
-    tools:layout_editor_absoluteX="417sp"
-    android:layout_marginTop="15dp"
-    android:id="@+id/buttonRecognition"
-    android:text="@string/buttonRecognition"
-    android:layout_marginRight="92dp"
-    android:layout_marginEnd="92dp"
-    android:layout_alignParentRight="true"
-    android:layout_alignParentEnd="true"
-    android:layout_below="@+id/title"/>
+    <Button
+        android:id="@+id/buttonRecognition"
+        android:layout_width="183dp"
+        android:layout_height="51dp"
+        android:layout_below="@+id/title"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="17dp"
+        android:layout_marginEnd="37dp"
+        android:layout_marginRight="37dp"
+        android:background="#ffbf40"
+        android:text="@string/buttonRecognition"
+        tools:layout_editor_absoluteX="417sp"
+        tools:layout_editor_absoluteY="155sp" />
 
-<Button
-    android:background="#ffbf40"
-    android:layout_height="51dp"
-    android:layout_width="183dp"
-    tools:layout_editor_absoluteY="237sp"
-    tools:layout_editor_absoluteX="417sp"
-    android:layout_marginLeft="-1dp"
-    android:layout_marginStart="-1dp"
-    android:id="@+id/buttonPlay"
-    android:text="@string/buttonPlay"
-    android:layout_alignLeft="@+id/buttonRecognition"
-    android:layout_alignStart="@+id/buttonRecognition"
-    android:layout_marginBottom="61dp"
-    android:layout_alignParentBottom="true"/>
+    <Button
+        android:id="@+id/buttonPlay"
+        android:layout_width="183dp"
+        android:layout_height="51dp"
+        android:layout_alignStart="@+id/buttonRecognition"
+        android:layout_alignLeft="@+id/buttonRecognition"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginBottom="33dp"
+        android:background="#ffbf40"
+        android:text="@string/buttonPlay"
+        tools:layout_editor_absoluteX="417sp"
+        tools:layout_editor_absoluteY="237sp" />
 
 </RelativeLayout>
