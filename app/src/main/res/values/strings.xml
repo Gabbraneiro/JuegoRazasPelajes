@@ -6,4 +6,29 @@
     <string name="title">Razas y pelajes</string>
     <string name="buttonPlay">Jugar</string>
     <string name="buttonRecognition">Reconocimiento</string>
+    <string name="raza_x">Raza X</string>
+    <string name="raza_y">Raza Y</string>
+    <string name="raza_z">Raza Z</string>
+    <string name="description">Descripcion</string>
+    <string name="config_lista">Lista</string>
+    <string name="config_grilla">Grilla</string>
+    <string name="modo_reconocimiento">Modo reconocimiento</string>
+    <string name="modo_interaccion"> Modo interaccion</string>
+    <string name="config_ajustes"> Ajustes</string>
+    <string name="config_minijuego"> Minijuego</string>
+    <string name="config_minijuego_1">Razas y pelajes</string>
+    <string name="config_minijuego_2">Razas y pelajes juntas</string>
+    <string name="config_minijuego_3">Cruza</string>
+
+    <string name="config_interaccion_a">Interaccion A</string>
+    <string name="config_interaccion_b">Interaccion B</string>
+    <string name="config_interaccion_c">Interaccion C</string>
+
+    <string name="config_ajustes_nivel_1">Nivel 1</string>
+    <string name="config_ajustes_nivel_2">Nivel 2</string>
+
+    <string name="config_ajustes_voz_masculina">Masculina</string>
+    <string name="config_ajustes_voz_femenina">Femenina</string>
+
+
 </resources>
