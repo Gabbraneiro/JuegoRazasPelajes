@@ -1,3 +1,9 @@
 <resources>
-    <string name="app_name">JuegoRazasPelajes</string>
+    <string name="app_name">JuegoRazasPelajesZampelungheBrañeiro</string>
+    <string name="imageHelp">Ayuda</string>
+    <string name="imageSettings">Configuración</string>
+    <string name="imageCedica">CEDICA</string>
+    <string name="title">Razas y pelajes</string>
+    <string name="buttonPlay">Jugar</string>
+    <string name="buttonRecognition">Reconocimiento</string>
 </resources>
