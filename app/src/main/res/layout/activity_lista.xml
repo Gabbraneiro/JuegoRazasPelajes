@@ -57,7 +57,8 @@
         android:layout_marginStart="179dp"
         android:layout_marginLeft="179dp"
         android:layout_marginBottom="-93dp"
-        app:srcCompat="@drawable/talking" />
+        app:srcCompat="@drawable/talking"
+        android:contentDescription="@string/talking" />
 
     <ImageButton
         android:id="@+id/imageButton3"
@@ -69,7 +70,8 @@
         android:layout_marginStart="179dp"
         android:layout_marginLeft="179dp"
         android:layout_marginBottom="-181dp"
-        app:srcCompat="@drawable/talking" />
+        app:srcCompat="@drawable/talking"
+        android:contentDescription="@string/talking" />
 
     <ImageButton
         android:id="@+id/imageButton"
@@ -81,7 +83,8 @@
         android:layout_marginStart="179dp"
         android:layout_marginLeft="179dp"
         android:layout_marginBottom="1dp"
-        app:srcCompat="@drawable/talking" />
+        app:srcCompat="@drawable/talking"
+        android:contentDescription="@string/talking" />
 
     <ImageView
         android:id="@+id/imageView13"
@@ -93,7 +96,8 @@
         android:layout_marginStart="10dp"
         android:layout_marginLeft="10dp"
         android:layout_marginTop="209dp"
-        app:srcCompat="@drawable/caballo" />
+        app:srcCompat="@drawable/caballo"
+        android:contentDescription="@string/caballo" />
 
     <ImageView
         android:id="@+id/imageView16"
@@ -105,7 +109,8 @@
         android:layout_marginStart="10dp"
         android:layout_marginLeft="10dp"
         android:layout_marginTop="115dp"
-        app:srcCompat="@drawable/caballo" />
+        app:srcCompat="@drawable/caballo"
+        android:contentDescription="@string/caballo" />
 
     <ImageView
         android:id="@+id/imageView18"
@@ -117,14 +122,16 @@
         android:layout_marginStart="10dp"
         android:layout_marginLeft="10dp"
         android:layout_marginTop="22dp"
-        app:srcCompat="@drawable/caballo" />
+        app:srcCompat="@drawable/caballo"
+        android:contentDescription="@string/caballo" />
 
     <TextView
         android:id="@+id/textView6"
         android:layout_width="60dp"
         android:layout_height="wrap_content"
         android:layout_alignTop="@+id/imageView18"
-        android:layout_alignRigth="@+id/imageButton2"
+        android:layout_alignEnd="@+id/imageButton2"
+        android:layout_alignRight="@+id/imageButton2"
         android:layout_marginTop="102dp"
         android:text="@string/raza_y" />
 
@@ -133,8 +140,9 @@
         android:layout_width="58dp"
         android:layout_height="wrap_content"
         android:layout_alignTop="@+id/imageView18"
-        android:layout_alignRigth="@+id/imageButton2"
         android:layout_marginTop="190dp"
+        android:layout_alignEnd="@+id/imageButton3"
+        android:layout_alignRight="@+id/imageButton3"
         android:text="@string/raza_z" />
 
     <TextView
@@ -142,8 +150,9 @@
         android:layout_width="59dp"
         android:layout_height="wrap_content"
         android:layout_alignTop="@+id/imageView18"
-        android:layout_alignRigth="@+id/imageButton2"
         android:layout_marginTop="11dp"
+        android:layout_alignEnd="@+id/imageButton"
+        android:layout_alignRight="@+id/imageButton"
         android:text="@string/raza_x" />
 
 </RelativeLayout>
