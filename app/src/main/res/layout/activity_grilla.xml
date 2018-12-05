@@ -21,14 +21,15 @@
             android:id="@+id/imageView"
             android:layout_width="match_parent"
             android:layout_height="110sp"
-            app:srcCompat="@drawable/caballo" />
+            app:srcCompat="@drawable/caballo"
+            android:contentDescription="@string/caballo" />
 
         <TextView
             android:id="@+id/textView3"
             android:layout_width="wrap_content"
             android:layout_height="34dp"
             android:layout_marginTop="115sp"
-            android:text="Raza X"
+            android:text="@string/raza_x"
             android:textSize="30sp"
             android:textStyle="bold"
             app:fontFamily="serif" />
@@ -38,8 +39,10 @@
             android:layout_width="52dp"
             android:layout_height="44dp"
             android:layout_marginLeft="120sp"
+            android:layout_marginStart="120sp"
             android:layout_marginTop="115sp"
-            app:srcCompat="@drawable/talking" />
+            app:srcCompat="@drawable/talking"
+            android:contentDescription="@string/talking" />
 
     </FrameLayout>
 
@@ -58,14 +61,15 @@
             android:id="@+id/imageView2"
             android:layout_width="match_parent"
             android:layout_height="110sp"
-            app:srcCompat="@drawable/caballo" />
+            app:srcCompat="@drawable/caballo"
+            android:contentDescription="@string/caballo" />
 
         <TextView
             android:id="@+id/textView4"
             android:layout_width="wrap_content"
             android:layout_height="34dp"
             android:layout_marginTop="115sp"
-            android:text="Raza X"
+            android:text="@string/raza_x"
             android:textSize="30sp"
             android:textStyle="bold"
             app:fontFamily="serif" />
@@ -75,8 +79,10 @@
             android:layout_width="52dp"
             android:layout_height="44dp"
             android:layout_marginLeft="120sp"
+            android:layout_marginStart="120sp"
             android:layout_marginTop="115sp"
-            app:srcCompat="@drawable/talking" />
+            app:srcCompat="@drawable/talking"
+            android:contentDescription="@string/talking" />
     </FrameLayout>
 
     <!--Arriba derecha-->
@@ -87,6 +93,7 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_marginLeft="1sp"
+        android:layout_marginStart="1sp"
         android:layout_marginTop="0dp"
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp">
@@ -95,14 +102,15 @@
             android:id="@+id/imageView3"
             android:layout_width="match_parent"
             android:layout_height="110sp"
-            app:srcCompat="@drawable/caballo" />
+            app:srcCompat="@drawable/caballo"
+            android:contentDescription="@string/caballo" />
 
         <TextView
             android:id="@+id/textView5"
             android:layout_width="wrap_content"
             android:layout_height="34dp"
             android:layout_marginTop="115sp"
-            android:text="Raza X"
+            android:text="@string/raza_x"
             android:textSize="30sp"
             android:textStyle="bold"
             app:fontFamily="serif" />
@@ -112,8 +120,10 @@
             android:layout_width="52dp"
             android:layout_height="44dp"
             android:layout_marginLeft="120sp"
+            android:layout_marginStart="120sp"
             android:layout_marginTop="115sp"
-            app:srcCompat="@drawable/talking" />
+            app:srcCompat="@drawable/talking"
+            android:contentDescription="@string/talking" />
     </FrameLayout>
 
     <!--Abajo izquierda-->
@@ -131,14 +141,15 @@
             android:id="@+id/imageView4"
             android:layout_width="match_parent"
             android:layout_height="110sp"
-            app:srcCompat="@drawable/caballo" />
+            app:srcCompat="@drawable/caballo"
+            android:contentDescription="@string/caballo" />
 
         <TextView
             android:id="@+id/textView6"
             android:layout_width="wrap_content"
             android:layout_height="34dp"
             android:layout_marginTop="115sp"
-            android:text="Raza X"
+            android:text="@string/raza_x"
             android:textSize="30sp"
             android:textStyle="bold"
             app:fontFamily="serif" />
@@ -148,8 +159,10 @@
             android:layout_width="52dp"
             android:layout_height="44dp"
             android:layout_marginLeft="120sp"
+            android:layout_marginStart="120sp"
             android:layout_marginTop="115sp"
-            app:srcCompat="@drawable/talking" />
+            app:srcCompat="@drawable/talking"
+            android:contentDescription="@string/talking" />
     </FrameLayout>
 
     <!--Abajo medio-->
@@ -167,14 +180,15 @@
             android:id="@+id/imageView5"
             android:layout_width="match_parent"
             android:layout_height="110sp"
-            app:srcCompat="@drawable/caballo" />
+            app:srcCompat="@drawable/caballo"
+            android:contentDescription="@string/caballo" />
 
         <TextView
             android:id="@+id/textView7"
             android:layout_width="wrap_content"
             android:layout_height="34dp"
             android:layout_marginTop="115sp"
-            android:text="Raza X"
+            android:text="@string/raza_x"
             android:textSize="30sp"
             android:textStyle="bold"
             app:fontFamily="serif" />
@@ -184,8 +198,10 @@
             android:layout_width="52dp"
             android:layout_height="44dp"
             android:layout_marginLeft="120sp"
+            android:layout_marginStart="120sp"
             android:layout_marginTop="115sp"
-            app:srcCompat="@drawable/talking" />
+            app:srcCompat="@drawable/talking"
+            android:contentDescription="@string/talking" />
     </FrameLayout>
 
     <!--Abajo derecha-->
@@ -196,6 +212,7 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_marginLeft="1sp"
+        android:layout_marginStart="1sp"
         android:layout_marginTop="173dp"
         android:layout_marginEnd="14dp"
         android:layout_marginRight="14dp">
@@ -204,14 +221,15 @@
             android:id="@+id/imageView6"
             android:layout_width="match_parent"
             android:layout_height="110sp"
-            app:srcCompat="@drawable/caballo" />
+            app:srcCompat="@drawable/caballo"
+            android:contentDescription="@string/caballo" />
 
         <TextView
             android:id="@+id/textView8"
             android:layout_width="wrap_content"
             android:layout_height="34dp"
             android:layout_marginTop="115sp"
-            android:text="Raza X"
+            android:text="@string/raza_x"
             android:textSize="30sp"
             android:textStyle="bold"
             app:fontFamily="serif" />
@@ -221,8 +239,10 @@
             android:layout_width="52dp"
             android:layout_height="44dp"
             android:layout_marginLeft="120sp"
+            android:layout_marginStart="120sp"
             android:layout_marginTop="115sp"
-            app:srcCompat="@drawable/talking" />
+            app:srcCompat="@drawable/talking"
+            android:contentDescription="@string/talking" />
     </FrameLayout>
 
 </RelativeLayout>
