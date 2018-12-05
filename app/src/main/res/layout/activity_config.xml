@@ -66,7 +66,7 @@
         android:layout_marginTop="5dp">
 
         <RadioGroup
-            android:id="@+id/config_interaccion{_radio"
+            android:id="@+id/config_interaccion_radio"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 

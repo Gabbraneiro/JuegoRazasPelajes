@@ -146,7 +146,7 @@
         android:layout_alignTop="@+id/imageView18"
         android:layout_alignEnd="@+id/imageButton2"
         android:layout_marginTop="11dp"
-        android:layout_marginEnd="0dp"
+        android:layout_marginEnd="0dp"-
         android:text="@string/raza_x" />
 
 </RelativeLayout>
