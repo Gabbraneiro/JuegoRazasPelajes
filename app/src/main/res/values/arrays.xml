@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array
+        name="modo_reconocimiento_radio_ids">
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+    <string-array
+        name="modo_reconocimiento_radio_values">
+        <item>Lista</item>
+        <item>Grilla</item>
+    </string-array>
+    <string-array
+        name="modo_interaccion_radio_ids">
+        <item>A</item>
+        <item>B</item>
+        <item>C</item>
+    </string-array>
+    <string-array
+        name="modo_interaccion_radio_values">
+        <item>Interaccion A</item>
+        <item>Interaccion B</item>
+        <item>Interaccion C</item>
+    </string-array>
+    <string-array
+        name="razas_ids">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+    <string-array
+        name="razas_values">
+        <item>Razas</item>
+        <item>Pelajes</item>
+        <item>Cruzas</item>
+    </string-array>
+    <string-array
+        name="minijuego_radio_id">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+    <string-array
+        name="minijuego_radio_values">
+        <item>Razas y pelajes</item>
+        <item>Razas y pelajes juntas</item>
+        <item>Cruza</item>
+    </string-array>
+    <string-array
+        name="niveles_ids">
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+    <string-array
+        name="niveles_values">
+        <item>Nivel 1</item>
+        <item>Nivel 2</item>
+    </string-array>
+    <string-array
+        name="voz_ids">
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+    <string-array
+        name="voz_values">
+        <item>Masculina</item>
+        <item>Femenina</item>
+    </string-array>
+</resources>
