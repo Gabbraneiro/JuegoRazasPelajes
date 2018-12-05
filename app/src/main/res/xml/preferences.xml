@@ -39,7 +39,6 @@
             android:key="nivel"
             android:summary="Eleccion de nivel"
             android:title="@string/nivel" />
-
         <ListPreference
             android:defaultValue="1"
             android:dialogTitle="@string/voz"
