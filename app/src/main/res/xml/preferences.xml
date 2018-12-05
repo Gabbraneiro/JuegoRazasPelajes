@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="@string/modo_reconocimiento">
+        <ListPreference
+            android:defaultValue="1"
+            android:dialogTitle="@string/modo_reconocimiento"
+            android:entries="@array/modo_reconocimiento_radio_ids"
+            android:entryValues="@array/modo_reconocimiento_radio_values"
+            android:key="modo_reconocimiento"
+            android:summary="Eleccion interfaz en el modo reconocimiento"
+            android:title="@string/modo_reconocimiento" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/modo_interaccion">
+        <ListPreference
+    android:defaultValue="A"
+    android:dialogTitle="@string/modo_interaccion"
+    android:entries="@array/modo_interaccion_radio_ids"
+    android:entryValues="@array/modo_interaccion_radio_values"
+    android:key="modo_interaccion"
+    android:summary="Eleccion de la interaccion"
+    android:title="@string/modo_interaccion" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/config_minijuego">
+        <ListPreference
+            android:defaultValue="1"
+            android:dialogTitle="@string/config_minijuego"
+            android:entries="@array/minijuego_radio_id"
+            android:entryValues="@array/minijuego_radio_values"
+            android:key="modo_interaccion"
+            android:summary="Eleccion del minijuego"
+            android:title="@string/config_minijuego" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Ajustes">
+        <ListPreference
+            android:defaultValue="1"
+            android:dialogTitle="@string/nivel"
+            android:entries="@array/niveles_ids"
+            android:entryValues="@array/niveles_values"
+            android:key="nivel"
+            android:summary="Eleccion de nivel"
+            android:title="@string/nivel" />
+        <ListPreference
+            android:defaultValue="1"
+            android:dialogTitle="@string/voz"
+            android:entries="@array/voz_ids"
+            android:entryValues="@array/voz_values"
+            android:key="voz"
+            android:summary="Eleccion de voz"
+            android:title="@string/voz" />
+    </PreferenceCategory>
+</PreferenceScreen>
