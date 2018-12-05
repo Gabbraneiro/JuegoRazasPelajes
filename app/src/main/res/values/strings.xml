@@ -6,6 +6,9 @@
     <string name="title">Razas y pelajes</string>
     <string name="buttonPlay">Jugar</string>
     <string name="buttonRecognition">Reconocimiento</string>
+
+    <string name="talking">Escuchar</string>
+    <string name="caballo">Caballo</string>
     <string name="raza_x">Raza X</string>
     <string name="raza_y">Raza Y</string>
     <string name="raza_z">Raza Z</string>
