@@ -124,9 +124,8 @@
         android:layout_width="60dp"
         android:layout_height="wrap_content"
         android:layout_alignTop="@+id/imageView18"
-        android:layout_alignEnd="@+id/imageButton2"
+        android:layout_alignRigth="@+id/imageButton2"
         android:layout_marginTop="102dp"
-        android:layout_marginEnd="0dp"
         android:text="@string/raza_y" />
 
     <TextView
@@ -134,9 +133,8 @@
         android:layout_width="58dp"
         android:layout_height="wrap_content"
         android:layout_alignTop="@+id/imageView18"
-        android:layout_alignEnd="@+id/imageButton2"
+        android:layout_alignRigth="@+id/imageButton2"
         android:layout_marginTop="190dp"
-        android:layout_marginEnd="0dp"
         android:text="@string/raza_z" />
 
     <TextView
@@ -144,9 +142,8 @@
         android:layout_width="59dp"
         android:layout_height="wrap_content"
         android:layout_alignTop="@+id/imageView18"
-        android:layout_alignEnd="@+id/imageButton2"
+        android:layout_alignRigth="@+id/imageButton2"
         android:layout_marginTop="11dp"
-        android:layout_marginEnd="0dp"-
         android:text="@string/raza_x" />
 
 </RelativeLayout>
