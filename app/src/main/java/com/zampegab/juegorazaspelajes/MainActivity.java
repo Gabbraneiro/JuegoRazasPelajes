@@ -10,12 +10,21 @@ import android.widget.ImageButton;
 
 public class MainActivity extends AppCompatActivity {
 
-    final Button buttonRecognition = (Button) findViewById(R.id.buttonRecognition);
-    final ImageButton buttonSettings = (ImageButton) findViewById(R.id.imageConfigurate);
+    Button buttonRecognition;
+    Button buttonPlay;
+    Button buttonPlay2;
+    ImageButton buttonSettings;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        buttonRecognition = findViewById(R.id.buttonRecognition);
+        buttonPlay = findViewById(R.id.buttonPlay);
+        buttonPlay2 = findViewById(R.id.buttonPlay2);
+        buttonSettings = findViewById(R.id.imageConfigurate);
+
         buttonRecognition.setOnClickListener(new OnClickListener(){
             @Override
             public void onClick(View v){
@@ -23,6 +32,23 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        buttonPlay2.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, InteraccionBActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        buttonPlay.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, InteraccionCActivity.class);
+                startActivity(intent);
+            }
+        });
+
         buttonSettings.setOnClickListener(new OnClickListener(){
             @Override
             public void onClick(View v){
@@ -31,5 +57,20 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-
 }
+
+
+        /* buttonRecognition.setOnClickListener(new OnClickListener(){
+@Override
+public void onClick(View v){
+        Intent intent = new Intent(MainActivity.this, GrillaActivity.class);
+        startActivity(intent);
+        }
+        });
+        buttonSettings.setOnClickListener(new OnClickListener(){
+            @Override
+            public void onClick(View v){
+                Intent intent = new Intent(MainActivity.this, SettingsActivity.class);
+                startActivity(intent);
+            }
+        });*/

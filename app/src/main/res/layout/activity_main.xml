@@ -90,17 +90,32 @@
         tools:layout_editor_absoluteY="155sp" />
 
     <Button
-        android:id="@+id/buttonPlay"
-        android:layout_width="183dp"
-        android:layout_height="51dp"
+        android:id="@+id/buttonPlay2"
+        android:layout_width="185dp"
+        android:layout_height="30dp"
         android:layout_alignStart="@+id/buttonRecognition"
         android:layout_alignLeft="@+id/buttonRecognition"
         android:layout_alignParentBottom="true"
         android:layout_marginStart="0dp"
         android:layout_marginLeft="0dp"
-        android:layout_marginBottom="76dp"
+        android:layout_marginBottom="97dp"
         android:background="#ffbf40"
-        android:text="@string/buttonPlay"
+        android:text="Interaccion B"
+        tools:layout_editor_absoluteX="417sp"
+        tools:layout_editor_absoluteY="237sp" />
+
+    <Button
+        android:id="@+id/buttonPlay"
+        android:layout_width="185dp"
+        android:layout_height="30dp"
+        android:layout_alignStart="@+id/buttonRecognition"
+        android:layout_alignLeft="@+id/buttonRecognition"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginBottom="49dp"
+        android:background="#ffbf40"
+        android:text="Interaccion C"
         tools:layout_editor_absoluteX="417sp"
         tools:layout_editor_absoluteY="237sp" />
 
