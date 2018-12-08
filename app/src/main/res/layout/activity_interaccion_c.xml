@@ -24,41 +24,41 @@
             android:layout_height="97dp"
             android:layout_marginTop="150sp">
 
-            <!--Caballo 1-->
-            <ImageView
-                android:id="@+id/imageView17"
+            <!-- Caballo 1-->
+            <ImageButton
+                android:id="@+id/horse1"
                 android:layout_width="125sp"
                 android:layout_height="77dp"
                 android:layout_marginStart="5sp"
                 android:layout_marginLeft="5sp"
-                app:srcCompat="@drawable/caballo" />
+                app:srcCompat="@drawable/caballo_btn" />
 
-            <!--Caballo 2-->
-            <ImageView
-                android:id="@+id/imageView15"
+            <!-- Caballo 2-->
+            <ImageButton
+                android:id="@+id/horse2"
                 android:layout_width="125sp"
                 android:layout_height="77dp"
                 android:layout_marginStart="140sp"
                 android:layout_marginLeft="140sp"
-                app:srcCompat="@drawable/caballo" />
+                app:srcCompat="@drawable/caballo_btn" />
 
-            <!--Caballo 3-->
-            <ImageView
-                android:id="@+id/imageView14"
+            <!-- Caballo 3-->
+            <ImageButton
+                android:id="@+id/horse3"
                 android:layout_width="125sp"
                 android:layout_height="77dp"
                 android:layout_marginStart="275sp"
                 android:layout_marginLeft="275sp"
-                app:srcCompat="@drawable/caballo" />
+                app:srcCompat="@drawable/caballo_btn" />
 
-            <!--Caballo 4-->
-            <ImageView
-                android:id="@+id/imageView12"
+            <!-- Caballo 4-->
+            <ImageButton
+                android:id="@+id/horse4"
                 android:layout_width="125sp"
                 android:layout_height="77dp"
                 android:layout_marginStart="410sp"
                 android:layout_marginLeft="410sp"
-                app:srcCompat="@drawable/caballo" />
+                app:srcCompat="@drawable/caballo_btn" />
         </FrameLayout>
 
         <!--Caballo grande-->
