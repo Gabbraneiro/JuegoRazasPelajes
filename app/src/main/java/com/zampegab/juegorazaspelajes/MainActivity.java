@@ -10,7 +10,8 @@ import android.widget.ImageButton;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button buttonRecognition;
+    Button buttonLista;
+    Button buttonGrilla;
     Button buttonPlay;
     Button buttonPlay2;
     ImageButton buttonSettings;
@@ -20,12 +21,21 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        buttonRecognition = findViewById(R.id.buttonRecognition);
+        buttonLista = findViewById(R.id.buttonLista);
+        buttonGrilla = findViewById(R.id.buttonGrilla);
         buttonPlay = findViewById(R.id.buttonPlay);
         buttonPlay2 = findViewById(R.id.buttonPlay2);
         buttonSettings = findViewById(R.id.imageConfigurate);
 
-        buttonRecognition.setOnClickListener(new OnClickListener(){
+        buttonLista.setOnClickListener(new OnClickListener(){
+            @Override
+            public void onClick(View v){
+                Intent intent = new Intent(MainActivity.this, ListaActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        buttonGrilla.setOnClickListener(new OnClickListener(){
             @Override
             public void onClick(View v){
                 Intent intent = new Intent(MainActivity.this, GrillaActivity.class);
