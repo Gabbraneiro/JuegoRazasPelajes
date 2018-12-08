@@ -3,6 +3,7 @@ package com.zampegab.juegorazaspelajes;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.media.MediaPlayer;
 
@@ -13,6 +14,7 @@ public class InteraccionCActivity extends AppCompatActivity{
     ImageButton btnHorse2;
     ImageButton btnHorse3;
     ImageButton btnHorse4;
+    Button btnBack;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,6 +54,14 @@ public class InteraccionCActivity extends AppCompatActivity{
             public void onClick(View v) {
                 mpResult = MediaPlayer.create(InteraccionCActivity.this, R.raw.incorrect);
                 mpResult.start();
+            }
+        });
+
+        btnBack = findViewById(R.id.buttonBack);
+        btnBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
             }
         });
     }
