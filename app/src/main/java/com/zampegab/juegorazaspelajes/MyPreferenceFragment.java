@@ -1,7 +1,7 @@
 package com.zampegab.juegorazaspelajes;
 
-import android.preference.PreferenceFragment;
-import android.os.Bundle;
+        import android.preference.PreferenceFragment;
+        import android.os.Bundle;
 
 public class MyPreferenceFragment extends PreferenceFragment {
     @Override
