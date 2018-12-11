@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Dimensiones activity_main.xml -->
+    <dimen name="imagen_cedica_width">500sp</dimen>
+    <dimen name="imagen_cedica_height">500sp</dimen>
+    <dimen name="imagen_cedica_mt">130sp</dimen>
+    <dimen name="imagen_cedica_ml">130sp</dimen>
+    <dimen name="title_size">35sp</dimen>
+    <dimen name="title_mt">85sp</dimen>
+    <dimen name="help_mt">25sp</dimen>
+    <dimen name="help_ml">20sp</dimen>
+    <dimen name="settings_mt">0sp</dimen>
+    <dimen name="settings_mr">0sp</dimen>
+    <dimen name="button_width">225sp</dimen>
+    <dimen name="button_height">75sp</dimen>
+    <dimen name="button_mt">40sp</dimen>
+    <dimen name="button_mr">50sp</dimen>
+    <dimen name="button_text_size">25sp</dimen>
+    <!-- FIN Dimensiones activity_main.xml -->
+
+    <!-- Dimensiones activity_lista.xml -->
+    <dimen name="imagen_lista_width">350sp</dimen>
+    <dimen name="imagen_lista_heigth">150sp</dimen>
+    <dimen name="imagen_lista_ml">20sp</dimen>
+    <dimen name="imagen_lista_mt">50sp</dimen>
+    <dimen name="lista_text_size">40sp</dimen>
+    <dimen name="lista_text_ml">15sp</dimen>
+    <dimen name="lista_text_mt">10sp</dimen>
+    <dimen name="lista_imagen_voz_width">60sp</dimen>
+    <dimen name="lista_imagen_voz_heigth">50sp</dimen>
+    <dimen name="lista_imagen_voz_ml">60sp</dimen>
+    <dimen name="lista_imagen_voz_mt">85sp</dimen>
+    <dimen name="lista_descripcion_width">400sp</dimen>
+    <dimen name="lista_descripcion_heigth">150sp</dimen>
+    <dimen name="lista_descripcion_mt">50sp</dimen>
+    <dimen name="lista_descripcion_mr">40sp</dimen>
+    <dimen name="lista_descripcion_text_size">22sp</dimen>
+    <!-- FIN Dimensiones activity_lista.xml -->
+
+    <!-- Dimensiones activity_grilla.xml -->
+    <dimen name="grilla_frame_width">330sp</dimen>
+    <dimen name="grilla_frame_heigth">315sp</dimen>
+    <dimen name="grilla_frame_mt">50sp</dimen>
+    <dimen name="grilla_frame_mr">100sp</dimen>
+    <dimen name="grilla_imagen_heigth">200sp</dimen>
+    <dimen name="grilla_imagen_mt">30sp</dimen>
+    <dimen name="grilla_imagen_ml">10sp</dimen>
+    <dimen name="grilla_imagen_mr">10sp</dimen>
+    <dimen name="grilla_texto_ml">10sp</dimen>
+    <dimen name="grilla_texto_mt">250sp</dimen>
+    <dimen name="grilla_texto_size">30sp</dimen>
+    <dimen name="grilla_imagen_voz_width">56sp</dimen>
+    <dimen name="grilla_imagen_voz_heigth">59sp</dimen>
+    <dimen name="grilla_imagen_voz_ml">150sp</dimen>
+    <dimen name="grilla_imagen_voz_mt">250sp</dimen>
+    <!-- FIN Dimensiones activity_grilla.xml -->
+</resources>

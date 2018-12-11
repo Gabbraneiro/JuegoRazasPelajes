@@ -13,7 +13,7 @@
     <string name="raza_x">Raza X</string>
     <string name="raza_y">Raza Y</string>
     <string name="raza_z">Raza Z</string>
-    <string name="description">Descripcion</string>
+    <string name="description">Descripcion del caballo mostrado en la foto lorem lpsum es simplemente un texto de relleno de las imprentas y archivos de texto...</string>
     <string name="config_lista">Lista</string>
     <string name="config_grilla">Grilla</string>
     <string name="modo_reconocimiento">Modo reconocimiento</string>
