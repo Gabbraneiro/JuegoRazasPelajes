@@ -54,4 +54,7 @@
     <dimen name="grilla_imagen_voz_ml">150sp</dimen>
     <dimen name="grilla_imagen_voz_mt">250sp</dimen>
     <!-- FIN Dimensiones activity_grilla.xml -->
+
+    <!-- Dimensiones activity_grilla.xml -->
+    <!-- FIN Dimensiones activity_grilla.xml -->
 </resources>
