@@ -6,8 +6,94 @@
     android:layout_height="match_parent"
     android:background="#ffffff" >
 
-
     <FrameLayout
+        android:id="@+id/layout"
+        android:layout_width="1170dp"
+        android:layout_height="673dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="52dp"
+        android:layout_marginEnd="53dp"
+        android:layout_marginRight="53dp"
+        android:background="#ffbf40">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="241dp"
+            android:layout_marginTop="430sp">
+
+            <!-- Caballo 1-->
+            <ImageButton
+                android:id="@+id/horse1"
+                android:layout_width="256dp"
+                android:layout_height="201dp"
+                android:layout_marginStart="30sp"
+                android:layout_marginLeft="5sp"
+                android:layout_marginTop="25sp"
+                android:contentDescription="@string/caballo"
+                app:srcCompat="@drawable/caballo_btn" />
+
+            <!-- Caballo 2-->
+            <ImageButton
+                android:id="@+id/horse2"
+                android:layout_width="256dp"
+                android:layout_height="201dp"
+                android:layout_marginStart="315sp"
+                android:layout_marginLeft="140sp"
+                android:layout_marginTop="25sp"
+                android:contentDescription="@string/caballo"
+                app:srcCompat="@drawable/caballo_btn" />
+
+            <!-- Caballo 3-->
+            <ImageButton
+                android:id="@+id/horse3"
+                android:layout_width="256dp"
+                android:layout_height="201dp"
+                android:layout_marginStart="600sp"
+                android:layout_marginLeft="275sp"
+                android:layout_marginTop="25sp"
+                android:contentDescription="@string/caballo"
+                app:srcCompat="@drawable/caballo_btn" />
+
+            <!-- Caballo 4-->
+            <ImageButton
+                android:id="@+id/horse4"
+                android:layout_width="256dp"
+                android:layout_height="201dp"
+                android:layout_marginStart="885sp"
+                android:layout_marginLeft="835sp"
+                android:layout_marginTop="25sp"
+                android:contentDescription="@string/caballo"
+                app:srcCompat="@drawable/caballo_btn" />
+        </FrameLayout>
+
+        <!--Caballo grande-->
+        <ImageView
+            android:id="@+id/imageView7"
+            android:layout_width="458dp"
+            android:layout_height="242dp"
+            android:layout_marginStart="360sp"
+            android:layout_marginLeft="360sp"
+            android:layout_marginTop="70sp"
+            android:contentDescription="@string/caballo"
+            app:srcCompat="@drawable/caballo" />
+
+    </FrameLayout>
+
+    <Button
+        android:id="@+id/buttonBack"
+        android:layout_width="164dp"
+        android:layout_height="69dp"
+        android:layout_alignEnd="@+id/layout"
+        android:layout_alignRight="@+id/layout"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        android:background="#ffbf40"
+        android:text="@string/buttonBack"
+        android:textSize="30sp" />
+
+    <!--<FrameLayout
         android:id="@+id/layout"
         android:layout_width="534dp"
         android:layout_height="248dp"
@@ -24,7 +110,7 @@
             android:layout_height="97dp"
             android:layout_marginTop="150sp">
 
-            <!-- Caballo 1-->
+            <- Caballo 1
             <ImageButton
                 android:id="@+id/horse1"
                 android:layout_width="125sp"
@@ -33,7 +119,7 @@
                 android:layout_marginLeft="5sp"
                 app:srcCompat="@drawable/caballo_btn" />
 
-            <!-- Caballo 2-->
+            <- Caballo 2
             <ImageButton
                 android:id="@+id/horse2"
                 android:layout_width="125sp"
@@ -42,7 +128,7 @@
                 android:layout_marginLeft="140sp"
                 app:srcCompat="@drawable/caballo_btn" />
 
-            <!-- Caballo 3-->
+            <!- Caballo 3
             <ImageButton
                 android:id="@+id/horse3"
                 android:layout_width="125sp"
@@ -51,7 +137,7 @@
                 android:layout_marginLeft="275sp"
                 app:srcCompat="@drawable/caballo_btn" />
 
-            <!-- Caballo 4-->
+            <!- Caballo 4
             <ImageButton
                 android:id="@+id/horse4"
                 android:layout_width="125sp"
@@ -61,7 +147,7 @@
                 app:srcCompat="@drawable/caballo_btn" />
         </FrameLayout>
 
-        <!--Caballo grande-->
+        <!-Caballo grande
         <ImageView
             android:id="@+id/imageView7"
             android:layout_width="209dp"
@@ -83,5 +169,5 @@
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="10dp"
         android:text="@string/buttonBack"
-        android:background="#ffbf40" />
+        android:background="#ffbf40" /> -->
 </RelativeLayout>
