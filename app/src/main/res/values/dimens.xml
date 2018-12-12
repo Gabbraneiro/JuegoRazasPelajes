@@ -55,6 +55,39 @@
     <dimen name="grilla_imagen_voz_mt">250sp</dimen>
     <!-- FIN Dimensiones activity_grilla.xml -->
 
-    <!-- Dimensiones activity_grilla.xml -->
-    <!-- FIN Dimensiones activity_grilla.xml -->
+    <!-- Dimensiones activities interaccion -->
+    <dimen name="i_frame_width">1170sp</dimen>
+    <dimen name="i_frame_heigth">673sp</dimen>
+    <dimen name="i_frame_m">53sp</dimen>
+    <dimen name="i_frame2_heigth">241sp</dimen>
+    <dimen name="i_frame2_m">430sp</dimen>
+    <dimen name="i_imagen_height">201sp</dimen>
+    <dimen name="i_imagen_width">256sp</dimen>
+    <dimen name="i_imagen_mt">25sp</dimen>
+    <dimen name="i_imagen_ml">30sp</dimen>
+    <dimen name="i_imagen2_ml">315sp</dimen>
+    <dimen name="i_imagen3_ml">600sp</dimen>
+    <dimen name="i_imagen4_ml">885sp</dimen>
+    <dimen name="i_btnBack_width">164sp</dimen>
+    <dimen name="i_btnBack_height">69sp</dimen>
+    <dimen name="i_btnBack_mb">10sp</dimen>
+    <dimen name="i_btnBack_text_size">30sp</dimen>
+    <!-- FIN Dimensiones activities interaccion -->
+
+    <!-- Dimensiones activity_interaccion_b.xml -->
+    <dimen name="b_texto_ml">380sp</dimen>
+    <dimen name="b_texto_mt">150sp</dimen>
+    <dimen name="b_texto_size">70sp</dimen>
+    <dimen name="b_imagen_voz_width">90sp</dimen>
+    <dimen name="b_imagen_voz_height">90sp</dimen>
+    <dimen name="b_imagen_voz_ml">660sp</dimen>
+    <dimen name="b_imagen_voz_mt">155sp</dimen>
+    <!-- FIN Dimensiones activity_interaccion_b.xml -->
+
+    <!-- Dimensiones activity_interaccion_c.xml -->
+    <dimen name="c_imagen_ppal_width">458sp</dimen>
+    <dimen name="c_imagen_ppal_height">242sp</dimen>
+    <dimen name="c_imagen_ppal_ml">360sp</dimen>
+    <dimen name="c_imagen_ppal_mt">70sp</dimen>
+    <!-- FIN Dimensiones activity_interaccion_c.xml -->
 </resources>
