@@ -25,6 +25,7 @@
 
             <!-- Caballo 1-->
             <ImageButton
+                android:id="@+id/horse1"
                 android:layout_width="@dimen/i_imagen_width"
                 android:layout_height="@dimen/i_imagen_height"
                 android:layout_marginStart="@dimen/i_imagen_ml"
