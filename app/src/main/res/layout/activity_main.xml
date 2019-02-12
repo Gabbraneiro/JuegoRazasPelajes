@@ -11,7 +11,7 @@
 
 
     <ImageView
-        android:id="@+id/logo_app"
+        android:id="@+id/img_logo_app"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
@@ -23,19 +23,19 @@
         app:srcCompat="@drawable/Logo_app" />
 
     <ImageButton
-        android:id="@+id/imageButton7"
-        android:layout_width="86dp"
-        android:layout_height="90dp"
+        android:id="@+id/imgBtn_config"
+        android:layout_width="84dp"
+        android:layout_height="83dp"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
-        android:layout_marginTop="29dp"
+        android:layout_marginTop="36dp"
         android:layout_marginEnd="51dp"
         android:layout_marginRight="51dp"
-        app:srcCompat="@drawable/config_click" />
+        app:srcCompat="@drawable/config_regular" />
 
     <ImageButton
-        android:id="@+id/imageButton8"
+        android:id="@+id/imgBtn_info"
         android:layout_width="84dp"
         android:layout_height="83dp"
         android:layout_alignParentStart="true"
@@ -44,5 +44,37 @@
         android:layout_marginStart="45dp"
         android:layout_marginLeft="45dp"
         android:layout_marginTop="36dp"
-        app:srcCompat="@drawable/info_click" />
+        app:srcCompat="@drawable/info_regular" />
+
+    <ImageButton
+        android:id="@+id/imgBtn_jugar"
+        android:layout_width="357dp"
+        android:layout_height="104dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="139dp"
+        app:srcCompat="@drawable/jugar_regular" />
+
+    <ImageButton
+        android:id="@+id/imgBtn_reconocimiento"
+        android:layout_width="357dp"
+        android:layout_height="67dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="44dp"
+        app:srcCompat="@drawable/reconocimiento_regular" />
+
+    <ImageView
+        android:id="@+id/img_logo_facultad"
+        android:layout_width="495dp"
+        android:layout_height="162dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="10dp"
+        android:layout_marginStart="-282dp"
+        android:layout_marginLeft="282dp"
+        android:layout_marginBottom="48dp"
+        android:layout_toEndOf="@+id/img_logo_app"
+        android:layout_toRightOf="@+id/img_logo_app"
+        app:srcCompat="@drawable/logo_facultad_informatiac" />
+
 </RelativeLayout>
