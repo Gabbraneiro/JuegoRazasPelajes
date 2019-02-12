@@ -19,22 +19,23 @@
     <!-- FIN Dimensiones activity_main.xml -->
 
     <!-- Dimensiones activity_lista.xml -->
-    <dimen name="imagen_lista_width">350sp</dimen>
-    <dimen name="imagen_lista_heigth">150sp</dimen>
-    <dimen name="imagen_lista_ml">20sp</dimen>
-    <dimen name="imagen_lista_mt">50sp</dimen>
+    <dimen name="imagen_lista_width">420sp</dimen>
+    <dimen name="imagen_lista_heigth">180sp</dimen>
+    <dimen name="imagen_lista_ml">45sp</dimen>
+    <dimen name="imagen_lista_mt">35sp</dimen>
     <dimen name="lista_text_size">40sp</dimen>
-    <dimen name="lista_text_ml">15sp</dimen>
-    <dimen name="lista_text_mt">10sp</dimen>
+    <dimen name="lista_text_ml">45sp</dimen>
+    <dimen name="lista_text_mt">100sp</dimen>
     <dimen name="lista_imagen_voz_width">60sp</dimen>
     <dimen name="lista_imagen_voz_heigth">50sp</dimen>
-    <dimen name="lista_imagen_voz_ml">60sp</dimen>
-    <dimen name="lista_imagen_voz_mt">85sp</dimen>
+    <dimen name="lista_imagen_voz_ml">45sp</dimen>
+    <dimen name="lista_imagen_voz_mt">100sp</dimen>
     <dimen name="lista_descripcion_width">400sp</dimen>
     <dimen name="lista_descripcion_heigth">150sp</dimen>
-    <dimen name="lista_descripcion_mt">50sp</dimen>
-    <dimen name="lista_descripcion_mr">40sp</dimen>
+    <dimen name="lista_descripcion_mt">20sp</dimen>
+    <dimen name="lista_descripcion_ml">45sp</dimen>
     <dimen name="lista_descripcion_text_size">22sp</dimen>
+    <dimen name="row_heigth">250sp</dimen>
     <!-- FIN Dimensiones activity_lista.xml -->
 
     <!-- Dimensiones activity_grilla.xml -->
@@ -90,4 +91,6 @@
     <dimen name="c_imagen_ppal_ml">360sp</dimen>
     <dimen name="c_imagen_ppal_mt">70sp</dimen>
     <!-- FIN Dimensiones activity_interaccion_c.xml -->
+
+
 </resources>
