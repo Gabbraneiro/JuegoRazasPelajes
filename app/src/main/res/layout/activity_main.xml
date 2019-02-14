@@ -70,6 +70,7 @@
         android:layout_height="162dp"
         android:layout_alignParentBottom="true"
         android:layout_marginRight="10dp"
+        android:layout_marginEnd="10dp"
         android:layout_marginStart="-282dp"
         android:layout_marginLeft="282dp"
         android:layout_marginBottom="48dp"

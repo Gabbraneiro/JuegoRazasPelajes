@@ -28,6 +28,10 @@
             android:screenOrientation="landscape">
         </activity>
         <activity
+            android:name="InteraccionAActivity"
+            android:screenOrientation="landscape">
+        </activity>
+        <activity
             android:name="InteraccionBActivity"
             android:screenOrientation="landscape">
         </activity>

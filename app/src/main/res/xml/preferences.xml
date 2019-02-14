@@ -12,13 +12,13 @@
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/modo_interaccion">
         <ListPreference
-    android:defaultValue="A"
-    android:dialogTitle="@string/modo_interaccion"
-    android:entryValues="@array/modo_interaccion_radio_ids"
-    android:entries="@array/modo_interaccion_radio_values"
-    android:key="modo_interaccion"
-    android:summary="Eleccion de la interaccion"
-    android:title="@string/modo_interaccion" />
+            android:defaultValue="A"
+            android:dialogTitle="@string/modo_interaccion"
+            android:entryValues="@array/modo_interaccion_radio_ids"
+            android:entries="@array/modo_interaccion_radio_values"
+            android:key="modo_interaccion"
+            android:summary="Eleccion de la interaccion"
+            android:title="@string/modo_interaccion" />
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/config_minijuego">
         <ListPreference
@@ -26,7 +26,7 @@
             android:dialogTitle="@string/config_minijuego"
             android:entryValues="@array/minijuego_radio_id"
             android:entries="@array/minijuego_radio_values"
-            android:key="modo_interaccion"
+            android:key="minijuego"
             android:summary="Eleccion del minijuego"
             android:title="@string/config_minijuego" />
     </PreferenceCategory>
