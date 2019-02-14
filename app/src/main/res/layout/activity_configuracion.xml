@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffbf40">
+
+
+    <FrameLayout
+        android:layout_width="649dp"
+        android:layout_height="364dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="631dp"
+        android:layout_marginLeft="631dp"
+        android:layout_marginTop="0dp">
+
+        <TextView
+            android:id="@+id/textConf_2"
+            android:layout_width="wrap_content"
+            android:layout_height="93dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:textSize="40dp"
+            android:text="Mini juego:" />
+
+        <RadioGroup
+            android:layout_width="300dp"
+            android:layout_height="75dp"
+            android:layout_marginStart="140dp"
+            android:layout_marginLeft="140dp"
+            android:layout_marginTop="130dp">
+
+            <RadioButton
+                android:id="@+id/radioBtnConf_juego_1"
+                android:layout_width="134dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Razas y Pelajes: Imagen - Palabras"
+                android:textSize="25dp" />
+
+            <RadioButton
+                android:id="@+id/radioBtnConf_juego_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:layout_weight="1"
+                android:text="Razas y Pelajes: Palabra - Imagenes"
+                android:textSize="25dp" />
+
+            <RadioButton
+                android:id="@+id/radioBtnConf_juego_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:layout_weight="1"
+                android:text="Cruza: Imagen - Imagen"
+                android:textSize="25dp" />
+
+        </RadioGroup>
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="624dp"
+        android:layout_height="364dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="0dp">
+
+        <TextView
+            android:id="@+id/textConf_1"
+            android:layout_width="wrap_content"
+            android:layout_height="93dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:textSize="40dp"
+            android:text="Modo reconocimiento:" />
+
+        <RadioGroup
+            android:layout_width="300dp"
+            android:layout_height="75dp"
+            android:layout_marginStart="140dp"
+            android:layout_marginLeft="140dp"
+            android:layout_marginTop="130dp">
+
+            <RadioButton
+                android:id="@+id/radioBtnConf_reconocimiento_1"
+                android:layout_width="134dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Lista"
+                android:textSize="25dp" />
+
+            <RadioButton
+                android:id="@+id/radioBtnConf_reconocimiento_2"
+                android:layout_width="138dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="160dp"
+                android:layout_marginLeft="160dp"
+                android:layout_marginTop="-53dp"
+                android:layout_weight="1"
+                android:text="Grilla"
+                android:textSize="25dp" />
+        </RadioGroup>
+
+        <CheckBox
+            android:id="@+id/checkBoxConf_1"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_marginStart="140dp"
+            android:layout_marginLeft="140dp"
+            android:layout_marginTop="230dp"
+            android:text="Razas y Pelajes"
+            android:textSize="25dp" />
+
+        <CheckBox
+            android:id="@+id/checkBoxConf_2"
+            android:layout_width="170dp"
+            android:layout_height="47dp"
+            android:layout_marginStart="380dp"
+            android:layout_marginLeft="380dp"
+            android:layout_marginTop="230dp"
+            android:text="Cruzas"
+            android:textSize="25dp" />
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="649dp"
+        android:layout_height="363dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="364dp">
+
+        <TextView
+            android:id="@+id/textConf_4"
+            android:layout_width="wrap_content"
+            android:layout_height="55dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:text="Audio:"
+            android:textSize="40dp" />
+
+        <Switch
+            android:id="@+id/switchConfig_audio"
+            android:layout_width="240dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="140dp"
+            android:layout_marginLeft="140dp"
+            android:layout_marginTop="150dp"
+            android:switchMinWidth="80sp"
+            android:text="Masculino"
+            android:textSize="30dp" />
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="624dp"
+        android:layout_height="363dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="364dp">
+
+        <TextView
+            android:id="@+id/textConf_3"
+            android:layout_width="wrap_content"
+            android:layout_height="55dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:text="Nivel de dificultad:"
+            android:textSize="40dp" />
+
+        <Switch
+            android:id="@+id/switchConfig_nivel"
+            android:layout_width="174dp"
+            android:layout_height="56dp"
+            android:layout_marginStart="140dp"
+            android:layout_marginLeft="140dp"
+            android:layout_marginTop="150dp"
+            android:switchMinWidth="80sp"
+            android:text="Facil"
+            android:textSize="30dp" />
+
+    </FrameLayout>
+</RelativeLayout>
