@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#ffbf40">
@@ -32,13 +33,14 @@
 
                     <ImageView
                         android:id="@+id/imageView7"
-                        app:srcCompat="@drawable/angola-spc-zainocolorado"
                         android:layout_width="@dimen/c_caballo_width"
                         android:layout_height="@dimen/c_caballo_heigth"
                         android:layout_marginStart="@dimen/c_caballo_ml"
                         android:layout_marginLeft="@dimen/c_caballo_ml"
                         android:layout_marginTop="@dimen/c_caballo_mt"
-                        android:contentDescription="@string/caballo" />
+                        android:contentDescription="@string/caballo"
+                        app:srcCompat="@drawable/juana_cuartodemilla_bayo"
+                        tools:srcCompat="@drawable/bionda_cruzaarabe_alazanruano" />
                 </FrameLayout
                     >
 

@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -9,10 +8,10 @@
 
     <!--Arriba izquierda-->
     <ScrollView
-        android:background="#ffbf40"
         android:id="@+id/scroll_grilla"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="#ffbf40">
 
         <LinearLayout
             android:id="@+id/linear_grilla"
@@ -45,7 +44,7 @@
                         android:layout_marginEnd="@dimen/grilla_imagen_mr"
                         android:layout_marginRight="@dimen/grilla_imagen_mr"
                         android:contentDescription="@string/caballo"
-                        tools:srcCompat="@drawable/bonita_mestizo_qh_con_criollo_overo azulejo" />
+                        tools:srcCompat="@drawable/bionda_cruzaarabe_alazanruano" />
 
                     <TextView
                         android:id="@+id/textView5"
@@ -90,8 +89,8 @@
                         android:layout_marginEnd="@dimen/grilla_imagen_mr"
                         android:layout_marginRight="@dimen/grilla_imagen_mr"
                         android:contentDescription="@string/caballo"
-                        app:srcCompat="@drawable/angola-spc-zainocolorado"
-                        tools:srcCompat="@drawable/angola-spc-zainocolorado" />
+                        app:srcCompat="@drawable/angola_spc_zainocolorado"
+                        tools:srcCompat="@drawable/angola_spc_zainocolorado" />
 
                     <TextView
                         android:id="@+id/textView3"
@@ -137,7 +136,7 @@
                         android:layout_marginEnd="@dimen/grilla_imagen_mr"
                         android:layout_marginRight="@dimen/grilla_imagen_mr"
                         android:contentDescription="@string/caballo"
-                        app:srcCompat="@drawable/angola-spc-zainocolorado" />
+                        app:srcCompat="@drawable/angola_spc_zainocolorado" />
 
                     <TextView
                         android:id="@+id/textView4"
@@ -188,7 +187,7 @@
                         android:layout_marginEnd="@dimen/grilla_imagen_mr"
                         android:layout_marginRight="@dimen/grilla_imagen_mr"
                         android:contentDescription="@string/caballo"
-                        app:srcCompat="@drawable/angola-spc-zainocolorado" />
+                        app:srcCompat="@drawable/bionda_cruzaarabe_alazanruano" />
 
                     <TextView
                         android:id="@+id/textView7"
@@ -233,7 +232,7 @@
                         android:layout_marginEnd="@dimen/grilla_imagen_mr"
                         android:layout_marginRight="@dimen/grilla_imagen_mr"
                         android:contentDescription="@string/caballo"
-                        app:srcCompat="@drawable/angola-spc-zainocolorado" />
+                        app:srcCompat="@drawable/angola_spc_zainocolorado" />
 
                     <TextView
                         android:id="@+id/textView8"
@@ -278,7 +277,7 @@
                         android:layout_marginEnd="@dimen/grilla_imagen_mr"
                         android:layout_marginRight="@dimen/grilla_imagen_mr"
                         android:contentDescription="@string/caballo"
-                        app:srcCompat="@drawable/angola-spc-zainocolorado" />
+                        app:srcCompat="@drawable/angola_spc_zainocolorado" />
 
                     <TextView
                         android:id="@+id/textView6"
