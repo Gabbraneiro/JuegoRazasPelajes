@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         ArrayList<Caballo> x = Repositorio.getCaballosRandom(1);
         System.out.print("PROBANDO APP");
-        buttonLista = findViewById(R.id.buttonLista);
+        /*buttonLista = findViewById(R.id.buttonLista);
         buttonGrilla = findViewById(R.id.buttonGrilla);
         buttonPlay = findViewById(R.id.buttonPlay);
         buttonPlay2 = findViewById(R.id.buttonPlay2);
@@ -87,3 +87,4 @@ public void onClick(View v){
                 startActivity(intent);
             }
         });*/
+    }}

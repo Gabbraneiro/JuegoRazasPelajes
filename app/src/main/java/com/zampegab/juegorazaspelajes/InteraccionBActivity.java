@@ -24,7 +24,7 @@ public class InteraccionBActivity  extends AppCompatActivity {
         setContentView(R.layout.activity_interaccion_b);
 
 
-        btnRaza = findViewById(R.id.b_imageButton);
+        /*btnRaza = findViewById(R.id.b_imageButton);
         btnRaza.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -75,7 +75,7 @@ public class InteraccionBActivity  extends AppCompatActivity {
             public void onClick(View v) {
                 finish();
             }
-        });
+        });*/
     }
 
 }

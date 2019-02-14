@@ -17,7 +17,7 @@ public class ListaActivity  extends AppCompatActivity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lista);
 
-        mpCaballo = MediaPlayer.create(this, R.raw.caballo);
+        /*mpCaballo = MediaPlayer.create(this, R.raw.caballo);
 
         btnHorse1 = findViewById(R.id.listImagenBtn);
         btnHorse1.setOnClickListener(new View.OnClickListener() {
@@ -41,7 +41,7 @@ public class ListaActivity  extends AppCompatActivity{
             public void onClick(View v) {
                 mpCaballo.start();
             }
-        });
+        });*/
     }
 
 }

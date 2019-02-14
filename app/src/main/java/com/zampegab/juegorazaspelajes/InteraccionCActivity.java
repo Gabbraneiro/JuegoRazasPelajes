@@ -21,7 +21,7 @@ public class InteraccionCActivity extends AppCompatActivity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_interaccion_c);
 
-        btnHorse1 = findViewById(R.id.horse1);
+        /*btnHorse1 = findViewById(R.id.horse1);
         btnHorse1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -63,7 +63,7 @@ public class InteraccionCActivity extends AppCompatActivity{
             public void onClick(View v) {
                 finish();
             }
-        });
+        });*/
     }
 
 }
