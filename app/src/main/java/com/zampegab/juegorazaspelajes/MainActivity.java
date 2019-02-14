@@ -8,6 +8,8 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.ImageButton;
 
+import java.util.ArrayList;
+
 public class MainActivity extends AppCompatActivity {
 
     Button buttonLista;
@@ -20,7 +22,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        ArrayList<Caballo> x = Repositorio.getCaballosRandom(1);
+        System.out.print("PROBANDO APP");
         buttonLista = findViewById(R.id.buttonLista);
         buttonGrilla = findViewById(R.id.buttonGrilla);
         buttonPlay = findViewById(R.id.buttonPlay);

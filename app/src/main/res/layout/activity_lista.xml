@@ -32,7 +32,7 @@
                     android:layout_marginLeft="@dimen/imagen_lista_ml"
                     android:layout_marginTop="@dimen/imagen_lista_mt"
                     android:contentDescription="@string/caballo"
-                    app:srcCompat="@drawable/angola-spc-zainocolorado" />
+                    app:srcCompat="@drawable/angola_spc_zainocolorado" />
 
                 <ImageButton
                     android:id="@+id/listImagenBtn"
@@ -82,7 +82,7 @@
                     android:layout_marginLeft="@dimen/imagen_lista_ml"
                     android:layout_marginTop="@dimen/imagen_lista_mt"
                     android:contentDescription="@string/caballo"
-                    app:srcCompat="@drawable/angola-spc-zainocolorado" />
+                    app:srcCompat="@drawable/angola_spc_zainocolorado" />
 
                 <ImageButton
                     android:id="@+id/listImagenBtn2"
@@ -132,7 +132,7 @@
                     android:layout_marginLeft="@dimen/imagen_lista_ml"
                     android:layout_marginTop="@dimen/imagen_lista_mt"
                     android:contentDescription="@string/caballo"
-                    app:srcCompat="@drawable/angola-spc-zainocolorado" />
+                    app:srcCompat="@drawable/angola_spc_zainocolorado" />
 
                 <ImageButton
                     android:id="@+id/listImagenBtn3"

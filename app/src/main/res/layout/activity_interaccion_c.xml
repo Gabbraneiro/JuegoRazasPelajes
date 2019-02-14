@@ -36,7 +36,7 @@
                         android:layout_marginLeft="@dimen/c_caballo_ml"
                         android:layout_marginTop="@dimen/c_caballo_mt"
                         android:contentDescription="@string/caballo"
-                        app:srcCompat="@drawable/angola-spc-zainocolorado" />
+                        app:srcCompat="@drawable/angola_spc_zainocolorado" />
                 </FrameLayout>
 
             </LinearLayout>
@@ -57,7 +57,7 @@
                     android:layout_marginRight="@dimen/grilla_imagen_mr"
                     android:layout_weight="1"
                     android:contentDescription="@string/caballo"
-                    app:srcCompat="@drawable/angola-spc-zainocolorado" />
+                    app:srcCompat="@drawable/angola_spc_zainocolorado" />
 
                 <ImageView
                     android:id="@+id/imageView9"
@@ -70,7 +70,7 @@
                     android:layout_marginRight="@dimen/grilla_imagen_mr"
                     android:layout_weight="1"
                     android:contentDescription="@string/caballo"
-                    app:srcCompat="@drawable/angola-spc-zainocolorado" />
+                    app:srcCompat="@drawable/angola_spc_zainocolorado" />
 
                 <ImageView
                     android:id="@+id/imageView10"
@@ -83,7 +83,7 @@
                     android:layout_marginRight="@dimen/grilla_imagen_mr"
                     android:layout_weight="1"
                     android:contentDescription="@string/caballo"
-                    app:srcCompat="@drawable/angola-spc-zainocolorado" />
+                    app:srcCompat="@drawable/angola_spc_zainocolorado" />
 
                 <ImageView
                     android:id="@+id/imageView11"
@@ -96,7 +96,7 @@
                     android:layout_marginRight="@dimen/grilla_imagen_mr"
                     android:layout_weight="1"
                     android:contentDescription="@string/caballo"
-                    app:srcCompat="@drawable/angola-spc-zainocolorado" />
+                    app:srcCompat="@drawable/angola_spc_zainocolorado" />
             </LinearLayout>
 
         </LinearLayout>
