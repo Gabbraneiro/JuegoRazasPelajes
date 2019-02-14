@@ -20,7 +20,7 @@
         android:layout_marginTop="34dp"
         android:layout_marginEnd="212dp"
         android:layout_marginRight="212dp"
-        app:srcCompat="@drawable/Logo_app" />
+        app:srcCompat="@drawable/logo_app" />
 
     <ImageButton
         android:id="@+id/imgBtn_config"
@@ -75,6 +75,6 @@
         android:layout_marginBottom="48dp"
         android:layout_toEndOf="@+id/img_logo_app"
         android:layout_toRightOf="@+id/img_logo_app"
-        app:srcCompat="@drawable/logo_facultad_informatiac" />
+        app:srcCompat="@drawable/logo_facultad_informatica" />
 
 </RelativeLayout>

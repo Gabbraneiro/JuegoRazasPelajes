@@ -2,288 +2,309 @@
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#ffbf40">
 
     <!--Arriba izquierda-->
-    <FrameLayout
-        android:id="@+id/frame1"
-        android:layout_width="@dimen/grilla_frame_width"
-        android:layout_height="@dimen/grilla_frame_heigth"
-        android:layout_marginTop="@dimen/grilla_frame_mt"
-        android:layout_marginEnd="@dimen/grilla_frame_mr"
-        android:layout_marginRight="@dimen/grilla_frame_mr"
-        android:layout_toStartOf="@+id/frame2"
-        android:layout_toLeftOf="@+id/frame2">
+    <ScrollView
+        android:background="#ffbf40"
+        android:id="@+id/scroll_grilla"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-        <ImageView
-            android:id="@+id/imageView"
+        <LinearLayout
+            android:id="@+id/linear_grilla"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/grilla_imagen_heigth"
-            android:layout_marginStart="@dimen/grilla_texto_ml"
-            android:layout_marginLeft="@dimen/grilla_imagen_ml"
-            android:layout_marginTop="@dimen/grilla_imagen_mt"
-            android:layout_marginEnd="@dimen/grilla_imagen_mr"
-            android:layout_marginRight="@dimen/grilla_imagen_mr"
-            android:contentDescription="@string/caballo"
-            app:srcCompat="@drawable/caballo" />
-
-        <TextView
-            android:id="@+id/textView3"
-            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/grilla_texto_ml"
-            android:layout_marginLeft="@dimen/grilla_texto_ml"
-            android:layout_marginTop="@dimen/grilla_texto_mt"
-            android:text="@string/raza_x"
-            android:textSize="@dimen/grilla_texto_size"
-            android:textStyle="bold"
-            app:fontFamily="serif" />
+            android:orientation="vertical">
 
-        <ImageButton
-            android:id="@+id/imageButton"
-            android:layout_width="@dimen/grilla_imagen_voz_width"
-            android:layout_height="@dimen/grilla_imagen_voz_heigth"
-            android:layout_marginStart="@dimen/grilla_imagen_voz_ml"
-            android:layout_marginLeft="@dimen/grilla_imagen_voz_ml"
-            android:layout_marginTop="@dimen/grilla_imagen_voz_mt"
-            android:contentDescription="@string/talking"
-            app:srcCompat="@drawable/talking" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/grilla_row_heigth"
+                android:orientation="horizontal">
 
-    </FrameLayout>
+                <FrameLayout
+                    android:id="@+id/frame3"
+                    android:layout_width="@dimen/grilla_frame_width"
+                    android:layout_height="@dimen/grilla_frame_heigth"
+                    android:layout_marginStart="@dimen/grilla_frame_ml"
+                    android:layout_marginLeft="@dimen/grilla_frame_ml"
+                    android:layout_marginTop="@dimen/grilla_frame_mt"
+                    android:layout_marginEnd="@dimen/grilla_frame_mr"
+                    android:layout_marginRight="@dimen/grilla_frame_mr">
 
-    <!--Arriba medio-->
-    <FrameLayout
-        android:id="@+id/frame2"
-        android:layout_width="@dimen/grilla_frame_width"
-        android:layout_height="@dimen/grilla_frame_heigth"
-        android:layout_marginTop="@dimen/grilla_frame_mt"
-        android:layout_marginEnd="@dimen/grilla_frame_mr"
-        android:layout_marginRight="@dimen/grilla_frame_mr"
-        android:layout_toStartOf="@+id/frame3"
-        android:layout_toLeftOf="@+id/frame3">
+                    <ImageView
+                        android:id="@+id/imageView3"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/grilla_imagen_heigth"
+                        android:layout_marginStart="@dimen/grilla_imagen_ml"
+                        android:layout_marginLeft="@dimen/grilla_imagen_ml"
+                        android:layout_marginTop="@dimen/grilla_imagen_mt"
+                        android:layout_marginEnd="@dimen/grilla_imagen_mr"
+                        android:layout_marginRight="@dimen/grilla_imagen_mr"
+                        android:contentDescription="@string/caballo"
+                        tools:srcCompat="@drawable/bonita_mestizo_qh_con_criollo_overo azulejo" />
 
-        <ImageView
-            android:id="@+id/imageView2"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/grilla_imagen_heigth"
-            android:layout_marginStart="@dimen/grilla_imagen_ml"
-            android:layout_marginLeft="@dimen/grilla_imagen_ml"
-            android:layout_marginTop="@dimen/grilla_imagen_mt"
-            android:layout_marginEnd="@dimen/grilla_imagen_mr"
-            android:layout_marginRight="@dimen/grilla_imagen_mr"
-            android:contentDescription="@string/caballo"
-            app:srcCompat="@drawable/caballo" />
+                    <TextView
+                        android:id="@+id/textView5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/grilla_texto_ml"
+                        android:layout_marginLeft="@dimen/grilla_texto_ml"
+                        android:layout_marginTop="@dimen/grilla_texto_mt"
+                        android:text="@string/raza_x"
+                        android:textSize="@dimen/grilla_texto_size"
+                        android:textStyle="bold"
+                        app:fontFamily="serif" />
 
-        <TextView
-            android:id="@+id/textView4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/grilla_texto_ml"
-            android:layout_marginLeft="@dimen/grilla_texto_ml"
-            android:layout_marginTop="@dimen/grilla_texto_mt"
-            android:text="@string/raza_x"
-            android:textSize="@dimen/grilla_texto_size"
-            android:textStyle="bold"
-            app:fontFamily="serif" />
+                    <ImageButton
+                        android:id="@+id/imageButton3"
+                        android:layout_width="@dimen/grilla_imagen_voz_width"
+                        android:layout_height="@dimen/grilla_imagen_voz_heigth"
+                        android:layout_marginStart="@dimen/grilla_imagen_voz_ml"
+                        android:layout_marginLeft="@dimen/grilla_imagen_voz_ml"
+                        android:layout_marginTop="@dimen/grilla_imagen_voz_mt"
+                        android:contentDescription="@string/talking"
+                        app:srcCompat="@drawable/audio_regular" />
+                </FrameLayout>
 
-        <ImageButton
-            android:id="@+id/imageButton2"
-            android:layout_width="@dimen/grilla_imagen_voz_width"
-            android:layout_height="@dimen/grilla_imagen_voz_heigth"
-            android:layout_marginStart="@dimen/grilla_imagen_voz_ml"
-            android:layout_marginLeft="@dimen/grilla_imagen_voz_ml"
-            android:layout_marginTop="@dimen/grilla_imagen_voz_mt"
-            android:contentDescription="@string/talking"
-            app:srcCompat="@drawable/talking" />
-    </FrameLayout>
+                <FrameLayout
+                    android:id="@+id/frame1"
+                    android:layout_width="@dimen/grilla_frame_width"
+                    android:layout_height="@dimen/grilla_frame_heigth"
+                    android:layout_marginStart="@dimen/grilla_frame_ml"
+                    android:layout_marginLeft="@dimen/grilla_frame_ml"
+                    android:layout_marginTop="@dimen/grilla_frame_mt"
+                    android:layout_marginEnd="@dimen/grilla_frame_mr"
+                    android:layout_marginRight="@dimen/grilla_frame_mr">
 
-    <!--Arriba derecha-->
-    <FrameLayout
-        android:id="@+id/frame3"
-        android:layout_width="@dimen/grilla_frame_width"
-        android:layout_height="@dimen/grilla_frame_heigth"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginTop="@dimen/grilla_frame_mt"
-        android:layout_marginEnd="@dimen/grilla_frame_mr"
-        android:layout_marginRight="@dimen/grilla_frame_mr">
+                    <ImageView
+                        android:id="@+id/imageView"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/grilla_imagen_heigth"
+                        android:layout_marginStart="@dimen/grilla_texto_ml"
+                        android:layout_marginLeft="@dimen/grilla_imagen_ml"
+                        android:layout_marginTop="@dimen/grilla_imagen_mt"
+                        android:layout_marginEnd="@dimen/grilla_imagen_mr"
+                        android:layout_marginRight="@dimen/grilla_imagen_mr"
+                        android:contentDescription="@string/caballo"
+                        app:srcCompat="@drawable/angola-spc-zainocolorado"
+                        tools:srcCompat="@drawable/angola-spc-zainocolorado" />
 
-        <ImageView
-            android:id="@+id/imageView3"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/grilla_imagen_heigth"
-            android:layout_marginStart="@dimen/grilla_imagen_ml"
-            android:layout_marginLeft="@dimen/grilla_imagen_ml"
-            android:layout_marginTop="@dimen/grilla_imagen_mt"
-            android:layout_marginEnd="@dimen/grilla_imagen_mr"
-            android:layout_marginRight="@dimen/grilla_imagen_mr"
-            android:contentDescription="@string/caballo"
-            app:srcCompat="@drawable/caballo" />
+                    <TextView
+                        android:id="@+id/textView3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/grilla_texto_ml"
+                        android:layout_marginLeft="@dimen/grilla_texto_ml"
+                        android:layout_marginTop="@dimen/grilla_texto_mt"
+                        android:text="@string/raza_x"
+                        android:textSize="@dimen/grilla_texto_size"
+                        android:textStyle="bold"
+                        app:fontFamily="serif" />
 
-        <TextView
-            android:id="@+id/textView5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/grilla_texto_ml"
-            android:layout_marginLeft="@dimen/grilla_texto_ml"
-            android:layout_marginTop="@dimen/grilla_texto_mt"
-            android:text="@string/raza_x"
-            android:textSize="@dimen/grilla_texto_size"
-            android:textStyle="bold"
-            app:fontFamily="serif" />
+                    <ImageButton
+                        android:id="@+id/imageButton"
+                        android:layout_width="@dimen/grilla_imagen_voz_width"
+                        android:layout_height="@dimen/grilla_imagen_voz_heigth"
+                        android:layout_marginStart="@dimen/grilla_imagen_voz_ml"
+                        android:layout_marginLeft="@dimen/grilla_imagen_voz_ml"
+                        android:layout_marginTop="@dimen/grilla_imagen_voz_mt"
+                        android:contentDescription="@string/talking"
+                        app:srcCompat="@drawable/audio_regular" />
 
-        <ImageButton
-            android:id="@+id/imageButton3"
-            android:layout_width="@dimen/grilla_imagen_voz_width"
-            android:layout_height="@dimen/grilla_imagen_voz_heigth"
-            android:layout_marginStart="@dimen/grilla_imagen_voz_ml"
-            android:layout_marginLeft="@dimen/grilla_imagen_voz_ml"
-            android:layout_marginTop="@dimen/grilla_imagen_voz_mt"
-            android:contentDescription="@string/talking"
-            app:srcCompat="@drawable/talking" />
-    </FrameLayout>
+                </FrameLayout>
 
-    <!--Abajo izquierda-->
-    <FrameLayout
-        android:id="@+id/frame4"
-        android:layout_width="@dimen/grilla_frame_width"
-        android:layout_height="@dimen/grilla_frame_heigth"
-        android:layout_below="@+id/frame1"
-        android:layout_marginTop="@dimen/grilla_frame_mt"
-        android:layout_marginEnd="@dimen/grilla_frame_mr"
-        android:layout_marginRight="@dimen/grilla_frame_mr"
-        android:layout_toStartOf="@+id/frame5"
-        android:layout_toLeftOf="@+id/frame5">
+                <FrameLayout
+                    android:id="@+id/frame2"
+                    android:layout_width="@dimen/grilla_frame_width"
+                    android:layout_height="@dimen/grilla_frame_heigth"
+                    android:layout_marginStart="@dimen/grilla_frame_ml"
+                    android:layout_marginLeft="@dimen/grilla_frame_ml"
+                    android:layout_marginTop="@dimen/grilla_frame_mt"
+                    android:layout_marginEnd="@dimen/grilla_frame_mr"
+                    android:layout_marginRight="@dimen/grilla_frame_mr">
 
-        <ImageView
-            android:id="@+id/imageView4"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/grilla_imagen_heigth"
-            android:layout_marginStart="@dimen/grilla_imagen_ml"
-            android:layout_marginLeft="@dimen/grilla_imagen_ml"
-            android:layout_marginTop="@dimen/grilla_imagen_mt"
-            android:layout_marginEnd="@dimen/grilla_imagen_mr"
-            android:layout_marginRight="@dimen/grilla_imagen_mr"
-            android:contentDescription="@string/caballo"
-            app:srcCompat="@drawable/caballo" />
+                    <ImageView
+                        android:id="@+id/imageView2"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/grilla_imagen_heigth"
+                        android:layout_marginStart="@dimen/grilla_imagen_ml"
+                        android:layout_marginLeft="@dimen/grilla_imagen_ml"
+                        android:layout_marginTop="@dimen/grilla_imagen_mt"
+                        android:layout_marginEnd="@dimen/grilla_imagen_mr"
+                        android:layout_marginRight="@dimen/grilla_imagen_mr"
+                        android:contentDescription="@string/caballo"
+                        app:srcCompat="@drawable/angola-spc-zainocolorado" />
 
-        <TextView
-            android:id="@+id/textView6"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/grilla_texto_ml"
-            android:layout_marginLeft="@dimen/grilla_texto_ml"
-            android:layout_marginTop="@dimen/grilla_texto_mt"
-            android:text="@string/raza_x"
-            android:textSize="@dimen/grilla_texto_size"
-            android:textStyle="bold"
-            app:fontFamily="serif" />
+                    <TextView
+                        android:id="@+id/textView4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/grilla_texto_ml"
+                        android:layout_marginLeft="@dimen/grilla_texto_ml"
+                        android:layout_marginTop="@dimen/grilla_texto_mt"
+                        android:text="@string/raza_x"
+                        android:textSize="@dimen/grilla_texto_size"
+                        android:textStyle="bold"
+                        app:fontFamily="serif" />
 
-        <ImageButton
-            android:id="@+id/imageButton4"
-            android:layout_width="@dimen/grilla_imagen_voz_width"
-            android:layout_height="@dimen/grilla_imagen_voz_heigth"
-            android:layout_marginStart="@dimen/grilla_imagen_voz_ml"
-            android:layout_marginLeft="@dimen/grilla_imagen_voz_ml"
-            android:layout_marginTop="@dimen/grilla_imagen_voz_mt"
-            android:contentDescription="@string/talking"
-            app:srcCompat="@drawable/talking" />
-    </FrameLayout>
+                    <ImageButton
+                        android:id="@+id/imageButton2"
+                        android:layout_width="@dimen/grilla_imagen_voz_width"
+                        android:layout_height="@dimen/grilla_imagen_voz_heigth"
+                        android:layout_marginStart="@dimen/grilla_imagen_voz_ml"
+                        android:layout_marginLeft="@dimen/grilla_imagen_voz_ml"
+                        android:layout_marginTop="@dimen/grilla_imagen_voz_mt"
+                        android:contentDescription="@string/talking"
+                        app:srcCompat="@drawable/audio_regular" />
+                </FrameLayout>
+            </LinearLayout>
 
-    <!--Abajo medio-->
-    <FrameLayout
-        android:id="@+id/frame5"
-        android:layout_width="@dimen/grilla_frame_width"
-        android:layout_height="@dimen/grilla_frame_heigth"
-        android:layout_below="@+id/frame2"
-        android:layout_marginTop="@dimen/grilla_frame_mt"
-        android:layout_marginEnd="@dimen/grilla_frame_mr"
-        android:layout_marginRight="@dimen/grilla_frame_mr"
-        android:layout_toStartOf="@+id/frame6"
-        android:layout_toLeftOf="@+id/frame6">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/grilla_row_heigth"
+                android:orientation="horizontal">
 
-        <ImageView
-            android:id="@+id/imageView5"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/grilla_imagen_heigth"
-            android:layout_marginStart="@dimen/grilla_imagen_ml"
-            android:layout_marginLeft="@dimen/grilla_imagen_ml"
-            android:layout_marginTop="@dimen/grilla_imagen_mt"
-            android:layout_marginEnd="@dimen/grilla_imagen_mr"
-            android:layout_marginRight="@dimen/grilla_imagen_mr"
-            android:contentDescription="@string/caballo"
-            app:srcCompat="@drawable/caballo" />
+                <FrameLayout
+                    android:id="@+id/frame5"
+                    android:layout_width="@dimen/grilla_frame_width"
+                    android:layout_height="@dimen/grilla_frame_heigth"
+                    android:layout_marginStart="@dimen/grilla_frame_ml"
+                    android:layout_marginLeft="@dimen/grilla_frame_ml"
+                    android:layout_marginTop="@dimen/grilla_frame_mt"
+                    android:layout_marginEnd="@dimen/grilla_frame_mr"
+                    android:layout_marginRight="@dimen/grilla_frame_mr">
 
-        <TextView
-            android:id="@+id/textView7"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/grilla_texto_ml"
-            android:layout_marginLeft="@dimen/grilla_texto_ml"
-            android:layout_marginTop="@dimen/grilla_texto_mt"
-            android:text="@string/raza_x"
-            android:textSize="@dimen/grilla_texto_size"
-            android:textStyle="bold"
-            app:fontFamily="serif" />
+                    <ImageView
+                        android:id="@+id/imageView5"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/grilla_imagen_heigth"
+                        android:layout_marginStart="@dimen/grilla_imagen_ml"
+                        android:layout_marginLeft="@dimen/grilla_imagen_ml"
+                        android:layout_marginTop="@dimen/grilla_imagen_mt"
+                        android:layout_marginEnd="@dimen/grilla_imagen_mr"
+                        android:layout_marginRight="@dimen/grilla_imagen_mr"
+                        android:contentDescription="@string/caballo"
+                        app:srcCompat="@drawable/angola-spc-zainocolorado" />
 
-        <ImageButton
-            android:id="@+id/imageButton5"
-            android:layout_width="@dimen/grilla_imagen_voz_width"
-            android:layout_height="@dimen/grilla_imagen_voz_heigth"
-            android:layout_marginStart="@dimen/grilla_imagen_voz_ml"
-            android:layout_marginLeft="@dimen/grilla_imagen_voz_ml"
-            android:layout_marginTop="@dimen/grilla_imagen_voz_mt"
-            android:contentDescription="@string/talking"
-            app:srcCompat="@drawable/talking" />
-    </FrameLayout>
+                    <TextView
+                        android:id="@+id/textView7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/grilla_texto_ml"
+                        android:layout_marginLeft="@dimen/grilla_texto_ml"
+                        android:layout_marginTop="@dimen/grilla_texto_mt"
+                        android:text="@string/raza_x"
+                        android:textSize="@dimen/grilla_texto_size"
+                        android:textStyle="bold"
+                        app:fontFamily="serif" />
 
-    <!--Abajo derecha-->
-    <FrameLayout
-        android:id="@+id/frame6"
-        android:layout_width="@dimen/grilla_frame_width"
-        android:layout_height="@dimen/grilla_frame_heigth"
-        android:layout_below="@+id/frame3"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginTop="@dimen/grilla_frame_mt"
-        android:layout_marginEnd="@dimen/grilla_frame_mr"
-        android:layout_marginRight="@dimen/grilla_frame_mr">
+                    <ImageButton
+                        android:id="@+id/imageButton5"
+                        android:layout_width="@dimen/grilla_imagen_voz_width"
+                        android:layout_height="@dimen/grilla_imagen_voz_heigth"
+                        android:layout_marginStart="@dimen/grilla_imagen_voz_ml"
+                        android:layout_marginLeft="@dimen/grilla_imagen_voz_ml"
+                        android:layout_marginTop="@dimen/grilla_imagen_voz_mt"
+                        android:contentDescription="@string/talking"
+                        app:srcCompat="@drawable/audio_regular" />
+                </FrameLayout>
 
-        <ImageView
-            android:id="@+id/imageView6"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/grilla_imagen_heigth"
-            android:layout_marginStart="@dimen/grilla_imagen_ml"
-            android:layout_marginLeft="@dimen/grilla_imagen_ml"
-            android:layout_marginTop="@dimen/grilla_imagen_mt"
-            android:layout_marginEnd="@dimen/grilla_imagen_mr"
-            android:layout_marginRight="@dimen/grilla_imagen_mr"
-            android:contentDescription="@string/caballo"
-            app:srcCompat="@drawable/caballo" />
+                <FrameLayout
+                    android:id="@+id/frame6"
+                    android:layout_width="@dimen/grilla_frame_width"
+                    android:layout_height="@dimen/grilla_frame_heigth"
+                    android:layout_marginStart="@dimen/grilla_frame_ml"
+                    android:layout_marginLeft="@dimen/grilla_frame_ml"
+                    android:layout_marginTop="@dimen/grilla_frame_mt"
+                    android:layout_marginEnd="@dimen/grilla_frame_mr"
+                    android:layout_marginRight="@dimen/grilla_frame_mr">
 
-        <TextView
-            android:id="@+id/textView8"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/grilla_texto_ml"
-            android:layout_marginLeft="@dimen/grilla_texto_ml"
-            android:layout_marginTop="@dimen/grilla_texto_mt"
-            android:text="@string/raza_x"
-            android:textSize="@dimen/grilla_texto_size"
-            android:textStyle="bold"
-            app:fontFamily="serif" />
+                    <ImageView
+                        android:id="@+id/imageView6"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/grilla_imagen_heigth"
+                        android:layout_marginStart="@dimen/grilla_imagen_ml"
+                        android:layout_marginLeft="@dimen/grilla_imagen_ml"
+                        android:layout_marginTop="@dimen/grilla_imagen_mt"
+                        android:layout_marginEnd="@dimen/grilla_imagen_mr"
+                        android:layout_marginRight="@dimen/grilla_imagen_mr"
+                        android:contentDescription="@string/caballo"
+                        app:srcCompat="@drawable/angola-spc-zainocolorado" />
 
-        <ImageButton
-            android:id="@+id/imageButton6"
-            android:layout_width="@dimen/grilla_imagen_voz_width"
-            android:layout_height="@dimen/grilla_imagen_voz_heigth"
-            android:layout_marginStart="@dimen/grilla_imagen_voz_ml"
-            android:layout_marginLeft="@dimen/grilla_imagen_voz_ml"
-            android:layout_marginTop="@dimen/grilla_imagen_voz_mt"
-            android:contentDescription="@string/talking"
-            app:srcCompat="@drawable/talking" />
-    </FrameLayout>
+                    <TextView
+                        android:id="@+id/textView8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/grilla_texto_ml"
+                        android:layout_marginLeft="@dimen/grilla_texto_ml"
+                        android:layout_marginTop="@dimen/grilla_texto_mt"
+                        android:text="@string/raza_x"
+                        android:textSize="@dimen/grilla_texto_size"
+                        android:textStyle="bold"
+                        app:fontFamily="serif" />
+
+                    <ImageButton
+                        android:id="@+id/imageButton6"
+                        android:layout_width="@dimen/grilla_imagen_voz_width"
+                        android:layout_height="@dimen/grilla_imagen_voz_heigth"
+                        android:layout_marginStart="@dimen/grilla_imagen_voz_ml"
+                        android:layout_marginLeft="@dimen/grilla_imagen_voz_ml"
+                        android:layout_marginTop="@dimen/grilla_imagen_voz_mt"
+                        android:contentDescription="@string/talking"
+                        app:srcCompat="@drawable/audio_regular" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/frame4"
+                    android:layout_width="@dimen/grilla_frame_width"
+                    android:layout_height="@dimen/grilla_frame_heigth"
+                    android:layout_marginStart="@dimen/grilla_frame_ml"
+                    android:layout_marginLeft="@dimen/grilla_frame_ml"
+                    android:layout_marginTop="@dimen/grilla_frame_mt"
+                    android:layout_marginEnd="@dimen/grilla_frame_mr"
+                    android:layout_marginRight="@dimen/grilla_frame_mr">
+
+                    <ImageView
+                        android:id="@+id/imageView4"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/grilla_imagen_heigth"
+                        android:layout_marginStart="@dimen/grilla_imagen_ml"
+                        android:layout_marginLeft="@dimen/grilla_imagen_ml"
+                        android:layout_marginTop="@dimen/grilla_imagen_mt"
+                        android:layout_marginEnd="@dimen/grilla_imagen_mr"
+                        android:layout_marginRight="@dimen/grilla_imagen_mr"
+                        android:contentDescription="@string/caballo"
+                        app:srcCompat="@drawable/angola-spc-zainocolorado" />
+
+                    <TextView
+                        android:id="@+id/textView6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/grilla_texto_ml"
+                        android:layout_marginLeft="@dimen/grilla_texto_ml"
+                        android:layout_marginTop="@dimen/grilla_texto_mt"
+                        android:text="@string/raza_x"
+                        android:textSize="@dimen/grilla_texto_size"
+                        android:textStyle="bold"
+                        app:fontFamily="serif" />
+
+                    <ImageButton
+                        android:id="@+id/imageButton4"
+                        android:layout_width="@dimen/grilla_imagen_voz_width"
+                        android:layout_height="@dimen/grilla_imagen_voz_heigth"
+                        android:layout_marginStart="@dimen/grilla_imagen_voz_ml"
+                        android:layout_marginLeft="@dimen/grilla_imagen_voz_ml"
+                        android:layout_marginTop="@dimen/grilla_imagen_voz_mt"
+                        android:contentDescription="@string/talking"
+                        app:srcCompat="@drawable/audio_regular" />
+                </FrameLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
 
 </RelativeLayout>

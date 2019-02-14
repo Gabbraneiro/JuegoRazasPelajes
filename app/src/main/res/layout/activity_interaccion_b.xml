@@ -1,109 +1,117 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#ffffff" >
+    android:background="#ffbf40">
 
 
-    <FrameLayout
-        android:id="@+id/layout"
-        android:layout_width="@dimen/i_frame_width"
-        android:layout_height="@dimen/i_frame_heigth"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginTop="@dimen/i_frame_m"
-        android:layout_marginEnd="@dimen/i_frame_m"
-        android:layout_marginRight="@dimen/i_frame_m"
-        android:background="#ffbf40">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-        <FrameLayout
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="@dimen/i_frame2_heigth"
-            android:layout_marginTop="@dimen/i_frame2_m">
-
-            <!-- Caballo 1-->
-            <ImageButton
-                android:id="@+id/b_horse1"
-                android:layout_width="@dimen/i_imagen_width"
-                android:layout_height="@dimen/i_imagen_height"
-                android:layout_marginStart="@dimen/i_imagen_ml"
-                android:layout_marginLeft="@dimen/i_imagen_ml"
-                android:layout_marginTop="@dimen/i_imagen_mt"
-                android:contentDescription="@string/caballo"
-                app:srcCompat="@drawable/caballo_btn" />
-
-            <!-- Caballo 2-->
-            <ImageButton
-                android:id="@+id/b_horse2"
-                android:layout_width="@dimen/i_imagen_width"
-                android:layout_height="@dimen/i_imagen_height"
-                android:layout_marginStart="@dimen/i_imagen2_ml"
-                android:layout_marginLeft="@dimen/i_imagen2_ml"
-                android:layout_marginTop="@dimen/i_imagen_mt"
-                android:contentDescription="@string/caballo"
-                app:srcCompat="@drawable/caballo_btn" />
-
-            <!-- Caballo 3-->
-            <ImageButton
-                android:id="@+id/b_horse3"
-                android:layout_width="@dimen/i_imagen_width"
-                android:layout_height="@dimen/i_imagen_height"
-                android:layout_marginStart="@dimen/i_imagen3_ml"
-                android:layout_marginLeft="@dimen/i_imagen3_ml"
-                android:layout_marginTop="@dimen/i_imagen_mt"
-                android:contentDescription="@string/caballo"
-                app:srcCompat="@drawable/caballo_btn" />
-
-            <!-- Caballo 4-->
-            <ImageButton
-                android:id="@+id/b_horse4"
-                android:layout_width="@dimen/i_imagen_width"
-                android:layout_height="@dimen/i_imagen_height"
-                android:layout_marginStart="@dimen/i_imagen4_ml"
-                android:layout_marginLeft="@dimen/i_imagen4_ml"
-                android:layout_marginTop="@dimen/i_imagen_mt"
-                android:contentDescription="@string/caballo"
-                app:srcCompat="@drawable/caballo_btn" />
-        </FrameLayout>
-
-        <!--Caballo grande-->
-        <TextView
-            android:id="@+id/title"
-            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/b_texto_ml"
-            android:layout_marginLeft="@dimen/b_texto_ml"
-            android:layout_marginTop="@dimen/b_texto_mt"
-            android:text="@string/raza_x"
-            android:textColor="#000000"
-            android:textSize="@dimen/b_texto_size"
-            android:textStyle="bold"
-            app:fontFamily="serif" />
+            android:orientation="vertical" >
 
-        <ImageButton
-            android:id="@+id/b_imageButton"
-            android:layout_width="@dimen/b_imagen_voz_width"
-            android:layout_height="@dimen/b_imagen_voz_height"
-            android:layout_marginStart="@dimen/b_imagen_voz_ml"
-            android:layout_marginLeft="@dimen/b_imagen_voz_ml"
-            android:layout_marginTop="@dimen/b_imagen_voz_mt"
-            android:contentDescription="@string/talking"
-            app:srcCompat="@drawable/b_talking" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="375dp"
+                android:orientation="horizontal">
 
-    </FrameLayout>
+                <FrameLayout
+                    android:layout_width="@dimen/frame_principal_width"
+                    android:layout_height="@dimen/frame_principal_heigth"
+                    android:layout_marginStart="@dimen/frame_principal_ml"
+                    android:layout_marginLeft="@dimen/frame_principal_ml"
+                    android:layout_marginTop="@dimen/frame_principal_mt"
+                    android:layout_marginEnd="@dimen/frame_principal_mt"
+                    android:layout_marginRight="@dimen/grilla_frame_mr">
 
-    <Button
-        android:id="@+id/b_buttonBack"
-        android:layout_width="@dimen/i_btnBack_width"
-        android:layout_height="@dimen/i_btnBack_height"
-        android:layout_alignEnd="@+id/layout"
-        android:layout_alignRight="@+id/layout"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="@dimen/i_btnBack_mb"
-        android:background="#ffbf40"
-        android:text="@string/buttonBack"
-        android:textSize="@dimen/i_btnBack_text_size" />
+                    <TextView
+                        android:id="@+id/textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/b_texto_ml"
+                        android:layout_marginLeft="@dimen/b_texto_ml"
+                        android:layout_marginTop="@dimen/b_texto_mt"
+                        android:text="@string/raza_x"
+                        android:textSize="@dimen/lista_text_size" />
+
+                    <ImageButton
+                        android:id="@+id/listImagenBtn4"
+                        android:layout_width="@dimen/b_imagen_voz_width"
+                        android:layout_height="@dimen/b_imagen_voz_height"
+                        android:layout_marginStart="@dimen/b_imagen_voz_ml"
+                        android:layout_marginLeft="@dimen/b_imagen_voz_ml"
+                        android:layout_marginTop="@dimen/b_imagen_voz_mt"
+                        android:contentDescription="@string/talking"
+                        app:srcCompat="@drawable/audio_regular" />
+
+                </FrameLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/interaccion_b_row"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imageView8"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/grilla_imagen_heigth"
+                    android:layout_marginStart="@dimen/grilla_imagen_ml"
+                    android:layout_marginLeft="@dimen/grilla_imagen_ml"
+                    android:layout_marginTop="@dimen/b_imagen_caballo_mt"
+                    android:layout_marginEnd="@dimen/grilla_imagen_mr"
+                    android:layout_marginRight="@dimen/grilla_imagen_mr"
+                    android:layout_weight="1"
+                    android:contentDescription="@string/caballo"
+                    app:srcCompat="@drawable/angola-spc-zainocolorado" />
+
+                <ImageView
+                    android:id="@+id/imageView9"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/grilla_imagen_heigth"
+                    android:layout_marginStart="@dimen/grilla_imagen_ml"
+                    android:layout_marginLeft="@dimen/grilla_imagen_ml"
+                    android:layout_marginTop="@dimen/b_imagen_caballo_mt"
+                    android:layout_marginEnd="@dimen/grilla_imagen_mr"
+                    android:layout_marginRight="@dimen/grilla_imagen_mr"
+                    android:layout_weight="1"
+                    android:contentDescription="@string/caballo"
+                    app:srcCompat="@drawable/angola-spc-zainocolorado" />
+
+                <ImageView
+                    android:id="@+id/imageView10"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/grilla_imagen_heigth"
+                    android:layout_marginStart="@dimen/grilla_imagen_ml"
+                    android:layout_marginLeft="@dimen/grilla_imagen_ml"
+                    android:layout_marginTop="@dimen/b_imagen_caballo_mt"
+                    android:layout_marginEnd="@dimen/grilla_imagen_mr"
+                    android:layout_marginRight="@dimen/grilla_imagen_mr"
+                    android:layout_weight="1"
+                    android:contentDescription="@string/caballo"
+                    app:srcCompat="@drawable/angola-spc-zainocolorado" />
+
+                <ImageView
+                    android:id="@+id/imageView11"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/grilla_imagen_heigth"
+                    android:layout_marginStart="@dimen/grilla_imagen_ml"
+                    android:layout_marginLeft="@dimen/grilla_imagen_ml"
+                    android:layout_marginTop="@dimen/b_imagen_caballo_mt"
+                    android:layout_marginEnd="@dimen/grilla_imagen_mr"
+                    android:layout_marginRight="@dimen/grilla_imagen_mr"
+                    android:layout_weight="1"
+                    android:contentDescription="@string/caballo"
+                    app:srcCompat="@drawable/angola-spc-zainocolorado" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
 </RelativeLayout>

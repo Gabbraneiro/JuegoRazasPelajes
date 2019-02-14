@@ -39,57 +39,62 @@
     <!-- FIN Dimensiones activity_lista.xml -->
 
     <!-- Dimensiones activity_grilla.xml -->
-    <dimen name="grilla_frame_width">330sp</dimen>
-    <dimen name="grilla_frame_heigth">315sp</dimen>
-    <dimen name="grilla_frame_mt">50sp</dimen>
-    <dimen name="grilla_frame_mr">100sp</dimen>
+    <dimen name="grilla_row_heigth">400sp</dimen>
+    <dimen name="grilla_frame_width">340sp</dimen>
+    <dimen name="grilla_frame_heigth">350sp</dimen>
+    <dimen name="grilla_frame_mt">25sp</dimen>
+    <dimen name="grilla_frame_mr">40sp</dimen>
+    <dimen name="grilla_frame_ml">40sp</dimen>
     <dimen name="grilla_imagen_heigth">200sp</dimen>
     <dimen name="grilla_imagen_mt">30sp</dimen>
     <dimen name="grilla_imagen_ml">10sp</dimen>
     <dimen name="grilla_imagen_mr">10sp</dimen>
     <dimen name="grilla_texto_ml">10sp</dimen>
-    <dimen name="grilla_texto_mt">250sp</dimen>
+    <dimen name="grilla_texto_mt">275sp</dimen>
     <dimen name="grilla_texto_size">30sp</dimen>
-    <dimen name="grilla_imagen_voz_width">56sp</dimen>
-    <dimen name="grilla_imagen_voz_heigth">59sp</dimen>
-    <dimen name="grilla_imagen_voz_ml">150sp</dimen>
+    <dimen name="grilla_imagen_voz_width">70sp</dimen>
+    <dimen name="grilla_imagen_voz_heigth">70sp</dimen>
+    <dimen name="grilla_imagen_voz_ml">225sp</dimen>
     <dimen name="grilla_imagen_voz_mt">250sp</dimen>
     <!-- FIN Dimensiones activity_grilla.xml -->
 
-    <!-- Dimensiones activities interaccion -->
-    <dimen name="i_frame_width">1170sp</dimen>
-    <dimen name="i_frame_heigth">673sp</dimen>
-    <dimen name="i_frame_m">53sp</dimen>
-    <dimen name="i_frame2_heigth">241sp</dimen>
-    <dimen name="i_frame2_m">430sp</dimen>
-    <dimen name="i_imagen_height">201sp</dimen>
-    <dimen name="i_imagen_width">256sp</dimen>
-    <dimen name="i_imagen_mt">25sp</dimen>
-    <dimen name="i_imagen_ml">30sp</dimen>
-    <dimen name="i_imagen2_ml">315sp</dimen>
-    <dimen name="i_imagen3_ml">600sp</dimen>
-    <dimen name="i_imagen4_ml">885sp</dimen>
-    <dimen name="i_btnBack_width">164sp</dimen>
-    <dimen name="i_btnBack_height">69sp</dimen>
-    <dimen name="i_btnBack_mb">10sp</dimen>
-    <dimen name="i_btnBack_text_size">30sp</dimen>
-    <!-- FIN Dimensiones activities interaccion -->
+    <!-- Dimensiones activities interaccion a -->
+    <dimen name="a_frame_heigth">200sp</dimen>
+    <dimen name="a_frame_mt">50sp</dimen>
+    <dimen name="c_imagen_voz_width">100sp</dimen>
+    <dimen name="c_imagen_voz_height">100sp</dimen>
+    <dimen name="c_imagen_voz_ml">100sp</dimen>
+    <dimen name="c_imagen_voz_mt">100sp</dimen>
+    <dimen name="c_texto_voz_width">200sp</dimen>
+    <dimen name="c_texto_voz_height">100sp</dimen>
+    <dimen name="c_texto_voz_ml">60sp</dimen>
+    <dimen name="c_texto_voz_mt">10sp</dimen>
+    <!-- FIN Dimensiones activities interaccion a -->
 
     <!-- Dimensiones activity_interaccion_b.xml -->
-    <dimen name="b_texto_ml">380sp</dimen>
-    <dimen name="b_texto_mt">150sp</dimen>
-    <dimen name="b_texto_size">70sp</dimen>
+    <dimen name="row_principal_heigth">380sp</dimen>
+    <dimen name="interaccion_b_row">380sp</dimen>
+    <dimen name="frame_principal_width">500sp</dimen>
+    <dimen name="frame_principal_heigth">300sp</dimen>
+    <dimen name="frame_principal_ml">390sp</dimen>
+    <dimen name="frame_principal_mt">40sp</dimen>
+    <dimen name="b_texto_ml">100sp</dimen>
+    <dimen name="b_texto_mt">120sp</dimen>
+    <dimen name="b_texto_size">90sp</dimen>
     <dimen name="b_imagen_voz_width">90sp</dimen>
     <dimen name="b_imagen_voz_height">90sp</dimen>
-    <dimen name="b_imagen_voz_ml">660sp</dimen>
-    <dimen name="b_imagen_voz_mt">155sp</dimen>
+    <dimen name="b_imagen_voz_ml">300sp</dimen>
+    <dimen name="b_imagen_voz_mt">100sp</dimen>
+    <dimen name="b_imagen_caballo_heigth">200sp</dimen>
+    <dimen name="b_imagen_caballo_width">100sp</dimen>
+    <dimen name="b_imagen_caballo_mt">75sp</dimen>
     <!-- FIN Dimensiones activity_interaccion_b.xml -->
 
     <!-- Dimensiones activity_interaccion_c.xml -->
-    <dimen name="c_imagen_ppal_width">458sp</dimen>
-    <dimen name="c_imagen_ppal_height">242sp</dimen>
-    <dimen name="c_imagen_ppal_ml">360sp</dimen>
-    <dimen name="c_imagen_ppal_mt">70sp</dimen>
+    <dimen name="c_caballo_width">450sp</dimen>
+    <dimen name="c_caballo_heigth">225sp</dimen>
+    <dimen name="c_caballo_ml">25sp</dimen>
+    <dimen name="c_caballo_mt">37sp</dimen>
     <!-- FIN Dimensiones activity_interaccion_c.xml -->
 
 
