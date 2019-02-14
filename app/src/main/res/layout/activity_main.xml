@@ -20,7 +20,7 @@
         android:layout_marginTop="34dp"
         android:layout_marginEnd="212dp"
         android:layout_marginRight="212dp"
-        app:srcCompat="@drawable/logo_app" />
+        app:srcCompat="@drawable/Logo_app" />
 
     <ImageButton
         android:id="@+id/imgBtn_config"
