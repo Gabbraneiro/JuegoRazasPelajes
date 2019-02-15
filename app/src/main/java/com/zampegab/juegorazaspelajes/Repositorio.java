@@ -32,7 +32,7 @@ public class Repositorio {
         List<Caballo> retorno = new ArrayList<>();
         int max = getCaballos().size() -1;
         for (int i = 0; i < cantidad; i++) {
-            int random = (int)(Math.random()*max +1);
+            int random = (int)(Math.random()*max);
             retorno.add(var_caballos.get(random));
             var_caballos.remove(random);
             max--;

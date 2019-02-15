@@ -38,7 +38,7 @@ public class InteraccionBActivity  extends AppCompatActivity {
             opcion4.setImageResource(caballos.get(3).getImg());
         }
 
-        final Caballo c = caballos.get((int)(Math.random() * (caballos.size()-1) + 1));
+        final Caballo c = caballos.get((int)(Math.random() * (caballos.size()-1)));
         TextView raza = findViewById(R.id.a_raza);
         raza.setText(c.getRaza());
         btnRaza = findViewById(R.id.a_sonido);
