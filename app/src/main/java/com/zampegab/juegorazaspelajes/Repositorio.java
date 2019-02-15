@@ -9,7 +9,7 @@ public class Repositorio {
     private static List<Caballo> caballos;
 
     private static List<Caballo> hardcodeCaballos(){
-        List<Caballo> retorno = new ArrayList<Caballo>();
+        List<Caballo> retorno = new ArrayList<>();
         retorno.add(new Caballo("angola","spc","zainocolorado",R.drawable.angola_spc_zainocolorado,R.raw.raza_spc,R.raw.pelaje_zaino,R.raw.razaconpelaje_spc_zaina_colorada, ""));
         retorno.add(new Caballo("candelaria","mestizo","tobiano",R.drawable.candelaria_mestizo_tobiano,R.raw.raza_mestizo,R.raw.pelaje_tobiano,R.raw.razaconpelaje_mestizo_tobiano,""));
         retorno.add(new Caballo("ciro","mestizo","tordillo canela",R.drawable.ciro_mestizo_tordillocanela,R.raw.raza_mestizo,R.raw.pelaje_tordiollo_canela,R.raw.razaconpelaje_mestizo_tordillo_canela,""));
@@ -29,10 +29,10 @@ public class Repositorio {
 
     public static List<Caballo> getCaballosRandom(int cantidad){
         List<Caballo> var_caballos = getCaballos();
-        List<Caballo> retorno = new ArrayList<Caballo>();
+        List<Caballo> retorno = new ArrayList<>();
         int max = getCaballos().size() -1;
         for (int i = 0; i < cantidad; i++) {
-            int random = (int)Math.random()*max +1;
+            int random = (int)(Math.random()*max +1);
             retorno.add(var_caballos.get(random));
             var_caballos.remove(random);
             max--;
@@ -44,28 +44,19 @@ public class Repositorio {
         Caballo caballo = null;
         switch (by){
             case "raza":
-                caballo = findCaballoByRaza((String)str_filtro);
-                break;
+                return findCaballoByRaza((String)str_filtro);
             case "pelaje":
-                caballo = findCaballoByPelaje((String)str_filtro);
-                break;
+                return findCaballoByPelaje((String)str_filtro);
             case "raza_pelaje":
-                caballo = findCaballoByRazaPelaje((String)str_filtro);
-                break;
+                return findCaballoByRazaPelaje((String)str_filtro);
             case "str_img":
-                caballo = findCaballoByimg((int)str_filtro);
+                return findCaballoByimg((int)str_filtro);
             case "str_audio_pelaje":
-                caballo = findCaballoByStrAudioPelaje((int)str_filtro);
-                break;
+                return findCaballoByStrAudioPelaje((int)str_filtro);
             case "str_audio_raza":
-                caballo = findCaballoByStrAudioRaza((int)str_filtro);
-                break;
+                return findCaballoByStrAudioRaza((int)str_filtro);
             case "str_audio_raza_pelaje":
-                caballo = findCaballoByStrAudioRazaPelaje((int)str_filtro);
-                break;
-
-
-
+                return findCaballoByStrAudioRazaPelaje((int)str_filtro);
         }
         return caballo;
     }
