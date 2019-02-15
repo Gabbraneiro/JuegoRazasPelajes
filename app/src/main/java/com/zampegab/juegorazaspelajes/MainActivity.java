@@ -5,6 +5,7 @@ import android.preference.Preference;
 import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.Button;
 import android.content.Intent;
 import android.view.View;
@@ -14,6 +15,7 @@ import android.widget.ImageButton;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -67,7 +69,7 @@ public class MainActivity extends AppCompatActivity {
                 ImageButton imagen = findViewById(R.id.btn_jugar);
                 imagen.setImageResource(R.drawable.jugar_click);
 
-                ArrayList<Caballo> caballos = Repositorio.getCaballosRandom(getCantCaballos(sharedPreferences));
+                //List<Caballo> caballos = Repositorio.getCaballosRandom(getCantCaballos(sharedPreferences));
                 String pref_interaccion = sharedPreferences.getString("modo_interaccion", "");
                 String pref_nivel = sharedPreferences.getString("minijuego", "");
                 Intent intent = null;
@@ -84,7 +86,7 @@ public class MainActivity extends AppCompatActivity {
                         intent = new Intent(MainActivity.this, InteraccionCActivity.class);
                         break;
                 }
-                intent.putExtra("minijuego", pref_nivel);
+                intent.putExtra("caballos", getCantCaballos(sharedPreferences));
                 startActivity(intent);
             }
         });

@@ -83,7 +83,7 @@
     <dimen name="b_texto_size">90sp</dimen>
     <dimen name="b_imagen_voz_width">90sp</dimen>
     <dimen name="b_imagen_voz_height">90sp</dimen>
-    <dimen name="b_imagen_voz_ml">300sp</dimen>
+    <dimen name="b_imagen_voz_ml">400sp</dimen>
     <dimen name="b_imagen_voz_mt">100sp</dimen>
     <dimen name="b_imagen_caballo_heigth">200sp</dimen>
     <dimen name="b_imagen_caballo_width">100sp</dimen>

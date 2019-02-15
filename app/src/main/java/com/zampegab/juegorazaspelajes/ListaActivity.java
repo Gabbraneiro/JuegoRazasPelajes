@@ -6,6 +6,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class ListaActivity  extends AppCompatActivity{
 
     MediaPlayer mpCaballo;
@@ -13,7 +16,7 @@ public class ListaActivity  extends AppCompatActivity{
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-
+        List<Caballo> caballos = Repositorio.getCaballos();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lista);
 

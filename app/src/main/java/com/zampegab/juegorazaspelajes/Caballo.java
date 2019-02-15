@@ -1,16 +1,22 @@
 package com.zampegab.juegorazaspelajes;
 
-public class Caballo {
-    private String nombre,raza, pelaje,str_img, str_audio_pelaje, str_audio_raza, str_audio_raza_pelaje;
+import java.io.Serializable;
 
-    public Caballo(String nombre, String raza, String pelaje, String str_img, String str_audio_pelaje, String str_audio_raza, String str_audio_raza_pelaje) {
+public class Caballo implements Serializable {
+    private String nombre,raza,pelaje,descripcion;
+    private int img, audio_pelaje, audio_raza, audio_raza_pelaje;
+
+
+    public Caballo(String nombre, String raza, String pelaje, int img, int audio_pelaje, int audio_raza, int audio_raza_pelaje, String descripcion) {
         this.nombre = nombre;
         this.raza = raza;
         this.pelaje = pelaje;
-        this.str_img = str_img;
-        this.str_audio_pelaje = str_audio_pelaje;
-        this.str_audio_raza = str_audio_raza;
-        this.str_audio_raza_pelaje = str_audio_raza_pelaje;
+        this.img = img;
+        this.audio_pelaje = audio_pelaje;
+        this.audio_raza = audio_raza;
+        this.audio_raza_pelaje = audio_raza_pelaje;
+        this.descripcion = descripcion;
+
     }
 
     public String getNombre() {
@@ -20,6 +26,7 @@ public class Caballo {
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
+
     public String getRaza() {
         return raza;
     }
@@ -36,35 +43,43 @@ public class Caballo {
         this.pelaje = pelaje;
     }
 
-    public String getStr_img() {
-        return str_img;
+    public String getDescripcion() {
+        return descripcion;
     }
 
-    public void setStr_img(String str_img) {
-        this.str_img = str_img;
+    public void setDescripcion(String descripcion) {
+        this.descripcion = descripcion;
     }
 
-    public String getStr_audio_pelaje() {
-        return str_audio_pelaje;
+    public int getImg() {
+        return img;
     }
 
-    public void setStr_audio_pelaje(String str_audio_pelaje) {
-        this.str_audio_pelaje = str_audio_pelaje;
+    public void setImg(int img) {
+        this.img = img;
     }
 
-    public String getStr_audio_raza() {
-        return str_audio_raza;
+    public int getAudio_pelaje() {
+        return audio_pelaje;
     }
 
-    public void setStr_audio_raza(String str_audio_raza) {
-        this.str_audio_raza = str_audio_raza;
+    public void setAudio_pelaje(int audio_pelaje) {
+        this.audio_pelaje = audio_pelaje;
     }
 
-    public String getStr_audio_raza_pelaje() {
-        return str_audio_raza_pelaje;
+    public int getAudio_raza() {
+        return audio_raza;
     }
 
-    public void setStr_audio_raza_pelaje(String str_audio_raza_pelaje) {
-        this.str_audio_raza_pelaje = str_audio_raza_pelaje;
+    public void setAudio_raza(int audio_raza) {
+        this.audio_raza = audio_raza;
+    }
+
+    public int getAudio_raza_pelaje() {
+        return audio_raza_pelaje;
+    }
+
+    public void setAudio_raza_pelaje(int audio_raza_pelaje) {
+        this.audio_raza_pelaje = audio_raza_pelaje;
     }
 }

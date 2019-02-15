@@ -5,6 +5,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+
+import java.lang.reflect.Method;
+import java.util.ArrayList;
+import java.util.List;
 
 public class GrillaActivity extends AppCompatActivity{
 
@@ -14,6 +20,7 @@ public class GrillaActivity extends AppCompatActivity{
         @Override
         protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
+            List<Caballo> caballos = Repositorio.getCaballos();
             setContentView(R.layout.activity_grilla);
 
             /*mpCaballo = MediaPlayer.create(this, R.raw.caballo);
