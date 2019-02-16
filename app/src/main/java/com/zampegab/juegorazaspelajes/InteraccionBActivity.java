@@ -4,9 +4,11 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
+import android.graphics.drawable.AnimationDrawable;
 import android.graphics.drawable.Drawable;
 import android.media.AudioManager;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.text.Layout;
 import android.util.Log;
@@ -103,7 +105,7 @@ public class InteraccionBActivity  extends AppCompatActivity {
         opcion1.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-
+                confeti();
                 if(caballos.get(0).getRaza() == c.getRaza()){
                     //RESPUESTA CORRECTA.
                     cant_correctas++;
@@ -114,8 +116,8 @@ public class InteraccionBActivity  extends AppCompatActivity {
                     soundPool.play(incorrecto_resoplido,1,1,0,0,1);
                 }
                 cant_rondas++;
-                //confeti();
-                jugarInteraccionB();
+
+                //jugarInteraccionB();
 
             }
         });
@@ -138,21 +140,15 @@ public class InteraccionBActivity  extends AppCompatActivity {
     }
     private void confeti(){
         //PROBANDO
-        ImageView sv = findViewById(R.id.confeti);
-        try{
-            int resId = getResources().getIdentifier("com.zampegab.juegorazaspelajes:drawable/angola_spc_zainocolorado",null,null);
-            sv.setImageResource(resId);/*
-            for (int i = 8; i < 71; i++) {
-                int resId = getResources().getIdentifier("com.zampegab.juegorazaspelajes:drawable/c00"+i,null,null);
-                sv.setImageResource(resId);
-            }*/
-        }
-        catch (Exception e){
-            Intent i = new Intent(InteraccionBActivity.this, MainActivity.class);
-            startActivity(i);
-        }
+        ImageView iv = findViewById(R.id.confeti);
+        AnimationDrawable animationConfeti = (AnimationDrawable)iv.getBackground();
+        animationConfeti.start();
        /*
-*/
+        Intent i = new Intent(InteraccionBActivity.this, InteraccionCActivity.class);
+        startActivity(i);
+        */
+
+
     }
     @Override
     protected void onResume(){
