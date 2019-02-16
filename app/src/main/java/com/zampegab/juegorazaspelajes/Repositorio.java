@@ -10,13 +10,13 @@ public class Repositorio {
 
     private static List<Caballo> hardcodeCaballos(){
         List<Caballo> retorno = new ArrayList<>();
-        retorno.add(new Caballo("angola","spc","zainocolorado",R.drawable.angola_spc_zainocolorado,R.raw.pelaje_zaino,R.raw.raza_spc,R.raw.razaconpelaje_spc_zaina_colorada, ""));
-        retorno.add(new Caballo("candelaria","mestizo","tobiano",R.drawable.candelaria_mestizo_tobiano,R.raw.pelaje_tobiano,R.raw.raza_mestizo,R.raw.razaconpelaje_mestizo_tobiano,""));
-        retorno.add(new Caballo("ciro","mestizo","tordillo canela",R.drawable.ciro_mestizo_tordillocanela,R.raw.pelaje_tordiollo_canela,R.raw.raza_mestizo,R.raw.razaconpelaje_mestizo_tordillo_canela,""));
-        retorno.add(new Caballo("bionda","cruza arabe","alazan ruano",R.drawable.bionda_cruzaarabe_alazanruano,R.raw.pelaje_alazan_ruano,R.raw.raza_criollo,-1,""));
-        retorno.add(new Caballo("bonita","mestizo criollo","overo azulejo",R.drawable.bonita_mestizo_criollo_overo_azulejo,R.raw.pelaje_overo_azulejo,R.raw.raza_mestizo,-1,""));
-        retorno.add(new Caballo("huaflin","criollo","horespicaso",R.drawable.huaflin_criollo_horespicaso,R.raw.pelaje_picaso,R.raw.raza_criollo,-1,""));
-        retorno.add(new Caballo("juana","cruza de milla","bayo",R.drawable.juana_cuartodemilla_bayo,R.raw.pelaje_bayo,R.raw.raza_cuartodemilla,R.raw.razaconpelaje_cuartodemilla_bayo,""));
+        retorno.add(new Caballo(1,"angola","spc","zainocolorado",R.drawable.angola_spc_zainocolorado,R.raw.pelaje_zaino,R.raw.raza_spc,R.raw.razaconpelaje_spc_zaina_colorada, ""));
+        retorno.add(new Caballo(2,"candelaria","mestizo","tobiano",R.drawable.candelaria_mestizo_tobiano,R.raw.pelaje_tobiano,R.raw.raza_mestizo,R.raw.razaconpelaje_mestizo_tobiano,""));
+        retorno.add(new Caballo(3,"ciro","mestizo","tordillo canela",R.drawable.ciro_mestizo_tordillocanela,R.raw.pelaje_tordiollo_canela,R.raw.raza_mestizo,R.raw.razaconpelaje_mestizo_tordillo_canela,""));
+        retorno.add(new Caballo(4,"bionda","cruza arabe","alazan ruano",R.drawable.bionda_cruzaarabe_alazanruano,R.raw.pelaje_alazan_ruano,R.raw.raza_criollo,-1,""));
+        retorno.add(new Caballo(5,"bonita","mestizo criollo","overo azulejo",R.drawable.bonita_mestizo_criollo_overo_azulejo,R.raw.pelaje_overo_azulejo,R.raw.raza_mestizo,-1,""));
+        retorno.add(new Caballo(6,"huaflin","criollo","horespicaso",R.drawable.huaflin_criollo_horespicaso,R.raw.pelaje_picaso,R.raw.raza_criollo,-1,""));
+        retorno.add(new Caballo(7,"juana","cruza de milla","bayo",R.drawable.juana_cuartodemilla_bayo,R.raw.pelaje_bayo,R.raw.raza_cuartodemilla,R.raw.razaconpelaje_cuartodemilla_bayo,""));
         return retorno;
     }
     public static List<Caballo> getCaballos(){
@@ -37,6 +37,7 @@ public class Repositorio {
             var_caballos.remove(random);
             max--;
         }
+        caballos = null;
         return retorno;
 
     }
@@ -130,4 +131,6 @@ public class Repositorio {
         }
         return caballo;
     }
+
+
 }
