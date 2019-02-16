@@ -89,7 +89,6 @@ public class MainActivity extends AppCompatActivity {
                 }
                 intent.putExtra("caballos", getCantCaballos(sharedPreferences));
                 startActivity(intent);
-                finish();
             }
         });
     }
@@ -102,6 +101,7 @@ public class MainActivity extends AppCompatActivity {
             return 4;
         }
     }
+
 }
 
 
