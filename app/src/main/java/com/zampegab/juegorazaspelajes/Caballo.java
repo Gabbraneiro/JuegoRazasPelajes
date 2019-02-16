@@ -4,10 +4,11 @@ import java.io.Serializable;
 
 public class Caballo implements Serializable {
     private String nombre,raza,pelaje,descripcion;
-    private int img, audio_pelaje, audio_raza, audio_raza_pelaje;
+    private int id, img, audio_pelaje, audio_raza, audio_raza_pelaje;
 
 
-    public Caballo(String nombre, String raza, String pelaje, int img, int audio_pelaje, int audio_raza, int audio_raza_pelaje, String descripcion) {
+    public Caballo(int id,String nombre, String raza, String pelaje, int img, int audio_pelaje, int audio_raza, int audio_raza_pelaje, String descripcion) {
+        this.id = id;
         this.nombre = nombre;
         this.raza = raza;
         this.pelaje = pelaje;
@@ -17,6 +18,10 @@ public class Caballo implements Serializable {
         this.audio_raza_pelaje = audio_raza_pelaje;
         this.descripcion = descripcion;
 
+    }
+
+    public int getId() {
+        return id;
     }
 
     public String getNombre() {

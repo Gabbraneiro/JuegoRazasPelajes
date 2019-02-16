@@ -1,19 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#ffbf40">
 
 
     <ScrollView
+        android:id="@+id/scroll_B"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical" >
+            android:orientation="vertical">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -67,6 +69,7 @@
                     android:layout_marginEnd="@dimen/grilla_imagen_mr"
                     android:layout_marginRight="@dimen/grilla_imagen_mr"
                     android:layout_weight="1"
+                    android:clickable="true"
                     android:contentDescription="@string/caballo" />
 
                 <ImageView
@@ -79,6 +82,7 @@
                     android:layout_marginEnd="@dimen/grilla_imagen_mr"
                     android:layout_marginRight="@dimen/grilla_imagen_mr"
                     android:layout_weight="1"
+                    android:clickable="true"
                     android:contentDescription="@string/caballo" />
 
                 <ImageView
@@ -91,6 +95,7 @@
                     android:layout_marginEnd="@dimen/grilla_imagen_mr"
                     android:layout_marginRight="@dimen/grilla_imagen_mr"
                     android:layout_weight="1"
+                    android:clickable="true"
                     android:contentDescription="@string/caballo" />
 
                 <ImageView
@@ -108,5 +113,10 @@
 
         </LinearLayout>
     </ScrollView>
+
+    <ImageView
+        android:id="@+id/confeti"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 
 </RelativeLayout>
