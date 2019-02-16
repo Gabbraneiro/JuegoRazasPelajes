@@ -1,6 +1,7 @@
 package com.zampegab.juegorazaspelajes;
 
 import android.content.SharedPreferences;
+import android.os.Parcelable;
 import android.preference.Preference;
 import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
@@ -88,13 +89,14 @@ public class MainActivity extends AppCompatActivity {
                 }
                 intent.putExtra("caballos", getCantCaballos(sharedPreferences));
                 startActivity(intent);
+                finish();
             }
         });
     }
 
     public Integer getCantCaballos(SharedPreferences sharedPreferences) {
         String pref_nivel = sharedPreferences.getString("nivel", "");
-        if (pref_nivel == "1") {
+        if (pref_nivel.equals("1")) {
             return 2;
         } else {
             return 4;
