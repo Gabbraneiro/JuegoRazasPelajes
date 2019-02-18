@@ -63,6 +63,7 @@
                         android:layout_marginLeft="@dimen/c_caballo_ml"
                         android:layout_marginTop="@dimen/c_caballo_mt"
                         android:contentDescription="@string/caballo" />
+
                 </FrameLayout>
 
             </LinearLayout>

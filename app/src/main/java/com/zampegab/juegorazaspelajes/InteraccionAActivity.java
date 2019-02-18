@@ -20,6 +20,7 @@ public class InteraccionAActivity extends AppCompatActivity {
 
     private SoundPool soundPool;
     private int audio_raza, cant_correctas, cant_rondas, incorrecto_resoplido, correcto_relincho;
+    ImageButton btnHome;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -121,7 +122,6 @@ public class InteraccionAActivity extends AppCompatActivity {
                     soundPool.play(audio_raza, 1, 1, 0, 0, 1);
                 }
             });
-
         }
     }
 

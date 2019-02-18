@@ -6,6 +6,7 @@
     android:background="#ffbf40">
 
     <ScrollView
+        android:id="@+id/scroll_C"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
@@ -20,23 +21,45 @@
                 android:orientation="horizontal">
 
                 <FrameLayout
+                    android:id="@+id/c_contadores"
+                    android:layout_width="200sp"
+                    android:layout_height="150sp"
+                    android:layout_marginLeft="25sp">
+
+                    <TextView
+                        android:id="@+id/c_correctas2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20sp"
+                        android:text="Correctas: 0"
+                        android:textSize="30sp" />
+
+                    <TextView
+                        android:id="@+id/c_rondas"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="70sp"
+                        android:text="Rondas: 0"
+                        android:textSize="30sp" />
+                </FrameLayout>
+
+                <FrameLayout
                     android:layout_width="@dimen/frame_principal_width"
                     android:layout_height="@dimen/frame_principal_heigth"
-                    android:layout_marginStart="@dimen/frame_principal_ml"
-                    android:layout_marginLeft="@dimen/frame_principal_ml"
+                    android:layout_marginStart="200sp"
+                    android:layout_marginLeft="200sp"
                     android:layout_marginTop="@dimen/frame_principal_mt"
                     android:layout_marginEnd="@dimen/frame_principal_mt"
                     android:layout_marginRight="@dimen/grilla_frame_mr">
 
                     <ImageView
-                        android:id="@+id/imageView7"
+                        android:id="@+id/c_caballo_correcto"
                         android:layout_width="@dimen/c_caballo_width"
                         android:layout_height="@dimen/c_caballo_heigth"
                         android:layout_marginStart="@dimen/c_caballo_ml"
                         android:layout_marginLeft="@dimen/c_caballo_ml"
                         android:layout_marginTop="@dimen/c_caballo_mt"
-                        android:contentDescription="@string/caballo"
-                        app:srcCompat="@drawable/angola_spc_zainocolorado" />
+                        android:contentDescription="@string/caballo" />
                 </FrameLayout>
 
             </LinearLayout>
@@ -47,7 +70,7 @@
                 android:orientation="horizontal">
 
                 <ImageView
-                    android:id="@+id/imageView8"
+                    android:id="@+id/c_opcion_1"
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/grilla_imagen_heigth"
                     android:layout_marginStart="@dimen/grilla_imagen_ml"
@@ -56,11 +79,10 @@
                     android:layout_marginEnd="@dimen/grilla_imagen_mr"
                     android:layout_marginRight="@dimen/grilla_imagen_mr"
                     android:layout_weight="1"
-                    android:contentDescription="@string/caballo"
-                    app:srcCompat="@drawable/angola_spc_zainocolorado" />
+                    android:contentDescription="@string/caballo" />
 
                 <ImageView
-                    android:id="@+id/imageView9"
+                    android:id="@+id/c_opcion_2"
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/grilla_imagen_heigth"
                     android:layout_marginStart="@dimen/grilla_imagen_ml"
@@ -69,11 +91,10 @@
                     android:layout_marginEnd="@dimen/grilla_imagen_mr"
                     android:layout_marginRight="@dimen/grilla_imagen_mr"
                     android:layout_weight="1"
-                    android:contentDescription="@string/caballo"
-                    app:srcCompat="@drawable/angola_spc_zainocolorado" />
+                    android:contentDescription="@string/caballo" />
 
                 <ImageView
-                    android:id="@+id/imageView10"
+                    android:id="@+id/c_opcion_3"
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/grilla_imagen_heigth"
                     android:layout_marginStart="@dimen/grilla_imagen_ml"
@@ -82,11 +103,10 @@
                     android:layout_marginEnd="@dimen/grilla_imagen_mr"
                     android:layout_marginRight="@dimen/grilla_imagen_mr"
                     android:layout_weight="1"
-                    android:contentDescription="@string/caballo"
-                    app:srcCompat="@drawable/angola_spc_zainocolorado" />
+                    android:contentDescription="@string/caballo" />
 
                 <ImageView
-                    android:id="@+id/imageView11"
+                    android:id="@+id/c_opcion_4"
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/grilla_imagen_heigth"
                     android:layout_marginStart="@dimen/grilla_imagen_ml"
@@ -95,10 +115,35 @@
                     android:layout_marginEnd="@dimen/grilla_imagen_mr"
                     android:layout_marginRight="@dimen/grilla_imagen_mr"
                     android:layout_weight="1"
-                    android:contentDescription="@string/caballo"
-                    app:srcCompat="@drawable/angola_spc_zainocolorado" />
+                    android:contentDescription="@string/caballo" />
             </LinearLayout>
 
         </LinearLayout>
     </ScrollView>
+
+    <ImageView
+        android:id="@+id/copa"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/confeti"
+        android:visibility="invisible" />
+
+    <FrameLayout
+        android:id="@+id/c_div_fin_nivel"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="0dp"
+        android:visibility="invisible">
+
+        <Button
+            android:id="@+id/c_accion_nivel"
+            android:layout_width="300sp"
+            android:layout_height="100sp"
+            android:layout_marginLeft="500sp"
+            android:layout_marginTop="300sp"
+            android:textSize="28sp" />
+
+    </FrameLayout>
+
 </RelativeLayout>
