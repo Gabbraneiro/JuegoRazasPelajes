@@ -18,30 +18,29 @@ import java.util.List;
 
 public class InteraccionAActivity extends AppCompatActivity {
 
-    int audio_raza;
-    SoundPool soundPool = new SoundPool(6, AudioManager.STREAM_MUSIC, 0);
-    int incorrecto_resoplido = soundPool.load(this, R.raw.resoplido,1);
-    int correcto_relincho = soundPool.load(this, R.raw.relincho,1);
-    int cant_correctas, cant_rondas;
+    private SoundPool soundPool;
+    private int audio_raza, cant_correctas, cant_rondas, incorrecto_resoplido, correcto_relincho;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
         cant_correctas = 0;
         cant_rondas = 0;
+        soundPool = new SoundPool(6, AudioManager.STREAM_MUSIC, 0);
+        incorrecto_resoplido = soundPool.load(this, R.raw.resoplido,1);
+        correcto_relincho = soundPool.load(this, R.raw.relincho,1);
+        super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_interaccion_a);
         jugarInteraccionA();
     }
 
     public void jugarInteraccionA(){
-
         final List<Caballo> caballos = Repositorio.getCaballosRandom((int) getIntent().getExtras().get("caballos"));
         final Caballo c = caballos.get((int) (Math.random() * (caballos.size() - 1)));
-        ImageView raza = findViewById(R.id.a_raza);
-        raza.setImageResource(c.getImg());
+        ImageView caballo_correcto = findViewById(R.id.a_caballo_correcto);
+        caballo_correcto.setImageResource(c.getImg());
 
         // OPCION 1
-        TextView opcion1 = findViewById(R.id.a_opcion_2);
+        TextView opcion1 = findViewById(R.id.opcion2);
         opcion1.setText(caballos.get(0).getRaza());
         opcion1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -51,7 +50,7 @@ public class InteraccionAActivity extends AppCompatActivity {
         });
 
         ImageButton audio_opcion1 = findViewById(R.id.b_opcion_2);
-        audio_opcion1.setImageResource(caballos.get(0).getImg());
+        audio_opcion1.setImageResource(R.drawable.audio_regular);
         audio_opcion1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -61,7 +60,7 @@ public class InteraccionAActivity extends AppCompatActivity {
         });
 
         //OPCION 2
-        TextView opcion2 = findViewById(R.id.a_opcion_3);
+        TextView opcion2 = findViewById(R.id.opcion3);
         opcion2.setText(caballos.get(1).getRaza());
         opcion2.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -71,7 +70,7 @@ public class InteraccionAActivity extends AppCompatActivity {
         });
 
         ImageButton audio_opcion2 = findViewById(R.id.b_opcion_3);
-        audio_opcion2.setImageResource(caballos.get(1).getImg());
+        audio_opcion2.setImageResource(R.drawable.audio_regular);
         audio_opcion2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -84,7 +83,7 @@ public class InteraccionAActivity extends AppCompatActivity {
         if (caballos.size() > 2) {
 
             // OPCION 3
-            TextView opcion3 = findViewById(R.id.a_opcion_1);
+            TextView opcion3 = findViewById(R.id.opcion1);
             opcion3.setText(caballos.get(2).getRaza());
             opcion3.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -94,7 +93,7 @@ public class InteraccionAActivity extends AppCompatActivity {
             });
 
             ImageButton audio_opcion3 = findViewById(R.id.b_opcion_1);
-            audio_opcion3.setImageResource(caballos.get(2).getImg());
+            audio_opcion3.setImageResource(R.drawable.audio_regular);
             audio_opcion3.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -104,7 +103,7 @@ public class InteraccionAActivity extends AppCompatActivity {
             });
 
             //OPCION 4
-            TextView opcion4 = findViewById(R.id.a_opcion_4);
+            TextView opcion4 = findViewById(R.id.opcion4);
             opcion4.setText(caballos.get(3).getRaza());
             opcion4.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -114,7 +113,7 @@ public class InteraccionAActivity extends AppCompatActivity {
             });
 
             ImageButton audio_opcion4 = findViewById(R.id.b_opcion_4);
-            audio_opcion4.setImageResource(caballos.get(3).getImg());
+            audio_opcion4.setImageResource(R.drawable.audio_regular);
             audio_opcion4.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -138,14 +137,13 @@ public class InteraccionAActivity extends AppCompatActivity {
             soundPool.play(incorrecto_resoplido,1,1,0,0,1);
         }
         cant_rondas++;
-        updateViewContadores();
-
+        verificar_rondas();
     }
 
     private void updateViewContadores(){
-        TextView correctas = findViewById(R.id.correctas2);
+        TextView correctas = findViewById(R.id.a_correctas2);
         correctas.setText("Correctas: "+cant_correctas);
-        TextView ronda = findViewById(R.id.rondas);
+        TextView ronda = findViewById(R.id.a_rondas);
         ronda.setText("Rondas: "+cant_rondas);
     }
 
