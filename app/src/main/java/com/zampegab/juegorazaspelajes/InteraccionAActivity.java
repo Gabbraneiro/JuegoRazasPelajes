@@ -162,7 +162,7 @@ public class InteraccionAActivity extends AppCompatActivity {
             final FrameLayout modal = findViewById(R.id.a_div_fin_nivel);
             if (cant_correctas >=3 ){
                 // SE DA LA OPCION DE PASAR AL SIGUIENTE MINIJUEGO
-                //confeti();
+                confeti();
                 accion.setText(R.string.to_next);
                 accion.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
                 modal.setVisibility(View.VISIBLE);
