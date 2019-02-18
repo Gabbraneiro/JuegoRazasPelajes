@@ -41,8 +41,7 @@
                         android:contentDescription="@string/caballo"
                         app:srcCompat="@drawable/juana_cuartodemilla_bayo"
                         tools:srcCompat="@drawable/bionda_cruzaarabe_alazanruano" />
-                </FrameLayout
-                    >
+                </FrameLayout>
 
             </LinearLayout>
 
