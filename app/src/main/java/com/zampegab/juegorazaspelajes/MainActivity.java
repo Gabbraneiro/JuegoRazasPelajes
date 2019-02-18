@@ -1,5 +1,6 @@
 package com.zampegab.juegorazaspelajes;
 
+import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Parcelable;
 import android.preference.Preference;
@@ -23,14 +24,15 @@ public class MainActivity extends AppCompatActivity {
     ImageButton btn_conf;
     ImageButton btn_jugar;
     ImageButton btn_reconocimiento;
+    Context context;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        context = this;
         final SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
-
 
         btn_conf = findViewById(R.id.btn_conf);
         btn_reconocimiento = findViewById(R.id.btn_reconocimiento);
@@ -44,6 +46,7 @@ public class MainActivity extends AppCompatActivity {
 
                 Intent intent = new Intent(MainActivity.this, SettingsActivity.class);
                 startActivity(intent);
+                imagen.setImageResource(R.drawable.config_click);
             }
         });
 
@@ -52,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 ImageButton imagen = findViewById(R.id.btn_reconocimiento);
                 imagen.setImageResource(R.drawable.reconocimiento_click);
-
+                   // new CuadroDialogo(context, 1, "correcta", 1);
                 String pref_reconocimiento = sharedPreferences.getString("modo_reconocimiento", "");
                 if (pref_reconocimiento.equals("1")) {
                     Intent intent = new Intent(MainActivity.this, ListaActivity.class);
@@ -61,6 +64,7 @@ public class MainActivity extends AppCompatActivity {
                     Intent intent = new Intent(MainActivity.this, GrillaActivity.class);
                     startActivity(intent);
                 }
+                imagen.setImageResource(R.drawable.reconocimiento_regular);
             }
         });
 
@@ -89,6 +93,7 @@ public class MainActivity extends AppCompatActivity {
                 }
                 intent.putExtra("caballos", getCantCaballos(sharedPreferences));
                 startActivity(intent);
+                imagen.setImageResource(R.drawable.jugar_regular);
             }
         });
     }

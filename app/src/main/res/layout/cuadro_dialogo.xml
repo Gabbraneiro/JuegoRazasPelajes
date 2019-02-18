@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="509dp"
+        android:layout_height="283dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="389dp"
+        android:layout_marginLeft="389dp"
+        android:layout_marginTop="259dp"
+        android:layout_marginEnd="382dp"
+        android:layout_marginRight="382dp"
+        android:layout_marginBottom="258dp"
+        android:orientation="vertical"
+        android:background="@drawable/cuadro_dialogo">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="62dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/dialogo_titulo"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:textColor="#000000" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="133dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/dialogo_ronda"
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:gravity="center"/>
+
+            <TextView
+                android:id="@+id/dialogo_correctas"
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:text="asdd"
+                android:textColor="#000000"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:orientation="horizontal"
+            android:background="#ffffff">
+
+            <Button
+                android:id="@+id/dialogo_button"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="220dp"
+                android:layout_marginLeft="220dp"
+                android:layout_marginRight="220dp"
+                android:layout_marginEnd="220dp"
+                android:layout_marginTop="25dp"
+                android:textSize="25sp"
+                android:textColor="#000000"
+                android:background="#ffffff"/>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>
