@@ -22,15 +22,15 @@ import android.widget.ScrollView;
 import android.widget.TextView;
 import android.media.SoundPool;
 
-import java.util.ArrayList;
+import org.w3c.dom.Text;
+
 import java.util.List;
 
 public class InteraccionBActivity  extends AppCompatActivity {
 
     private SoundPool  soundPool;
-    int sonido_raza, correcto_relincho, incorrecto_resoplido;
+    private int sonido_raza, correcto_relincho, incorrecto_resoplido,cant_correctas, cant_rondas;
     private ImageButton btnRaza;
-    private int cant_correctas, cant_rondas;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,7 +38,6 @@ public class InteraccionBActivity  extends AppCompatActivity {
         correcto_relincho = soundPool.load(this, R.raw.relincho, 1);
         incorrecto_resoplido = soundPool.load(this, R.raw.resoplido, 1);
         super.onCreate(savedInstanceState);
-        cant_correctas = 0; cant_rondas = 0;
         setContentView(R.layout.activity_interaccion_b);
 
         jugarInteraccionB();
@@ -82,7 +81,7 @@ public class InteraccionBActivity  extends AppCompatActivity {
                         soundPool.play(incorrecto_resoplido,1,1,0,0,1);
                     }
                     cant_rondas++;
-                    jugarInteraccionB();
+                    checkContadores();
                 }
             });
             opcion4.setOnClickListener(new View.OnClickListener(){
@@ -98,14 +97,13 @@ public class InteraccionBActivity  extends AppCompatActivity {
                         soundPool.play(incorrecto_resoplido,1,1,0,0,1);
                     }
                     cant_rondas++;
-                    jugarInteraccionB();
+                    checkContadores();
                 }
             });
         }
         opcion1.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                confeti();
                 if(caballos.get(0).getRaza() == c.getRaza()){
                     //RESPUESTA CORRECTA.
                     cant_correctas++;
@@ -116,8 +114,7 @@ public class InteraccionBActivity  extends AppCompatActivity {
                     soundPool.play(incorrecto_resoplido,1,1,0,0,1);
                 }
                 cant_rondas++;
-
-                //jugarInteraccionB();
+                checkContadores();
 
             }
         });
@@ -134,22 +131,22 @@ public class InteraccionBActivity  extends AppCompatActivity {
                     soundPool.play(incorrecto_resoplido,1,1,0,0,1);
                 }
                 cant_rondas++;
-                jugarInteraccionB();
+                checkContadores();
             }
         });
     }
     private void confeti(){
-        //PROBANDO
         ImageView iv = findViewById(R.id.confeti);
         AnimationDrawable animationConfeti = (AnimationDrawable)iv.getBackground();
+        iv.setVisibility(View.VISIBLE);
         animationConfeti.start();
-       /*
+    }
+
+    private void jugarInteraccionC(){
         Intent i = new Intent(InteraccionBActivity.this, InteraccionCActivity.class);
         startActivity(i);
-        */
-
-
     }
+
     @Override
     protected void onResume(){
         super.onResume();
@@ -160,5 +157,54 @@ public class InteraccionBActivity  extends AppCompatActivity {
     protected void onDestroy(){
         super.onDestroy();
     }
+    private void checkContadores(){
+
+        if(cant_rondas == 5){
+            final ScrollView interaccionB = findViewById(R.id.scroll_B);
+            final Button accion = findViewById(R.id.accion_nivel);
+            final FrameLayout modal = findViewById(R.id.div_fin_nivel);
+            if(cant_correctas >= 3){
+                // SE DA LA OPCION DE PASAR AL SIGUIENTE MINIJUEGO
+                confeti();
+                accion.setText(R.string.to_next);
+                accion.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
+                modal.setVisibility(View.VISIBLE);
+                accion.setOnClickListener(new View.OnClickListener() {
+                    public void onClick(View v){
+                        jugarInteraccionC();
+                    }
+                });
+
+            }
+            else{
+                //SE DA LA OPCION DE VOLVER A JUGAR LA INTERACCION B
+                accion.setText(R.string.retry);
+                accion.setBackgroundColor(getResources().getColor(R.color.colorAccent));
+                modal.setVisibility(View.VISIBLE);
+                accion.setOnClickListener(new View.OnClickListener() {
+                    public void onClick(View v){
+                        interaccionB.setVisibility(View.VISIBLE);
+                        modal.setVisibility(View.GONE);
+                        jugarInteraccionB();
+                    }
+                });
+            }
+            cant_correctas = 0; cant_rondas = 0;
+            updateViewContadores();
+            interaccionB.setVisibility(View.INVISIBLE);
+        }
+        else{
+            updateViewContadores();
+            jugarInteraccionB();
+        }
+    }
+
+    private void updateViewContadores(){
+        TextView correctas = findViewById(R.id.correctas2);
+        correctas.setText("Correctas: "+cant_correctas);
+        TextView ronda = findViewById(R.id.rondas);
+        ronda.setText("Rondas: "+cant_rondas);
+    }
+
 
 }

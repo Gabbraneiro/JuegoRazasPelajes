@@ -33,7 +33,7 @@ public class InteraccionAActivity extends AppCompatActivity implements View.OnCl
         audio_opcion1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                audio_raza = soundPool.load(this, caballos.get(0).getAudio_raza(), 1);
+                audio_raza = soundPool.load(InteraccionAActivity.this, caballos.get(0).getAudio_raza(), 1);
                 soundPool.play(audio_raza, 1, 1, 0, 0, 1);
             }
         });
@@ -46,7 +46,7 @@ public class InteraccionAActivity extends AppCompatActivity implements View.OnCl
             audio_opcion3.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    audio_raza = soundPool.load(this, caballos.get(0).getAudio_raza(), 1);
+                    audio_raza = soundPool.load(InteraccionAActivity.this, caballos.get(0).getAudio_raza(), 1);
                     soundPool.play(audio_raza, 1, 1, 0, 0, 1);
                 }
             });
