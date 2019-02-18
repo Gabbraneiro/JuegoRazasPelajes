@@ -38,9 +38,7 @@
                         android:layout_marginStart="@dimen/c_caballo_ml"
                         android:layout_marginLeft="@dimen/c_caballo_ml"
                         android:layout_marginTop="@dimen/c_caballo_mt"
-                        android:contentDescription="@string/caballo"
-                        app:srcCompat="@drawable/juana_cuartodemilla_bayo"
-                        tools:srcCompat="@drawable/bionda_cruzaarabe_alazanruano" />
+                        android:contentDescription="@string/caballo" />
                 </FrameLayout>
 
             </LinearLayout>
@@ -64,7 +62,6 @@
                         android:layout_marginLeft="@dimen/c_texto_voz_ml"
                         android:layout_marginTop="@dimen/c_texto_voz_mt"
                         android:gravity="center_horizontal"
-                        android:text="@string/raza_x"
                         android:textSize="@dimen/lista_text_size"
                         android:clickable="true"
                         android:focusable="true"/>
@@ -76,8 +73,7 @@
                         android:layout_marginStart="@dimen/c_imagen_voz_ml"
                         android:layout_marginLeft="@dimen/c_imagen_voz_ml"
                         android:layout_marginTop="@dimen/c_imagen_voz_mt"
-                        android:contentDescription="@string/talking"
-                        app:srcCompat="@drawable/audio_regular" />
+                        android:contentDescription="@string/talking" />
                 </FrameLayout>
 
                 <FrameLayout
@@ -94,7 +90,6 @@
                         android:layout_marginLeft="@dimen/c_texto_voz_ml"
                         android:layout_marginTop="@dimen/c_texto_voz_mt"
                         android:gravity="center_horizontal"
-                        android:text="@string/raza_x"
                         android:textSize="@dimen/lista_text_size"
                         android:clickable="true"
                         android:focusable="true" />
@@ -106,8 +101,7 @@
                         android:layout_marginStart="@dimen/c_imagen_voz_ml"
                         android:layout_marginLeft="@dimen/c_imagen_voz_ml"
                         android:layout_marginTop="@dimen/c_imagen_voz_mt"
-                        android:contentDescription="@string/talking"
-                        app:srcCompat="@drawable/audio_regular" />
+                        android:contentDescription="@string/talking" />
                 </FrameLayout>
 
                 <FrameLayout
@@ -124,7 +118,6 @@
                         android:layout_marginLeft="@dimen/c_texto_voz_ml"
                         android:layout_marginTop="@dimen/c_texto_voz_mt"
                         android:gravity="center_horizontal"
-                        android:text="@string/raza_x"
                         android:textSize="@dimen/lista_text_size"
                         android:clickable="true"
                         android:focusable="true" />
@@ -136,8 +129,7 @@
                         android:layout_marginStart="@dimen/c_imagen_voz_ml"
                         android:layout_marginLeft="@dimen/c_imagen_voz_ml"
                         android:layout_marginTop="@dimen/c_imagen_voz_mt"
-                        android:contentDescription="@string/talking"
-                        app:srcCompat="@drawable/audio_regular" />
+                        android:contentDescription="@string/talking" />
                 </FrameLayout>
 
                 <FrameLayout
@@ -155,7 +147,6 @@
                         android:layout_marginTop="@dimen/c_texto_voz_mt"
                         android:gravity="center_horizontal"
                         android:text="@string/raza_x"
-                        android:textSize="@dimen/lista_text_size"
                         android:clickable="true"
                         android:focusable="true"/>
 
@@ -166,8 +157,7 @@
                         android:layout_marginStart="@dimen/c_imagen_voz_ml"
                         android:layout_marginLeft="@dimen/c_imagen_voz_ml"
                         android:layout_marginTop="@dimen/c_imagen_voz_mt"
-                        android:contentDescription="@string/talking"
-                        app:srcCompat="@drawable/audio_regular" />
+                        android:contentDescription="@string/talking" />
                 </FrameLayout>
 
             </LinearLayout>
