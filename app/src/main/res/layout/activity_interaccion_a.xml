@@ -7,6 +7,7 @@
     android:background="#ffbf40">
 
     <ScrollView
+        android:id="@+id/scroll_A"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
@@ -22,11 +23,34 @@
                 android:orientation="horizontal">
 
                 <FrameLayout
+                    android:id="@+id/contadores"
+                    android:layout_width="200sp"
+                    android:layout_height="150sp"
+                    android:layout_marginLeft="25sp">
+
+                    <TextView
+                        android:id="@+id/correctas2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20sp"
+                        android:text="Correctas: 0"
+                        android:textSize="30sp" />
+
+                    <TextView
+                        android:id="@+id/rondas"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="70sp"
+                        android:text="Rondas: 0"
+                        android:textSize="30sp" />
+                </FrameLayout>
+
+                <FrameLayout
 
                     android:layout_width="@dimen/frame_principal_width"
                     android:layout_height="@dimen/frame_principal_heigth"
-                    android:layout_marginStart="@dimen/frame_principal_ml"
-                    android:layout_marginLeft="@dimen/frame_principal_ml"
+                    android:layout_marginStart="200dp"
+                    android:layout_marginLeft="200dp"
                     android:layout_marginTop="@dimen/frame_principal_mt"
                     android:layout_marginEnd="@dimen/frame_principal_mt"
                     android:layout_marginRight="@dimen/grilla_frame_mr">
@@ -164,4 +188,31 @@
 
         </LinearLayout>
     </ScrollView>
+
+    <ImageView
+        android:id="@+id/a_confeti"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/confeti"
+        android:visibility="invisible" />
+
+    <FrameLayout
+        android:id="@+id/a_div_fin_nivel"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="0dp"
+        android:visibility="invisible">
+
+        <Button
+            android:id="@+id/a_accion_nivel"
+            android:layout_width="300sp"
+            android:layout_height="100sp"
+            android:layout_marginLeft="500sp"
+            android:layout_marginStart="500sp"
+            android:layout_marginTop="300sp"
+            android:textSize="28sp" />
+
+    </FrameLayout>
+
 </RelativeLayout>

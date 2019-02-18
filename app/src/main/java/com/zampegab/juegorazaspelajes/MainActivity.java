@@ -76,7 +76,7 @@ public class MainActivity extends AppCompatActivity {
 
                 //List<Caballo> caballos = Repositorio.getCaballosRandom(getCantCaballos(sharedPreferences));
                 String pref_interaccion = sharedPreferences.getString("modo_interaccion", "");
-                String pref_nivel = sharedPreferences.getString("minijuego", "");
+                String pref_minijuego = sharedPreferences.getString("minijuego", "");
                 Intent intent = null;
                 switch (pref_interaccion){
                     case "A":
@@ -99,7 +99,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public Integer getCantCaballos(SharedPreferences sharedPreferences) {
-        String pref_nivel = sharedPreferences.getString("nivel", "");
+        String pref_nivel = sharedPreferences.getString("nivel", "1");
         if (pref_nivel.equals("1")) {
             return 2;
         } else {
