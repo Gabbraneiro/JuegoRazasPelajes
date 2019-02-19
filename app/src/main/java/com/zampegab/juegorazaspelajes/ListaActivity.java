@@ -27,10 +27,11 @@ public class ListaActivity  extends AppCompatActivity{
         int row = 1;
         int frame = 1;
         for (int i = 0; i < caballos.size(); i++) {
-            FrameLayout frame_layout = findViewById(getResources().getIdentifier("row_"+row+"_frame_"+frame,"id",ListaActivity.this.getPackageName()));
-            ImageView img = findViewById(getResources().getIdentifier("image_"+row+"_"+frame,"id",ListaActivity.this.getPackageName()));
-            ImageButton img_talk = findViewById(getResources().getIdentifier("talk_"+row+"_"+frame, "id",ListaActivity.this.getPackageName()));
-            TextView text = findViewById(getResources().getIdentifier("texto_"+row+"_"+frame,"id",ListaActivity.this.getPackageName()));
+            FrameLayout frame_layout = findViewById(getResources().getIdentifier("linear_row_" + row,"id",ListaActivity.this.getPackageName()));
+            ImageView img = findViewById(getResources().getIdentifier("image_" + row,"id",ListaActivity.this.getPackageName()));
+            ImageButton img_talk = findViewById(getResources().getIdentifier("button_" + row, "id",ListaActivity.this.getPackageName()));
+            TextView text = findViewById(getResources().getIdentifier("text_" + row + "_1","id",ListaActivity.this.getPackageName()));
+            TextView text2 = findViewById(getResources().getIdentifier("text_" + row + "_1","id",ListaActivity.this.getPackageName()));
 
             img.setImageResource(caballos.get(i).getImg());
             text.setText(caballos.get(i).getRaza());
@@ -42,13 +43,9 @@ public class ListaActivity  extends AppCompatActivity{
                     soundPool.play(sonido,1,1,0,0,1);
                 }
             });
-            if(frame == 3){
-                row++;
-                frame = 1;
-            }
-            else{
-                frame++;
-            }
+            text2.setText(caballos.get(i).getDescripcion());
+
+            row++;
 
             frame_layout.setVisibility(View.VISIBLE);
         }
