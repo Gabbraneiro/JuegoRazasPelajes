@@ -75,18 +75,42 @@ public class MainActivity extends AppCompatActivity {
                 imagen.setImageResource(R.drawable.jugar_click);
 
                 //List<Caballo> caballos = Repositorio.getCaballosRandom(getCantCaballos(sharedPreferences));
-                String pref_interaccion = sharedPreferences.getString("modo_interaccion", "");
-                String pref_minijuego = sharedPreferences.getString("minijuego", "");
+                String pref_interaccion = sharedPreferences.getString("modo_interaccion", "A");
+                String pref_minijuego = sharedPreferences.getString("minijuego", "1");
                 Intent intent = null;
                 switch (pref_interaccion){
                     case "A":
                         //AGREGAR IF(pref_nivel) PARA SABER A QUE MINIJUEGO SE VA.
-                        intent = new Intent(MainActivity.this, InteraccionAActivity.class);
+                        if(pref_minijuego.equals("1")){
+                            int random = 1;
+                            //random = (int) (Math.random() * 2);
+                            if(random == 1){
+                                intent = new Intent(MainActivity.this, InteraccionAActivity.class);
+                            }
+                            else{
+                                intent = new Intent(MainActivity.this, InteraccionA1PelajesActivity.class);
+                            }
+                        }
+                        else if(pref_minijuego.equals("2")){
+                            intent = new Intent(MainActivity.this, InteraccionARazaPelajeActivity.class);
+                        }
                         break;
 
                     case "B":
                         //AGREGAR IF(pref_nivel) PARA SABER A QUE MINIJUEGO SE VA.
-                        intent = new Intent(MainActivity.this, InteraccionBActivity.class);
+                        if(pref_minijuego.equals("1")){
+                            int random = 1;
+                            //random = (int) (Math.random() * 2);
+                            if(random == 1){
+                                intent = new Intent(MainActivity.this, InteraccionBActivity.class);
+                            }
+                            else{
+                                intent = new Intent(MainActivity.this, InteraccionBPelajeActivity.class);
+                            }
+                        }
+                        else if(pref_minijuego.equals("2")){
+                            intent = new Intent(MainActivity.this, InteraccionBRazaPelajeActivity.class);
+                        }
                         break;
 
                     case "C":
