@@ -76,14 +76,17 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent = null;
                 switch (pref_interaccion){
                     case "A":
+                        //AGREGAR IF(pref_nivel) PARA SABER A QUE MINIJUEGO SE VA.
                         intent = new Intent(MainActivity.this, InteraccionAActivity.class);
                         break;
 
                     case "B":
+                        //AGREGAR IF(pref_nivel) PARA SABER A QUE MINIJUEGO SE VA.
                         intent = new Intent(MainActivity.this, InteraccionBActivity.class);
                         break;
 
                     case "C":
+                        //AGREGAR IF(pref_nivel) PARA SABER A QUE MINIJUEGO SE VA.
                         intent = new Intent(MainActivity.this, InteraccionCActivity.class);
                         break;
                 }
