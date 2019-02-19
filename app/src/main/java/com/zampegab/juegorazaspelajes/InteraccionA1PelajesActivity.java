@@ -208,7 +208,7 @@ public class InteraccionA1PelajesActivity extends AppCompatActivity {
     }
 
     private void jugarInteraccionB(){
-        Intent i = new Intent(InteraccionA1PelajesActivity.this, InteraccionBActivity.class);
+        Intent i = new Intent(InteraccionA1PelajesActivity.this, InteraccionBPelajeActivity.class);
         startActivity(i);
         finish();
     }
