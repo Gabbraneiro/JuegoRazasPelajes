@@ -51,7 +51,7 @@
     <dimen name="grilla_imagen_mr">10sp</dimen>
     <dimen name="grilla_texto_ml">10sp</dimen>
     <dimen name="grilla_texto_mt">275sp</dimen>
-    <dimen name="grilla_texto_size">30sp</dimen>
+    <dimen name="grilla_texto_size">20sp</dimen>
     <dimen name="grilla_imagen_voz_width">70sp</dimen>
     <dimen name="grilla_imagen_voz_heigth">70sp</dimen>
     <dimen name="grilla_imagen_voz_ml">225sp</dimen>

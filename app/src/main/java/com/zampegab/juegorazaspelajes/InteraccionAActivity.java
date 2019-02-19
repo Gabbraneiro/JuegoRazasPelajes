@@ -123,6 +123,12 @@ public class InteraccionAActivity extends AppCompatActivity {
                 }
             });
         }
+        else{
+            FrameLayout opcion3 = findViewById(R.id.o1);
+            FrameLayout opcion4 = findViewById(R.id.o4);
+            opcion3.setVisibility(View.INVISIBLE);
+            opcion4.setVisibility(View.INVISIBLE);
+        }
     }
 
 

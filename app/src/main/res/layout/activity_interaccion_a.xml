@@ -74,9 +74,10 @@
                 android:orientation="horizontal">
 
                 <FrameLayout
-                    android:layout_marginTop="@dimen/a_frame_mt"
+                    android:id="@+id/o1"
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/a_frame_heigth"
+                    android:layout_marginTop="@dimen/a_frame_mt"
                     android:layout_weight="1">
 
                     <TextView
@@ -86,10 +87,10 @@
                         android:layout_marginStart="@dimen/c_texto_voz_ml"
                         android:layout_marginLeft="@dimen/c_texto_voz_ml"
                         android:layout_marginTop="@dimen/c_texto_voz_mt"
-                        android:gravity="center_horizontal"
-                        android:textSize="@dimen/lista_text_size"
                         android:clickable="true"
-                        android:focusable="true"/>
+                        android:focusable="true"
+                        android:gravity="center_horizontal"
+                        android:textSize="@dimen/lista_text_size" />
 
                     <ImageButton
                         android:id="@+id/b_opcion_1"
@@ -102,9 +103,10 @@
                 </FrameLayout>
 
                 <FrameLayout
-                    android:layout_marginTop="@dimen/a_frame_mt"
+                    android:id="@+id/o2"
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/a_frame_heigth"
+                    android:layout_marginTop="@dimen/a_frame_mt"
                     android:layout_weight="1">
 
                     <TextView
@@ -114,10 +116,10 @@
                         android:layout_marginStart="@dimen/c_texto_voz_ml"
                         android:layout_marginLeft="@dimen/c_texto_voz_ml"
                         android:layout_marginTop="@dimen/c_texto_voz_mt"
-                        android:gravity="center_horizontal"
-                        android:textSize="@dimen/lista_text_size"
                         android:clickable="true"
-                        android:focusable="true" />
+                        android:focusable="true"
+                        android:gravity="center_horizontal"
+                        android:textSize="@dimen/lista_text_size" />
 
                     <ImageButton
                         android:id="@+id/b_opcion_2"
@@ -130,9 +132,10 @@
                 </FrameLayout>
 
                 <FrameLayout
-                    android:layout_marginTop="@dimen/a_frame_mt"
+                    android:id="@+id/o3"
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/a_frame_heigth"
+                    android:layout_marginTop="@dimen/a_frame_mt"
                     android:layout_weight="1">
 
                     <TextView
@@ -142,10 +145,10 @@
                         android:layout_marginStart="@dimen/c_texto_voz_ml"
                         android:layout_marginLeft="@dimen/c_texto_voz_ml"
                         android:layout_marginTop="@dimen/c_texto_voz_mt"
-                        android:gravity="center_horizontal"
-                        android:textSize="@dimen/lista_text_size"
                         android:clickable="true"
-                        android:focusable="true" />
+                        android:focusable="true"
+                        android:gravity="center_horizontal"
+                        android:textSize="@dimen/lista_text_size" />
 
                     <ImageButton
                         android:id="@+id/b_opcion_3"
@@ -158,9 +161,10 @@
                 </FrameLayout>
 
                 <FrameLayout
-                    android:layout_marginTop="@dimen/a_frame_mt"
+                    android:id="@+id/o4"
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/a_frame_heigth"
+                    android:layout_marginTop="@dimen/a_frame_mt"
                     android:layout_weight="1">
 
                     <TextView
@@ -170,10 +174,10 @@
                         android:layout_marginStart="@dimen/c_texto_voz_ml"
                         android:layout_marginLeft="@dimen/c_texto_voz_ml"
                         android:layout_marginTop="@dimen/c_texto_voz_mt"
-                        android:gravity="center_horizontal"
-                        android:text="@string/raza_x"
                         android:clickable="true"
-                        android:focusable="true"/>
+                        android:focusable="true"
+                        android:gravity="center_horizontal"
+                        android:textSize="@dimen/lista_text_size" />
 
                     <ImageButton
                         android:id="@+id/b_opcion_4"

@@ -2,8 +2,8 @@
 <animation-list android:id="@+id/selected"
     android:oneshot="false"
     xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:drawable="@drawable/c008" android:duration="1" />
-    <item android:drawable="@drawable/c009" android:duration="1" />
+    <item android:drawable="@drawable/c0008" android:duration="1" />
+    <item android:drawable="@drawable/c0009" android:duration="1" />
     <item android:drawable="@drawable/c0010" android:duration="1" />
     <item android:drawable="@drawable/c0011" android:duration="1" />
     <item android:drawable="@drawable/c0012" android:duration="1" />
