@@ -1,50 +1,57 @@
 package com.zampegab.juegorazaspelajes;
 
+import android.media.AudioManager;
 import android.media.MediaPlayer;
+import android.media.SoundPool;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.FrameLayout;
 import android.widget.ImageButton;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class ListaActivity  extends AppCompatActivity{
 
-    MediaPlayer mpCaballo;
-    ImageButton btnHorse1, btnHorse2, btnHorse3, btnHorse4, btnHorse5, btnHorse6;
-
+    private List<Caballo> caballos;
+    private SoundPool soundPool;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        List<Caballo> caballos = Repositorio.getCaballos();
         super.onCreate(savedInstanceState);
+        soundPool = new SoundPool(8, AudioManager.STREAM_MUSIC, 0);
+        caballos = Repositorio.getCaballos();
         setContentView(R.layout.activity_lista);
+        int row = 1;
+        int frame = 1;
+        for (int i = 0; i < caballos.size(); i++) {
+            FrameLayout frame_layout = findViewById(getResources().getIdentifier("row_"+row+"_frame_"+frame,"id",ListaActivity.this.getPackageName()));
+            ImageView img = findViewById(getResources().getIdentifier("image_"+row+"_"+frame,"id",ListaActivity.this.getPackageName()));
+            ImageButton img_talk = findViewById(getResources().getIdentifier("talk_"+row+"_"+frame, "id",ListaActivity.this.getPackageName()));
+            TextView text = findViewById(getResources().getIdentifier("texto_"+row+"_"+frame,"id",ListaActivity.this.getPackageName()));
 
-        /*mpCaballo = MediaPlayer.create(this, R.raw.caballo);
-
-        btnHorse1 = findViewById(R.id.listImagenBtn);
-        btnHorse1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                mpCaballo.start();
+            img.setImageResource(caballos.get(i).getImg());
+            text.setText(caballos.get(i).getRaza());
+            final int sonido_caballo =caballos.get(i).getAudio_raza();
+            img_talk.setOnClickListener(new View.OnClickListener(){
+                @Override
+                public void onClick(View v) {
+                    int sonido = soundPool.load(ListaActivity.this, sonido_caballo, 1);
+                    soundPool.play(sonido,1,1,0,0,1);
+                }
+            });
+            if(frame == 3){
+                row++;
+                frame = 1;
             }
-        });
-
-        btnHorse2 = findViewById(R.id.listImagenBtn2);
-        btnHorse2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                mpCaballo.start();
+            else{
+                frame++;
             }
-        });
 
-        btnHorse3 = findViewById(R.id.listImagenBtn3);
-        btnHorse3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                mpCaballo.start();
-            }
-        });*/
+            frame_layout.setVisibility(View.VISIBLE);
+        }
     }
 
 }

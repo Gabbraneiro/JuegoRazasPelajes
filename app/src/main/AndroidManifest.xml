@@ -32,6 +32,14 @@
             android:screenOrientation="landscape">
         </activity>
         <activity
+            android:name="InteraccionA1PelajesActivity"
+            android:screenOrientation="landscape">
+        </activity>
+        <activity
+            android:name=".InteraccionARazaPelajeActivity"
+            android:screenOrientation="landscape">
+        </activity>
+        <activity
             android:name="InteraccionBActivity"
             android:screenOrientation="landscape">
         </activity>
