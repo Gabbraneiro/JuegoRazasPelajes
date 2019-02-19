@@ -44,6 +44,14 @@
             android:screenOrientation="landscape">
         </activity>
         <activity
+            android:name="InteraccionBPelajeActivity"
+            android:screenOrientation="landscape">
+        </activity>
+        <activity
+            android:name=".InteraccionBRazaPelajeActivity"
+            android:screenOrientation="landscape">
+        </activity>
+        <activity
             android:name="InteraccionCActivity"
             android:screenOrientation="landscape">
         </activity>
