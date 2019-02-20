@@ -210,7 +210,7 @@ public class InteraccionARazaPelajeActivity extends AppCompatActivity {
     }
 
     private void jugarInteraccionB(){
-        Intent i = new Intent(InteraccionARazaPelajeActivity.this, InteraccionBRazaPelajeActivity.class);
+        Intent i = new Intent(InteraccionARazaPelajeActivity.this, InteraccionCActivity.class);
         startActivity(i);
         finish();
     }
