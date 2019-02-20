@@ -1,29 +1,21 @@
 package com.zampegab.juegorazaspelajes;
 
-import android.app.Activity;
-import android.content.Context;
+
 import android.content.Intent;
-import android.graphics.Color;
+import android.content.SharedPreferences;
 import android.graphics.drawable.AnimationDrawable;
-import android.graphics.drawable.Drawable;
 import android.media.AudioManager;
 import android.os.Bundle;
-import android.os.Handler;
+import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
-import android.text.Layout;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.ImageButton;
 import android.widget.ImageView;
-import android.widget.RelativeLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
 import android.media.SoundPool;
-
-import org.w3c.dom.Text;
-
 import java.util.List;
 
 public class InteraccionBActivity  extends AppCompatActivity {
@@ -143,7 +135,16 @@ public class InteraccionBActivity  extends AppCompatActivity {
     }
 
     private void jugarInteraccionC(){
+        final SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
+        String pref_nivel = sharedPreferences.getString("nivel", "1");
+        int cant_caballos;
         Intent i = new Intent(InteraccionBActivity.this, InteraccionCActivity.class);
+        if (pref_nivel.equals("1")) {
+            cant_caballos = 2;
+        } else {
+            cant_caballos = 4;
+        }
+        i.putExtra("caballos", cant_caballos);
         startActivity(i);
     }
 

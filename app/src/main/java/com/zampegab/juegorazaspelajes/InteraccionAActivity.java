@@ -1,10 +1,12 @@
 package com.zampegab.juegorazaspelajes;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.drawable.AnimationDrawable;
 import android.media.AudioManager;
 import android.media.SoundPool;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
@@ -55,8 +57,8 @@ public class InteraccionAActivity extends AppCompatActivity {
         audio_opcion1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                audio_raza = soundPool.load(InteraccionAActivity.this, caballos.get(0).getAudio_raza(), 1);
-                soundPool.play(audio_raza, 1, 1, 0, 0, 1);
+                int sonido = soundPool.load(InteraccionAActivity.this, caballos.get(0).getAudio_raza(), 1);
+                soundPool.play(sonido, 1, 1, 0, 0, 1);
             }
         });
 
@@ -75,8 +77,8 @@ public class InteraccionAActivity extends AppCompatActivity {
         audio_opcion2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                audio_raza = soundPool.load(InteraccionAActivity.this, caballos.get(1).getAudio_raza(), 1);
-                soundPool.play(audio_raza, 1, 1, 0, 0, 1);
+                int sonido = soundPool.load(InteraccionAActivity.this, caballos.get(1).getAudio_raza(), 1);
+                soundPool.play(sonido, 1, 1, 0, 0, 1);
             }
         });
 
@@ -98,8 +100,8 @@ public class InteraccionAActivity extends AppCompatActivity {
             audio_opcion3.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    audio_raza = soundPool.load(InteraccionAActivity.this, caballos.get(2).getAudio_raza(), 1);
-                    soundPool.play(audio_raza, 1, 1, 0, 0, 1);
+                    int sonido = soundPool.load(InteraccionAActivity.this, caballos.get(2).getAudio_raza(), 1);
+                    soundPool.play(sonido, 1, 1, 0, 0, 1);
                 }
             });
 
@@ -118,8 +120,8 @@ public class InteraccionAActivity extends AppCompatActivity {
             audio_opcion4.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    audio_raza = soundPool.load(InteraccionAActivity.this, caballos.get(3).getAudio_raza(), 1);
-                    soundPool.play(audio_raza, 1, 1, 0, 0, 1);
+                    int sonido = soundPool.load(InteraccionAActivity.this, caballos.get(3).getAudio_raza(), 1);
+                    soundPool.play(sonido, 1, 1, 0, 0, 1);
                 }
             });
         }
@@ -207,7 +209,16 @@ public class InteraccionAActivity extends AppCompatActivity {
     }
 
     private void jugarInteraccionB(){
+        final SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
+        String pref_nivel = sharedPreferences.getString("nivel", "1");
+        int cant_caballos;
         Intent i = new Intent(InteraccionAActivity.this, InteraccionBActivity.class);
+        if (pref_nivel.equals("1")) {
+            cant_caballos = 2;
+        } else {
+            cant_caballos = 4;
+        }
+        i.putExtra("caballos", cant_caballos);
         startActivity(i);
     }
 }

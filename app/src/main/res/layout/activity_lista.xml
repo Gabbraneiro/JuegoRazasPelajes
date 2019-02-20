@@ -23,7 +23,8 @@
                 android:id="@+id/linear_row_1"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/row_heigth"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:visibility="invisible">
 
                 <ImageView
                     android:id="@+id/image_1"
@@ -71,7 +72,8 @@
                 android:id="@+id/linear_row_2"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/row_heigth"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:visibility="invisible">
 
                 <ImageView
                     android:id="@+id/image_2"
@@ -121,7 +123,8 @@
                 android:id="@+id/linear_row_3"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/row_heigth"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:visibility="invisible">
 
                 <ImageView
                     android:id="@+id/image_3"
@@ -170,7 +173,8 @@
                 android:id="@+id/linear_row_4"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/row_heigth"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:visibility="invisible">
 
                 <ImageView
                     android:id="@+id/image_4"
@@ -219,7 +223,8 @@
                 android:id="@+id/linear_row_5"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/row_heigth"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:visibility="invisible">
 
                 <ImageView
                     android:id="@+id/image_5"
@@ -268,7 +273,8 @@
                 android:id="@+id/linear_row_6"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/row_heigth"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:visibility="invisible">
 
                 <ImageView
                     android:id="@+id/image_6"
@@ -288,7 +294,7 @@
                     android:layout_marginTop="@dimen/lista_imagen_voz_mt"
                     android:contentDescription="@string/talking"
                     app:srcCompat="@drawable/audio_regular"
-                    tools:layout_alignTop="@id/image_1"  />
+                    tools:layout_alignTop="@id/image_1" />
 
                 <TextView
                     android:id="@+id/text_6_1"
@@ -317,7 +323,8 @@
                 android:id="@+id/linear_row_7"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/row_heigth"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:visibility="invisible">
 
                 <ImageView
                     android:id="@+id/image_7"
@@ -326,7 +333,7 @@
                     android:layout_marginStart="@dimen/imagen_lista_ml"
                     android:layout_marginLeft="@dimen/imagen_lista_ml"
                     android:layout_marginTop="@dimen/imagen_lista_mt"
-                    android:contentDescription="@string/caballo"/>
+                    android:contentDescription="@string/caballo" />
 
                 <ImageButton
                     android:id="@+id/button_7"
@@ -335,7 +342,8 @@
                     android:layout_marginStart="@dimen/lista_imagen_voz_ml"
                     android:layout_marginLeft="@dimen/lista_imagen_voz_ml"
                     android:layout_marginTop="@dimen/lista_imagen_voz_mt"
-                    android:contentDescription="@string/talking"/>
+                    android:contentDescription="@string/talking"
+                    android:src="@drawable/audio_regular" />
 
                 <TextView
                     android:id="@+id/text_7_1"

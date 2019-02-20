@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -27,7 +28,7 @@ public class ListaActivity  extends AppCompatActivity{
         int row = 1;
         int frame = 1;
         for (int i = 0; i < caballos.size(); i++) {
-            FrameLayout frame_layout = findViewById(getResources().getIdentifier("linear_row_" + row,"id",ListaActivity.this.getPackageName()));
+            LinearLayout linear_layout = findViewById(getResources().getIdentifier("linear_row_" + row,"id",ListaActivity.this.getPackageName()));
             ImageView img = findViewById(getResources().getIdentifier("image_" + row,"id",ListaActivity.this.getPackageName()));
             ImageButton img_talk = findViewById(getResources().getIdentifier("button_" + row, "id",ListaActivity.this.getPackageName()));
             TextView text = findViewById(getResources().getIdentifier("text_" + row + "_1","id",ListaActivity.this.getPackageName()));
@@ -47,7 +48,7 @@ public class ListaActivity  extends AppCompatActivity{
 
             row++;
 
-            frame_layout.setVisibility(View.VISIBLE);
+            linear_layout.setVisibility(View.VISIBLE);
         }
     }
 
