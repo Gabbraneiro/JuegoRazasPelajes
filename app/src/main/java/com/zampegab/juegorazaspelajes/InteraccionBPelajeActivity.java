@@ -1,10 +1,12 @@
 package com.zampegab.juegorazaspelajes;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.drawable.AnimationDrawable;
 import android.media.AudioManager;
 import android.media.SoundPool;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
@@ -33,7 +35,9 @@ public class InteraccionBPelajeActivity extends AppCompatActivity {
 
     }
     private void jugarMinijuegoUno(){
-        final List<Caballo> caballos = Repositorio.getCaballosRandom((int) getIntent().getExtras().get("caballos"));
+        final SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
+        int cantCaballos = MainActivity.getCantCaballos(sharedPreferences);
+        final List<Caballo> caballos = Repositorio.getCaballosRandom(cantCaballos);
         ImageView opcion1 = findViewById(R.id.a_opcion_2);
         opcion1.setImageResource(caballos.get(0).getImg());
         ImageView opcion2 = findViewById(R.id.a_opcion_3);
@@ -154,15 +158,16 @@ public class InteraccionBPelajeActivity extends AppCompatActivity {
             final FrameLayout modal = findViewById(R.id.div_fin_nivel);
             if(cant_correctas >= 3){
                 // SE DA LA OPCION DE PASAR AL SIGUIENTE MINIJUEGO
-                Minijuego minijuego = Minijuego.getMinijuego();
-                minijuego.setActual(2);
                 confeti();
                 accion.setText(R.string.to_next);
                 accion.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
                 modal.setVisibility(View.VISIBLE);
                 accion.setOnClickListener(new View.OnClickListener() {
                     public void onClick(View v){
-                        jugarMinijuegoDos();
+                        final SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(InteraccionBPelajeActivity.this);
+                        Intent intent = Minijuego.getMinijuego().nextLevel(2,InteraccionBPelajeActivity.this,sharedPreferences);
+                        startActivity(intent);
+                        finish();
                     }
                 });
 

@@ -69,6 +69,10 @@ public class MainActivity extends AppCompatActivity {
                 String pref_interaccion = sharedPreferences.getString("modo_interaccion", "A");
                 Minijuego minijuego = Minijuego.getMinijuego();
                 Intent intent = null;
+                if(minijuego.getActual() == 3){
+                    intent = new Intent(MainActivity.this, InteraccionCActivity.class);
+                    startActivity(intent);
+                }
                 switch (pref_interaccion){
                     case "A":
                         if(minijuego.getActual() == 1){
@@ -106,14 +110,14 @@ public class MainActivity extends AppCompatActivity {
                         intent = new Intent(MainActivity.this, InteraccionCActivity.class);
                         break;
                 }
-                intent.putExtra("caballos", getCantCaballos(sharedPreferences));
+                //intent.putExtra("caballos", getCantCaballos(sharedPreferences));
                 startActivity(intent);
                 imagen.setImageResource(R.drawable.jugar_regular);
             }
         });
     }
 
-    public Integer getCantCaballos(SharedPreferences sharedPreferences) {
+    public static Integer getCantCaballos(SharedPreferences sharedPreferences) {
         String pref_nivel = sharedPreferences.getString("nivel", "1");
         if (pref_nivel.equals("1")) {
             return 2;
