@@ -67,12 +67,11 @@ public class MainActivity extends AppCompatActivity {
 
                 //List<Caballo> caballos = Repositorio.getCaballosRandom(getCantCaballos(sharedPreferences));
                 String pref_interaccion = sharedPreferences.getString("modo_interaccion", "A");
-                String pref_minijuego = sharedPreferences.getString("minijuego", "1");
+                Minijuego minijuego = Minijuego.getMinijuego();
                 Intent intent = null;
                 switch (pref_interaccion){
                     case "A":
-                        //AGREGAR IF(pref_nivel) PARA SABER A QUE MINIJUEGO SE VA.
-                        if(pref_minijuego.equals("1")){
+                        if(minijuego.getActual() == 1){
                             int random = 1;
                             //random = (int) (Math.random() * 2);
                             if(random == 1){
@@ -82,14 +81,13 @@ public class MainActivity extends AppCompatActivity {
                                 intent = new Intent(MainActivity.this, InteraccionA1PelajesActivity.class);
                             }
                         }
-                        else if(pref_minijuego.equals("2")){
+                        else if(minijuego.getActual() == 2){
                             intent = new Intent(MainActivity.this, InteraccionARazaPelajeActivity.class);
                         }
                         break;
 
                     case "B":
-                        //AGREGAR IF(pref_nivel) PARA SABER A QUE MINIJUEGO SE VA.
-                        if(pref_minijuego.equals("1")){
+                        if(minijuego.getActual() == 1){
                             int random = 1;
                             //random = (int) (Math.random() * 2);
                             if(random == 1){
@@ -99,13 +97,12 @@ public class MainActivity extends AppCompatActivity {
                                 intent = new Intent(MainActivity.this, InteraccionBPelajeActivity.class);
                             }
                         }
-                        else if(pref_minijuego.equals("2")){
+                        else if(minijuego.getActual() == 2){
                             intent = new Intent(MainActivity.this, InteraccionBRazaPelajeActivity.class);
                         }
                         break;
 
                     case "C":
-                        //AGREGAR IF(pref_nivel) PARA SABER A QUE MINIJUEGO SE VA.
                         intent = new Intent(MainActivity.this, InteraccionCActivity.class);
                         break;
                 }

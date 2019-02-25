@@ -29,10 +29,10 @@ public class InteraccionBRazaPelajeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_interaccion_b);
 
-        jugarInteraccionB();
+        jugarMinijuegoDos();
     }
 
-    private void jugarInteraccionB(){
+    private void jugarMinijuegoDos(){
         final List<Caballo> caballos = Repositorio.getCaballosRandom((int) getIntent().getExtras().get("caballos"));
         ImageView opcion1 = findViewById(R.id.a_opcion_2);
         opcion1.setImageResource(caballos.get(0).getImg());
@@ -132,7 +132,7 @@ public class InteraccionBRazaPelajeActivity extends AppCompatActivity {
         animationConfeti.start();
     }
 
-    private void jugarInteraccionC(){
+    private void jugarMinijuegoTres(){
         Intent i = new Intent(InteraccionBRazaPelajeActivity.this, InteraccionCActivity.class);
         startActivity(i);
     }
@@ -161,7 +161,7 @@ public class InteraccionBRazaPelajeActivity extends AppCompatActivity {
                 modal.setVisibility(View.VISIBLE);
                 accion.setOnClickListener(new View.OnClickListener() {
                     public void onClick(View v){
-                        jugarInteraccionC();
+                        jugarMinijuegoTres();
                     }
                 });
 
@@ -175,7 +175,7 @@ public class InteraccionBRazaPelajeActivity extends AppCompatActivity {
                     public void onClick(View v){
                         interaccionB.setVisibility(View.VISIBLE);
                         modal.setVisibility(View.GONE);
-                        jugarInteraccionB();
+                        jugarMinijuegoDos();
                     }
                 });
             }
@@ -185,7 +185,7 @@ public class InteraccionBRazaPelajeActivity extends AppCompatActivity {
         }
         else{
             updateViewContadores();
-            jugarInteraccionB();
+            jugarMinijuegoDos();
         }
     }
 

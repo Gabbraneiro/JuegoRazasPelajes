@@ -33,10 +33,10 @@ public class InteraccionAActivity extends AppCompatActivity {
         correcto_relincho = soundPool.load(this, R.raw.relincho,1);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_interaccion_a);
-        jugarInteraccionA();
+        jugarMinijuegoUno();
     }
 
-    public void jugarInteraccionA(){
+    public void jugarMinijuegoUno(){
         final List<Caballo> caballos = Repositorio.getCaballosRandom((int) getIntent().getExtras().get("caballos"));
         final Caballo c = caballos.get((int) (Math.random() * (caballos.size() - 1)));
         ImageView caballo_correcto = findViewById(R.id.a_caballo_correcto);
@@ -174,7 +174,7 @@ public class InteraccionAActivity extends AppCompatActivity {
                 modal.setVisibility(View.VISIBLE);
                 accion.setOnClickListener(new View.OnClickListener() {
                     public void onClick(View v){
-                        jugarInteraccionB();
+                        jugarMinijuegoDos();
                     }
                 });
             }
@@ -187,7 +187,7 @@ public class InteraccionAActivity extends AppCompatActivity {
                     public void onClick(View v){
                         interaccionA.setVisibility(View.VISIBLE);
                         modal.setVisibility(View.GONE);
-                        jugarInteraccionA();
+                        jugarMinijuegoUno();
                     }
                 });
             }
@@ -197,7 +197,7 @@ public class InteraccionAActivity extends AppCompatActivity {
         }
         else{
             updateViewContadores();
-            jugarInteraccionA();
+            jugarMinijuegoUno();
         }
     }
 
@@ -208,17 +208,18 @@ public class InteraccionAActivity extends AppCompatActivity {
         animationConfeti.start();
     }
 
-    private void jugarInteraccionB(){
-        final SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
+    private void jugarMinijuegoDos(){
+        /*final SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
         String pref_nivel = sharedPreferences.getString("nivel", "1");
         int cant_caballos;
-        Intent i = new Intent(InteraccionAActivity.this, InteraccionBActivity.class);
         if (pref_nivel.equals("1")) {
             cant_caballos = 2;
         } else {
             cant_caballos = 4;
-        }
-        i.putExtra("caballos", cant_caballos);
+        }*/
+        Intent i = new Intent(InteraccionAActivity.this, InteraccionARazaPelajeActivity.class);
+        i.putExtra("caballos", (int) getIntent().getExtras().get("caballos"));
         startActivity(i);
+        finish();
     }
 }

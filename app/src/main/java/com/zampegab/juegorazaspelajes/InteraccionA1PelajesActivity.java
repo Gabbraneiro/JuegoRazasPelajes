@@ -30,10 +30,10 @@ public class InteraccionA1PelajesActivity extends AppCompatActivity {
         correcto_relincho = soundPool.load(this, R.raw.relincho,1);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_interaccion_a);
-        jugarInteraccionA();
+        jugarMinijuegoUno();
     }
 
-    public void jugarInteraccionA(){
+    public void jugarMinijuegoUno(){
         final List<Caballo> caballos = Repositorio.getCaballosRandom((int) getIntent().getExtras().get("caballos"));
         final Caballo c = caballos.get((int) (Math.random() * (caballos.size() - 1)));
         ImageView caballo_correcto = findViewById(R.id.a_caballo_correcto);
@@ -173,7 +173,7 @@ public class InteraccionA1PelajesActivity extends AppCompatActivity {
                 modal.setVisibility(View.VISIBLE);
                 accion.setOnClickListener(new View.OnClickListener() {
                     public void onClick(View v){
-                        jugarInteraccionB();
+                        jugarMinijuegoDos();
                     }
                 });
             }
@@ -186,7 +186,7 @@ public class InteraccionA1PelajesActivity extends AppCompatActivity {
                     public void onClick(View v){
                         interaccionA.setVisibility(View.VISIBLE);
                         modal.setVisibility(View.GONE);
-                        jugarInteraccionA();
+                        jugarMinijuegoUno();
                     }
                 });
             }
@@ -196,7 +196,7 @@ public class InteraccionA1PelajesActivity extends AppCompatActivity {
         }
         else{
             updateViewContadores();
-            jugarInteraccionA();
+            jugarMinijuegoUno();
         }
     }
 
@@ -207,8 +207,8 @@ public class InteraccionA1PelajesActivity extends AppCompatActivity {
         animationConfeti.start();
     }
 
-    private void jugarInteraccionB(){
-        Intent i = new Intent(InteraccionA1PelajesActivity.this, InteraccionBPelajeActivity.class);
+    private void jugarMinijuegoDos(){
+        Intent i = new Intent(InteraccionA1PelajesActivity.this, InteraccionARazaPelajeActivity.class);
         startActivity(i);
         finish();
     }

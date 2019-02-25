@@ -20,16 +20,6 @@
             android:summary="Eleccion de la interaccion"
             android:title="@string/modo_interaccion" />
     </PreferenceCategory>
-    <PreferenceCategory android:title="@string/config_minijuego">
-        <ListPreference
-            android:defaultValue="1"
-            android:dialogTitle="@string/config_minijuego"
-            android:entryValues="@array/minijuego_radio_id"
-            android:entries="@array/minijuego_radio_values"
-            android:key="minijuego"
-            android:summary="Eleccion del minijuego"
-            android:title="@string/config_minijuego" />
-    </PreferenceCategory>
     <PreferenceCategory android:title="Ajustes">
         <ListPreference
             android:defaultValue="1"

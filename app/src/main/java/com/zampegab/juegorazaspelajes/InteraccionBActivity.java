@@ -32,10 +32,10 @@ public class InteraccionBActivity  extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_interaccion_b);
 
-        jugarInteraccionB();
+        jugarMinijuegoUno();
 
     }
-    private void jugarInteraccionB(){
+    private void jugarMinijuegoUno(){
         final List<Caballo> caballos = Repositorio.getCaballosRandom((int) getIntent().getExtras().get("caballos"));
         ImageView opcion1 = findViewById(R.id.a_opcion_2);
         opcion1.setImageResource(caballos.get(0).getImg());
@@ -134,11 +134,11 @@ public class InteraccionBActivity  extends AppCompatActivity {
         animationConfeti.start();
     }
 
-    private void jugarInteraccionC(){
+    private void jugarMinijuegoDos(){
         final SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
         String pref_nivel = sharedPreferences.getString("nivel", "1");
         int cant_caballos;
-        Intent i = new Intent(InteraccionBActivity.this, InteraccionCActivity.class);
+        Intent i = new Intent(InteraccionBActivity.this, InteraccionBRazaPelajeActivity.class);
         if (pref_nivel.equals("1")) {
             cant_caballos = 2;
         } else {
@@ -172,7 +172,7 @@ public class InteraccionBActivity  extends AppCompatActivity {
                 modal.setVisibility(View.VISIBLE);
                 accion.setOnClickListener(new View.OnClickListener() {
                     public void onClick(View v){
-                        jugarInteraccionC();
+                        jugarMinijuegoDos();
                     }
                 });
 
@@ -186,7 +186,7 @@ public class InteraccionBActivity  extends AppCompatActivity {
                     public void onClick(View v){
                         interaccionB.setVisibility(View.VISIBLE);
                         modal.setVisibility(View.GONE);
-                        jugarInteraccionB();
+                        jugarMinijuegoUno();
                     }
                 });
             }
@@ -196,7 +196,7 @@ public class InteraccionBActivity  extends AppCompatActivity {
         }
         else{
             updateViewContadores();
-            jugarInteraccionB();
+            jugarMinijuegoUno();
         }
     }
 

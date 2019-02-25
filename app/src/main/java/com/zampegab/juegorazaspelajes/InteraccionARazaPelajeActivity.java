@@ -30,10 +30,10 @@ public class InteraccionARazaPelajeActivity extends AppCompatActivity {
         correcto_relincho = soundPool.load(this, R.raw.relincho,1);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_interaccion_a);
-        jugarInteraccionA();
+        jugarMinijuegoDos();
     }
 
-    public void jugarInteraccionA(){
+    public void jugarMinijuegoDos(){
         final List<Caballo> caballos = Repositorio.getCaballosRandom((int) getIntent().getExtras().get("caballos"));
         final Caballo c = caballos.get((int) (Math.random() * (caballos.size() - 1)));
         ImageView caballo_correcto = findViewById(R.id.a_caballo_correcto);
@@ -175,7 +175,7 @@ public class InteraccionARazaPelajeActivity extends AppCompatActivity {
                 modal.setVisibility(View.VISIBLE);
                 accion.setOnClickListener(new View.OnClickListener() {
                     public void onClick(View v){
-                        jugarInteraccionB();
+                        jugarMinijuegoTres();
                     }
                 });
             }
@@ -188,7 +188,7 @@ public class InteraccionARazaPelajeActivity extends AppCompatActivity {
                     public void onClick(View v){
                         interaccionA.setVisibility(View.VISIBLE);
                         modal.setVisibility(View.GONE);
-                        jugarInteraccionA();
+                        jugarMinijuegoDos();
                     }
                 });
             }
@@ -198,7 +198,7 @@ public class InteraccionARazaPelajeActivity extends AppCompatActivity {
         }
         else{
             updateViewContadores();
-            jugarInteraccionA();
+            jugarMinijuegoDos();
         }
     }
 
@@ -209,7 +209,7 @@ public class InteraccionARazaPelajeActivity extends AppCompatActivity {
         animationConfeti.start();
     }
 
-    private void jugarInteraccionB(){
+    private void jugarMinijuegoTres(){
         Intent i = new Intent(InteraccionARazaPelajeActivity.this, InteraccionCActivity.class);
         startActivity(i);
         finish();

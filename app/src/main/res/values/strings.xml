@@ -19,10 +19,6 @@
     <string name="modo_reconocimiento">Modo reconocimiento</string>
     <string name="modo_interaccion"> Modo interaccion</string>
     <string name="config_ajustes"> Ajustes</string>
-    <string name="config_minijuego"> Minijuego</string>
-    <string name="config_minijuego_1">Razas y pelajes</string>
-    <string name="config_minijuego_2">Razas y pelajes juntas</string>
-    <string name="config_minijuego_3">Cruza</string>
 
     <string name="config_interaccion_a">Interaccion A</string>
     <string name="config_interaccion_b">Interaccion B</string>

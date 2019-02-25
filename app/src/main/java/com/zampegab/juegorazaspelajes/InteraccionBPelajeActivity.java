@@ -29,10 +29,10 @@ public class InteraccionBPelajeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_interaccion_b);
 
-        jugarInteraccionB();
+        jugarMinijuegoUno();
 
     }
-    private void jugarInteraccionB(){
+    private void jugarMinijuegoUno(){
         final List<Caballo> caballos = Repositorio.getCaballosRandom((int) getIntent().getExtras().get("caballos"));
         ImageView opcion1 = findViewById(R.id.a_opcion_2);
         opcion1.setImageResource(caballos.get(0).getImg());
@@ -131,8 +131,8 @@ public class InteraccionBPelajeActivity extends AppCompatActivity {
         animationConfeti.start();
     }
 
-    private void jugarInteraccionC(){
-        Intent i = new Intent(InteraccionBPelajeActivity.this, InteraccionCActivity.class);
+    private void jugarMinijuegoDos(){
+        Intent i = new Intent(InteraccionBPelajeActivity.this, InteraccionBRazaPelajeActivity.class);
         startActivity(i);
     }
 
@@ -160,7 +160,7 @@ public class InteraccionBPelajeActivity extends AppCompatActivity {
                 modal.setVisibility(View.VISIBLE);
                 accion.setOnClickListener(new View.OnClickListener() {
                     public void onClick(View v){
-                        jugarInteraccionC();
+                        jugarMinijuegoDos();
                     }
                 });
 
@@ -174,7 +174,7 @@ public class InteraccionBPelajeActivity extends AppCompatActivity {
                     public void onClick(View v){
                         interaccionB.setVisibility(View.VISIBLE);
                         modal.setVisibility(View.GONE);
-                        jugarInteraccionB();
+                        jugarMinijuegoUno();
                     }
                 });
             }
@@ -184,7 +184,7 @@ public class InteraccionBPelajeActivity extends AppCompatActivity {
         }
         else{
             updateViewContadores();
-            jugarInteraccionB();
+            jugarMinijuegoUno();
         }
     }
 
