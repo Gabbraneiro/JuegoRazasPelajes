@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
                 ImageButton imagen = findViewById(R.id.btn_reconocimiento);
                 imagen.setImageResource(R.drawable.reconocimiento_click);
                // new CuadroDialogo(context, 1, "correcta", 1);
-                String pref_reconocimiento = sharedPreferences.getString("modo_reconocimiento", "");
+                String pref_reconocimiento = sharedPreferences.getString("modo_reconocimiento", "1");
                 if (pref_reconocimiento.equals("1")) {
                     Intent intent = new Intent(MainActivity.this, ListaActivity.class);
                     startActivity(intent);

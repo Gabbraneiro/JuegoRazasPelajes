@@ -169,6 +169,8 @@ public class InteraccionARazaPelajeActivity extends AppCompatActivity {
             final FrameLayout modal = findViewById(R.id.a_div_fin_nivel);
             if (cant_correctas >=3 ){
                 // SE DA LA OPCION DE PASAR AL SIGUIENTE MINIJUEGO
+                Minijuego minijuego = Minijuego.getMinijuego();
+                minijuego.setActual(3);
                 confeti();
                 accion.setText(R.string.to_next);
                 accion.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
