@@ -1,10 +1,12 @@
 package com.zampegab.juegorazaspelajes;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.drawable.AnimationDrawable;
 import android.media.AudioManager;
 import android.media.SoundPool;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
@@ -33,7 +35,9 @@ public class InteraccionBRazaPelajeActivity extends AppCompatActivity {
     }
 
     private void jugarMinijuegoDos(){
-        final List<Caballo> caballos = Repositorio.getCaballosRandom((int) getIntent().getExtras().get("caballos"));
+        final SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
+        int cantCaballos = MainActivity.getCantCaballos(sharedPreferences);
+        final List<Caballo> caballos = Repositorio.getCaballosRandom(cantCaballos);
         ImageView opcion1 = findViewById(R.id.a_opcion_2);
         opcion1.setImageResource(caballos.get(0).getImg());
         ImageView opcion2 = findViewById(R.id.a_opcion_3);
@@ -132,11 +136,6 @@ public class InteraccionBRazaPelajeActivity extends AppCompatActivity {
         animationConfeti.start();
     }
 
-    private void jugarMinijuegoTres(){
-        Intent i = new Intent(InteraccionBRazaPelajeActivity.this, InteraccionCActivity.class);
-        startActivity(i);
-    }
-
     @Override
     protected void onResume(){
         super.onResume();
@@ -163,7 +162,10 @@ public class InteraccionBRazaPelajeActivity extends AppCompatActivity {
                 modal.setVisibility(View.VISIBLE);
                 accion.setOnClickListener(new View.OnClickListener() {
                     public void onClick(View v){
-                        jugarMinijuegoTres();
+                        final SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(InteraccionBRazaPelajeActivity.this);
+                        Intent intent = Minijuego.getMinijuego().nextLevel(3,InteraccionBRazaPelajeActivity.this,sharedPreferences);
+                        startActivity(intent);
+                        finish();
                     }
                 });
 

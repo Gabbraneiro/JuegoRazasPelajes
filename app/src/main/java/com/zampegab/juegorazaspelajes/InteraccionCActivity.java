@@ -1,8 +1,10 @@
 package com.zampegab.juegorazaspelajes;
 
+import android.content.SharedPreferences;
 import android.graphics.drawable.AnimationDrawable;
 import android.media.AudioManager;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
@@ -34,9 +36,11 @@ public class InteraccionCActivity  extends AppCompatActivity {
 
     }
     private void jugarInteraccionC(){
-        final List<Caballo> caballos = Repositorio.getCaballosRandom((int) getIntent().getExtras().get("caballos"));
+        final SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
+        int cantCaballos = MainActivity.getCantCaballos(sharedPreferences);
+        final List<Caballo> caballos = Repositorio.getCaballosRandom(cantCaballos);
         final Caballo c = caballos.get((int) (Math.random() * (caballos.size() - 1)));
-        ImageView caballo_correcto = findViewById(R.id.a_caballo_correcto);
+        ImageView caballo_correcto = findViewById(R.id.c_caballo_correcto);
         caballo_correcto.setImageResource(c.getImg());
 
         ImageView opcion1 = findViewById(R.id.c_opcion_2);

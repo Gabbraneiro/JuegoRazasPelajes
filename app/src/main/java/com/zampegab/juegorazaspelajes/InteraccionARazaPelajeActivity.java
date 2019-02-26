@@ -1,10 +1,12 @@
 package com.zampegab.juegorazaspelajes;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.drawable.AnimationDrawable;
 import android.media.AudioManager;
 import android.media.SoundPool;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
@@ -16,9 +18,10 @@ import android.widget.TextView;
 
 import java.util.List;
 
+//MINIJUEGO 2
 public class InteraccionARazaPelajeActivity extends AppCompatActivity {
     private SoundPool soundPool;
-    private int audio_raza_pelaje, cant_correctas, cant_rondas, incorrecto_resoplido, correcto_relincho;
+    private int audio_raza_pelaje, cant_correctas, cant_rondas, incorrecto_resoplido, correcto_relincho,sonido_actual;
     ImageButton btnHome;
 
     @Override
@@ -34,7 +37,9 @@ public class InteraccionARazaPelajeActivity extends AppCompatActivity {
     }
 
     public void jugarMinijuegoDos(){
-        final List<Caballo> caballos = Repositorio.getCaballosRandom((int) getIntent().getExtras().get("caballos"));
+        final SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
+        int cantCaballos = MainActivity.getCantCaballos(sharedPreferences);
+        final List<Caballo> caballos = Repositorio.getCaballosRandom(cantCaballos);
         final Caballo c = caballos.get((int) (Math.random() * (caballos.size() - 1)));
         ImageView caballo_correcto = findViewById(R.id.a_caballo_correcto);
         caballo_correcto.setImageResource(c.getImg());
@@ -55,14 +60,18 @@ public class InteraccionARazaPelajeActivity extends AppCompatActivity {
         audio_opcion1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                audio_raza_pelaje = soundPool.load(InteraccionARazaPelajeActivity.this, caballos.get(0).getAudio_raza_pelaje(), 1);
-                soundPool.play(audio_raza_pelaje, 1, 1, 0, 0, 1);
+                sonido_actual = soundPool.load(InteraccionARazaPelajeActivity.this, caballos.get(0).getAudio_raza(), 1);
+                int streamID = -1;
+                do {
+                    streamID = soundPool.play(sonido_actual, 1, 1, 0, 0, 1);
+                } while(streamID==0);
+
             }
         });
 
         //OPCION 2
         TextView opcion2 = findViewById(R.id.opcion3);
-        String raza_pelaje2 = caballos.get(0).getRaza() + " " + caballos.get(0).getPelaje();
+        String raza_pelaje2 = caballos.get(1).getRaza() + " " + caballos.get(1).getPelaje();
         opcion2.setText(raza_pelaje2);
         opcion2.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -76,8 +85,11 @@ public class InteraccionARazaPelajeActivity extends AppCompatActivity {
         audio_opcion2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                audio_raza_pelaje = soundPool.load(InteraccionARazaPelajeActivity.this, caballos.get(1).getAudio_raza_pelaje(), 1);
-                soundPool.play(audio_raza_pelaje, 1, 1, 0, 0, 1);
+                sonido_actual = soundPool.load(InteraccionARazaPelajeActivity.this, caballos.get(1).getAudio_raza(), 1);
+                int streamID = -1;
+                do {
+                    streamID = soundPool.play(sonido_actual, 1, 1, 0, 0, 1);
+                } while(streamID==0);
             }
         });
 
@@ -86,7 +98,7 @@ public class InteraccionARazaPelajeActivity extends AppCompatActivity {
 
             // OPCION 3
             TextView opcion3 = findViewById(R.id.opcion1);
-            String raza_pelaje3 = caballos.get(0).getRaza() + " " + caballos.get(0).getPelaje();
+            String raza_pelaje3 = caballos.get(2).getRaza() + " " + caballos.get(2).getPelaje();
             opcion3.setText(raza_pelaje3);
             opcion3.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -100,14 +112,17 @@ public class InteraccionARazaPelajeActivity extends AppCompatActivity {
             audio_opcion3.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    audio_raza_pelaje = soundPool.load(InteraccionARazaPelajeActivity.this, caballos.get(2).getAudio_raza_pelaje(), 1);
-                    soundPool.play(audio_raza_pelaje, 1, 1, 0, 0, 1);
+                    sonido_actual = soundPool.load(InteraccionARazaPelajeActivity.this, caballos.get(2).getAudio_raza(), 1);
+                    int streamID = -1;
+                    do {
+                        streamID = soundPool.play(sonido_actual, 1, 1, 0, 0, 1);
+                    } while(streamID==0);
                 }
             });
 
             //OPCION 4
             TextView opcion4 = findViewById(R.id.opcion4);
-            String raza_pelaje4 = caballos.get(0).getRaza() + " " + caballos.get(0).getPelaje();
+            String raza_pelaje4 = caballos.get(3).getRaza() + " " + caballos.get(3).getPelaje();
             opcion4.setText(raza_pelaje4);
             opcion4.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -121,8 +136,11 @@ public class InteraccionARazaPelajeActivity extends AppCompatActivity {
             audio_opcion4.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    audio_raza_pelaje = soundPool.load(InteraccionARazaPelajeActivity.this, caballos.get(3).getAudio_raza_pelaje(), 1);
-                    soundPool.play(audio_raza_pelaje, 1, 1, 0, 0, 1);
+                    sonido_actual = soundPool.load(InteraccionARazaPelajeActivity.this, caballos.get(3).getAudio_raza(), 1);
+                    int streamID = -1;
+                    do {
+                        streamID = soundPool.play(sonido_actual, 1, 1, 0, 0, 1);
+                    } while(streamID==0);
                 }
             });
         }
@@ -169,16 +187,16 @@ public class InteraccionARazaPelajeActivity extends AppCompatActivity {
             final FrameLayout modal = findViewById(R.id.a_div_fin_nivel);
             if (cant_correctas >=3 ){
                 // SE DA LA OPCION DE PASAR AL SIGUIENTE MINIJUEGO
-                Minijuego minijuego = Minijuego.getMinijuego();
-                minijuego.setActual(3);
                 confeti();
                 accion.setText(R.string.to_next);
                 accion.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
                 modal.setVisibility(View.VISIBLE);
                 accion.setOnClickListener(new View.OnClickListener() {
                     public void onClick(View v){
-                        jugarMinijuegoTres();
-                    }
+                        final SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(InteraccionARazaPelajeActivity.this);
+                        Intent intent = Minijuego.getMinijuego().nextLevel(3,InteraccionARazaPelajeActivity.this,sharedPreferences);
+                        startActivity(intent);
+                        finish();                    }
                 });
             }
             else{

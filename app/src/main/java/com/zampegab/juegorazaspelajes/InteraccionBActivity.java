@@ -36,7 +36,9 @@ public class InteraccionBActivity  extends AppCompatActivity {
 
     }
     private void jugarMinijuegoUno(){
-        final List<Caballo> caballos = Repositorio.getCaballosRandom((int) getIntent().getExtras().get("caballos"));
+        final SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
+        int cantCaballos = MainActivity.getCantCaballos(sharedPreferences);
+        final List<Caballo> caballos = Repositorio.getCaballosRandom(cantCaballos);
         ImageView opcion1 = findViewById(R.id.a_opcion_2);
         opcion1.setImageResource(caballos.get(0).getImg());
         ImageView opcion2 = findViewById(R.id.a_opcion_3);
@@ -134,20 +136,6 @@ public class InteraccionBActivity  extends AppCompatActivity {
         animationConfeti.start();
     }
 
-    private void jugarMinijuegoDos(){
-        final SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
-        String pref_nivel = sharedPreferences.getString("nivel", "1");
-        int cant_caballos;
-        Intent i = new Intent(InteraccionBActivity.this, InteraccionBRazaPelajeActivity.class);
-        if (pref_nivel.equals("1")) {
-            cant_caballos = 2;
-        } else {
-            cant_caballos = 4;
-        }
-        i.putExtra("caballos", cant_caballos);
-        startActivity(i);
-    }
-
     @Override
     protected void onResume(){
         super.onResume();
@@ -166,15 +154,16 @@ public class InteraccionBActivity  extends AppCompatActivity {
             final FrameLayout modal = findViewById(R.id.div_fin_nivel);
             if(cant_correctas >= 3){
                 // SE DA LA OPCION DE PASAR AL SIGUIENTE MINIJUEGO
-                Minijuego minijuego = Minijuego.getMinijuego();
-                minijuego.setActual(2);
                 confeti();
                 accion.setText(R.string.to_next);
                 accion.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
                 modal.setVisibility(View.VISIBLE);
                 accion.setOnClickListener(new View.OnClickListener() {
                     public void onClick(View v){
-                        jugarMinijuegoDos();
+                        final SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(InteraccionBActivity.this);
+                        Intent intent = Minijuego.getMinijuego().nextLevel(2,InteraccionBActivity.this,sharedPreferences);
+                        startActivity(intent);
+                        finish();
                     }
                 });
 
