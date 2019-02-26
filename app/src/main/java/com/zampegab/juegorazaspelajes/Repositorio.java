@@ -17,6 +17,7 @@ public class Repositorio {
         retorno.add(new Caballo(5,"bonita","mestizo criollo","overo azulejo",R.drawable.bonita_mestizo_criollo_overo_azulejo,R.raw.pelaje_overo_azulejo,R.raw.raza_mestizo,R.raw.nohayaudio,""));
         retorno.add(new Caballo(6,"huaflin","criollo","horespicaso",R.drawable.huaflin_criollo_horespicaso,R.raw.pelaje_picaso,R.raw.raza_criollo,R.raw.nohayaudio,""));
         retorno.add(new Caballo(7,"juana","cuarto    de milla","bayo",R.drawable.juana_cuartodemilla_bayo,R.raw.pelaje_bayo,R.raw.raza_cuartodemilla,R.raw.razaconpelaje_cuartodemilla_bayo,""));
+        retorno.add(new Caballo(8,"amapola","petizo argentino","rosillo",R.drawable.amapola_petizo_argentino_rosillo,R.raw.nohayaudio,R.raw.nohayaudio,R.raw.nohayaudio,""));
         return retorno;
     }
     public static List<Caballo> getCaballos(){

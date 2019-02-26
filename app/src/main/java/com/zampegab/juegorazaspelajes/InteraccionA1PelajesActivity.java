@@ -21,13 +21,15 @@ import java.util.List;
 public class InteraccionA1PelajesActivity extends AppCompatActivity {
 
     private SoundPool soundPool;
-    private int audio_raza, cant_correctas, cant_rondas, incorrecto_resoplido, correcto_relincho;
+    private int audio_raza, cant_correctas, cant_rondas, incorrecto_resoplido, correcto_relincho, sonido_actual;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         cant_correctas = 0;
         cant_rondas = 0;
         soundPool = new SoundPool(6, AudioManager.STREAM_MUSIC, 0);
+        correcto_relincho = soundPool.load(this, R.raw.relincho,1);
+        incorrecto_resoplido = soundPool.load(this, R.raw.resoplido,1);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_interaccion_a);
         jugarMinijuegoUno();
@@ -56,8 +58,11 @@ public class InteraccionA1PelajesActivity extends AppCompatActivity {
         audio_opcion1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                audio_raza = soundPool.load(InteraccionA1PelajesActivity.this, caballos.get(0).getAudio_pelaje(), 1);
-                soundPool.play(audio_raza, 1, 1, 0, 0, 1);
+                sonido_actual= soundPool.load(InteraccionA1PelajesActivity.this, caballos.get(0).getAudio_pelaje(), 1);
+                int streamID = -1;
+                do {
+                    streamID = soundPool.play(sonido_actual, 1, 1, 0, 0, 1);
+                } while(streamID==0);
             }
         });
 
@@ -76,8 +81,11 @@ public class InteraccionA1PelajesActivity extends AppCompatActivity {
         audio_opcion2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                audio_raza = soundPool.load(InteraccionA1PelajesActivity.this, caballos.get(1).getAudio_pelaje(), 1);
-                soundPool.play(audio_raza, 1, 1, 0, 0, 1);
+                sonido_actual= soundPool.load(InteraccionA1PelajesActivity.this, caballos.get(1).getAudio_pelaje(), 1);
+                int streamID = -1;
+                do {
+                    streamID = soundPool.play(sonido_actual, 1, 1, 0, 0, 1);
+                } while(streamID==0);
             }
         });
 
@@ -99,8 +107,11 @@ public class InteraccionA1PelajesActivity extends AppCompatActivity {
             audio_opcion3.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    audio_raza = soundPool.load(InteraccionA1PelajesActivity.this, caballos.get(2).getAudio_pelaje(), 1);
-                    soundPool.play(audio_raza, 1, 1, 0, 0, 1);
+                    sonido_actual= soundPool.load(InteraccionA1PelajesActivity.this, caballos.get(2).getAudio_pelaje(), 1);
+                    int streamID = -1;
+                    do {
+                        streamID = soundPool.play(sonido_actual, 1, 1, 0, 0, 1);
+                    } while(streamID==0);
                 }
             });
 
@@ -119,8 +130,11 @@ public class InteraccionA1PelajesActivity extends AppCompatActivity {
             audio_opcion4.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    audio_raza = soundPool.load(InteraccionA1PelajesActivity.this, caballos.get(3).getAudio_pelaje(), 1);
-                    soundPool.play(audio_raza, 1, 1, 0, 0, 1);
+                    sonido_actual= soundPool.load(InteraccionA1PelajesActivity.this, caballos.get(3).getAudio_pelaje(), 1);
+                    int streamID = -1;
+                    do {
+                        streamID = soundPool.play(sonido_actual, 1, 1, 0, 0, 1);
+                    } while(streamID==0);
                 }
             });
         }
@@ -214,9 +228,4 @@ public class InteraccionA1PelajesActivity extends AppCompatActivity {
         animationConfeti.start();
     }
 
-    private void jugarMinijuegoDos(){
-        Intent i = new Intent(InteraccionA1PelajesActivity.this, InteraccionARazaPelajeActivity.class);
-        startActivity(i);
-        finish();
-    }
 }

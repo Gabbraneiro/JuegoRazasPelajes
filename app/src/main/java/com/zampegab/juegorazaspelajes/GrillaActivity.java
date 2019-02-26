@@ -20,6 +20,7 @@ public class GrillaActivity extends AppCompatActivity{
 
         private List<Caballo> caballos;
         private SoundPool soundPool;
+        private int sonido_actual;
         @Override
         protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
@@ -40,8 +41,11 @@ public class GrillaActivity extends AppCompatActivity{
                 img_talk.setOnClickListener(new View.OnClickListener(){
                     @Override
                     public void onClick(View v) {
-                        int sonido = soundPool.load(GrillaActivity.this, sonido_caballo, 1);
-                        soundPool.play(sonido,1,1,0,0,1);
+                        sonido_actual = soundPool.load(GrillaActivity.this, sonido_caballo, 1);
+                        int streamID = -1;
+                        do {
+                            streamID = soundPool.play(sonido_actual, 1, 1, 0, 0, 1);
+                        } while(streamID==0);
                     }
                 });
                 if(frame == 3){
