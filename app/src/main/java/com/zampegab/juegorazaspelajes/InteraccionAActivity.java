@@ -2,6 +2,8 @@ package com.zampegab.juegorazaspelajes;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.drawable.AnimationDrawable;
 import android.media.AudioManager;
 import android.media.SoundPool;
@@ -29,8 +31,8 @@ public class InteraccionAActivity extends AppCompatActivity {
         cant_correctas = 0;
         cant_rondas = 0;
         soundPool = new SoundPool(6, AudioManager.STREAM_MUSIC, 0);
-        incorrecto_resoplido = soundPool.load(this, R.raw.resoplido,1);
         correcto_relincho = soundPool.load(this, R.raw.relincho,1);
+        incorrecto_resoplido = soundPool.load(this, R.raw.resoplido,1);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_interaccion_a);
         jugarMinijuegoUno();
@@ -42,7 +44,9 @@ public class InteraccionAActivity extends AppCompatActivity {
         final List<Caballo> caballos = Repositorio.getCaballosRandom(cantCaballos);
         final Caballo c = caballos.get((int) (Math.random() * (caballos.size() - 1)));
         ImageView caballo_correcto = findViewById(R.id.a_caballo_correcto);
+        //Bitmap bm = Bitmap.createScaledBitmap(BitmapFactory.decodeFile("juana_cuartodemilla_bayo"),100,100,true);
         caballo_correcto.setImageResource(c.getImg());
+        //caballo_correcto.setImageBitmap(bm);
 
         // OPCION 1
         TextView opcion1 = findViewById(R.id.opcion2);

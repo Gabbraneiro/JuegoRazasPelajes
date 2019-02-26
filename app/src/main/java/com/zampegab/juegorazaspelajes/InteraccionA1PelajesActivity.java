@@ -28,8 +28,6 @@ public class InteraccionA1PelajesActivity extends AppCompatActivity {
         cant_correctas = 0;
         cant_rondas = 0;
         soundPool = new SoundPool(6, AudioManager.STREAM_MUSIC, 0);
-        incorrecto_resoplido = soundPool.load(this, R.raw.resoplido,1);
-        correcto_relincho = soundPool.load(this, R.raw.relincho,1);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_interaccion_a);
         jugarMinijuegoUno();
@@ -139,10 +137,12 @@ public class InteraccionA1PelajesActivity extends AppCompatActivity {
         if(caballo_correcto.getPelaje().equals(caballo_seleccionado.getPelaje())){
             // RESPUESTA CORRECTA
             soundPool.play(correcto_relincho,1,1,0,0,1);
+            correcto_relincho = soundPool.load(this, R.raw.relincho,1);
             cant_correctas++;
         }
         else {
             // RESPUESTA INCORRECTA
+            incorrecto_resoplido = soundPool.load(this, R.raw.resoplido,1);
             soundPool.play(incorrecto_resoplido,1,1,0,0,1);
         }
         cant_rondas++;

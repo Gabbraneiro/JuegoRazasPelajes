@@ -17,6 +17,7 @@
     <string name="config_lista">Lista</string>
     <string name="config_grilla">Grilla</string>
     <string name="modo_reconocimiento">Modo reconocimiento</string>
+    <string name="tipo_reconocimiento">Tipo reconocimiento</string>
     <string name="modo_interaccion"> Modo interaccion</string>
     <string name="config_ajustes"> Ajustes</string>
 
