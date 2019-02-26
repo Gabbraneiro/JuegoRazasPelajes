@@ -64,12 +64,10 @@ public class Minijuego {
                     return  new Intent(contexto_previo, InteraccionBRazaPelajeActivity.class);
                 }
                 break;
-
-            case "C":
-                return new Intent(contexto_previo, InteraccionCActivity.class);
+        }
+        if(lvl == 3){
+            return new Intent(contexto_previo, InteraccionCActivity.class);
         }
         return null;
     }
-
-
 }

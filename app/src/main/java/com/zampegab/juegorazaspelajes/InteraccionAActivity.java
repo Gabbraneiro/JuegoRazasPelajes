@@ -44,9 +44,7 @@ public class InteraccionAActivity extends AppCompatActivity {
         final List<Caballo> caballos = Repositorio.getCaballosRandom(cantCaballos);
         final Caballo c = caballos.get((int) (Math.random() * (caballos.size() - 1)));
         ImageView caballo_correcto = findViewById(R.id.a_caballo_correcto);
-        //Bitmap bm = Bitmap.createScaledBitmap(BitmapFactory.decodeFile("juana_cuartodemilla_bayo"),100,100,true);
         caballo_correcto.setImageResource(c.getImg());
-        //caballo_correcto.setImageBitmap(bm);
 
         // OPCION 1
         TextView opcion1 = findViewById(R.id.opcion2);
