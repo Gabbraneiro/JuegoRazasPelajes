@@ -105,10 +105,9 @@ public class MainActivity extends AppCompatActivity {
                             intent = new Intent(MainActivity.this, InteraccionBRazaPelajeActivity.class);
                         }
                         break;
-
-                    case "C":
-                        intent = new Intent(MainActivity.this, InteraccionCActivity.class);
-                        break;
+                }
+                if(minijuego.getActual() == 3){
+                    intent = new Intent(MainActivity.this, InteraccionCActivity.class);
                 }
                 //intent.putExtra("caballos", getCantCaballos(sharedPreferences));
                 startActivity(intent);

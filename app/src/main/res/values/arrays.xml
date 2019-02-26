@@ -14,13 +14,11 @@
         name="modo_interaccion_radio_ids">
         <item>A</item>
         <item>B</item>
-        <item>C</item>
     </string-array>
     <string-array
         name="modo_interaccion_radio_values">
         <item>Razas y pelajes: Imagen-Palabra</item>
         <item>Razas y pelajes: Palabra-Imagen</item>
-        <item>Cruza: Imagen-Imagen</item>
     </string-array>
     <string-array
         name="razas_ids">
