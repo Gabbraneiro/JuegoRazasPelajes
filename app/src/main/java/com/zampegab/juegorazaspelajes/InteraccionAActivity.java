@@ -2,6 +2,8 @@ package com.zampegab.juegorazaspelajes;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.drawable.AnimationDrawable;
 import android.media.AudioManager;
 import android.media.SoundPool;
@@ -29,8 +31,8 @@ public class InteraccionAActivity extends AppCompatActivity {
         cant_correctas = 0;
         cant_rondas = 0;
         soundPool = new SoundPool(6, AudioManager.STREAM_MUSIC, 0);
-        incorrecto_resoplido = soundPool.load(this, R.raw.resoplido,1);
         correcto_relincho = soundPool.load(this, R.raw.relincho,1);
+        incorrecto_resoplido = soundPool.load(this, R.raw.resoplido,1);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_interaccion_a);
         jugarMinijuegoUno();

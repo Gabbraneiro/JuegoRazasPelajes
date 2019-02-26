@@ -9,6 +9,14 @@
             android:key="modo_reconocimiento"
             android:summary="Eleccion interfaz en el modo reconocimiento"
             android:title="@string/modo_reconocimiento" />
+        <ListPreference
+            android:defaultValue="1"
+            android:dialogTitle="@string/tipo_reconocimiento"
+            android:entryValues="@array/tipo_reconocimiento_radio_ids"
+            android:entries="@array/tipo_reconocimiento_radio_values"
+            android:key="tipo_reconocimiento"
+            android:summary="Eleccion interfaz en el modo reconocimiento"
+            android:title="@string/tipo_reconocimiento" />
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/modo_interaccion">
         <ListPreference

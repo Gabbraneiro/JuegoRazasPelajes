@@ -49,7 +49,17 @@ public class MainActivity extends AppCompatActivity {
                // new CuadroDialogo(context, 1, "correcta", 1);
                 String pref_reconocimiento = sharedPreferences.getString("modo_reconocimiento", "1");
                 if (pref_reconocimiento.equals("1")) {
-                    Intent intent = new Intent(MainActivity.this, ListaActivity.class);
+                    Intent intent = null;
+                    String tipo_reconocimiento = sharedPreferences.getString("tipo_reconocimiento", "1");
+                    if(tipo_reconocimiento.equals("1")){
+                        intent = new Intent(MainActivity.this, ListaActivity.class);
+                    }
+                    else if(tipo_reconocimiento.equals("2")){
+                        intent = new Intent(MainActivity.this, ListaPelajeActivity.class);
+                    }
+                    else{
+                        intent = new Intent(MainActivity.this, ListaCruzaActivity.class);
+                    }
                     startActivity(intent);
                 } else {
                     Intent intent = new Intent(MainActivity.this, GrillaActivity.class);
@@ -77,7 +87,7 @@ public class MainActivity extends AppCompatActivity {
                     case "A":
                         if(minijuego.getActual() == 1){
                             int random = 1;
-                            //random = (int) (Math.random() * 2);
+                            random = (int) (Math.random() * 2);
                             if(random == 1){
                                 intent = new Intent(MainActivity.this, InteraccionAActivity.class);
                             }
@@ -93,7 +103,7 @@ public class MainActivity extends AppCompatActivity {
                     case "B":
                         if(minijuego.getActual() == 1){
                             int random = 1;
-                            //random = (int) (Math.random() * 2);
+                            random = (int) (Math.random() * 2);
                             if(random == 1){
                                 intent = new Intent(MainActivity.this, InteraccionBActivity.class);
                             }
@@ -105,10 +115,9 @@ public class MainActivity extends AppCompatActivity {
                             intent = new Intent(MainActivity.this, InteraccionBRazaPelajeActivity.class);
                         }
                         break;
-
-                    case "C":
-                        intent = new Intent(MainActivity.this, InteraccionCActivity.class);
-                        break;
+                }
+                if(minijuego.getActual() == 3){
+                    intent = new Intent(MainActivity.this, InteraccionCActivity.class);
                 }
                 //intent.putExtra("caballos", getCantCaballos(sharedPreferences));
                 startActivity(intent);

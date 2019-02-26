@@ -11,6 +11,18 @@
         <item>Grilla</item>
     </string-array>
     <string-array
+        name="tipo_reconocimiento_radio_ids">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+    <string-array
+        name="tipo_reconocimiento_radio_values">
+        <item>Raza</item>
+        <item>Pelaje</item>
+        <item>Cruza</item>
+    </string-array>
+    <string-array
         name="modo_interaccion_radio_ids">
         <item>A</item>
         <item>B</item>

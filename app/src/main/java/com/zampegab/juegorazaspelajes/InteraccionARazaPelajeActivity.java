@@ -196,7 +196,8 @@ public class InteraccionARazaPelajeActivity extends AppCompatActivity {
                         final SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(InteraccionARazaPelajeActivity.this);
                         Intent intent = Minijuego.getMinijuego().nextLevel(3,InteraccionARazaPelajeActivity.this,sharedPreferences);
                         startActivity(intent);
-                        finish();                    }
+                        finish();
+                    }
                 });
             }
             else{
