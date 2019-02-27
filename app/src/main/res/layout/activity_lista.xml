@@ -53,7 +53,7 @@
                     android:layout_marginStart="@dimen/lista_text_ml"
                     android:layout_marginLeft="@dimen/lista_text_ml"
                     android:layout_marginTop="@dimen/lista_text_mt"
-                    android:textSize="10sp" />
+                    android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/text_2_2"
