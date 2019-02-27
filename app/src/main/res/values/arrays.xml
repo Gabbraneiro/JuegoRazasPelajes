@@ -70,8 +70,8 @@
     </string-array>
     <string-array
         name="voz_ids">
-        <item>1</item>
-        <item>2</item>
+        <item>m</item>
+        <item>f</item>
     </string-array>
     <string-array
         name="voz_values">

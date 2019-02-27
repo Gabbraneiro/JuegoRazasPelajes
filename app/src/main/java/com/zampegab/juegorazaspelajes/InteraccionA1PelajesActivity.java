@@ -22,9 +22,11 @@ public class InteraccionA1PelajesActivity extends AppCompatActivity {
 
     private SoundPool soundPool;
     private int audio_raza, cant_correctas, cant_rondas, incorrecto_resoplido, correcto_relincho, sonido_actual;
-
+    private String voz;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        final SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
+        voz = sharedPreferences.getString("voz","m");
         cant_correctas = 0;
         cant_rondas = 0;
         soundPool = new SoundPool(6, AudioManager.STREAM_MUSIC, 0);
@@ -58,7 +60,7 @@ public class InteraccionA1PelajesActivity extends AppCompatActivity {
         audio_opcion1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                sonido_actual= soundPool.load(InteraccionA1PelajesActivity.this, caballos.get(0).getAudio_pelaje(), 1);
+                sonido_actual= soundPool.load(InteraccionA1PelajesActivity.this, caballos.get(0).getAudio_pelaje(voz), 1);
                 int streamID = -1;
                 do {
                     streamID = soundPool.play(sonido_actual, 1, 1, 0, 0, 1);
@@ -81,7 +83,7 @@ public class InteraccionA1PelajesActivity extends AppCompatActivity {
         audio_opcion2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                sonido_actual= soundPool.load(InteraccionA1PelajesActivity.this, caballos.get(1).getAudio_pelaje(), 1);
+                sonido_actual= soundPool.load(InteraccionA1PelajesActivity.this, caballos.get(1).getAudio_pelaje(voz), 1);
                 int streamID = -1;
                 do {
                     streamID = soundPool.play(sonido_actual, 1, 1, 0, 0, 1);
@@ -107,7 +109,7 @@ public class InteraccionA1PelajesActivity extends AppCompatActivity {
             audio_opcion3.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    sonido_actual= soundPool.load(InteraccionA1PelajesActivity.this, caballos.get(2).getAudio_pelaje(), 1);
+                    sonido_actual= soundPool.load(InteraccionA1PelajesActivity.this, caballos.get(2).getAudio_pelaje(voz), 1);
                     int streamID = -1;
                     do {
                         streamID = soundPool.play(sonido_actual, 1, 1, 0, 0, 1);
@@ -130,7 +132,7 @@ public class InteraccionA1PelajesActivity extends AppCompatActivity {
             audio_opcion4.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    sonido_actual= soundPool.load(InteraccionA1PelajesActivity.this, caballos.get(3).getAudio_pelaje(), 1);
+                    sonido_actual= soundPool.load(InteraccionA1PelajesActivity.this, caballos.get(3).getAudio_pelaje(voz), 1);
                     int streamID = -1;
                     do {
                         streamID = soundPool.play(sonido_actual, 1, 1, 0, 0, 1);

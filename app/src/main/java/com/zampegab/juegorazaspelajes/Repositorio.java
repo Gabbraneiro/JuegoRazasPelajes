@@ -16,7 +16,7 @@ public class Repositorio {
 
     private static List<Caballo> hardcodeCaballos(){
         List<Caballo> retorno = new ArrayList<>();
-        retorno.add(new Caballo(8,"amapola","petiso argentino","rosillo",R.drawable.amapola_petiso_argentino_rosillo,R.raw.pelaje_rosillo,R.raw.raza_petiso_argentino,R.raw.nohayaudio, "Raza de Caballos que nació de la cruza de petisos importados con caballos de otras razas, principalmente autóctonas. De cabeza mediana, orejas pequeñas, cuerpo armonioso y profundo; de acción ágil y suelta, temperamento activo y brioso.En la actualidad, se usa para actividades hípicas con niños y niñas. Formado por una capa de pelos rojizos y blancos entremezclados, generalmente, sobre piel clara."));
+        retorno.add(new Caballo(8,"amapola","petiso argentino","rosillo",R.drawable.amapola_petiso_argentino_rosillo,R.raw.pelaje_rosillo,R.raw.raza_petizo_argentino,R.raw.nohayaudio, "Raza de Caballos que nació de la cruza de petisos importados con caballos de otras razas, principalmente autóctonas. De cabeza mediana, orejas pequeñas, cuerpo armonioso y profundo; de acción ágil y suelta, temperamento activo y brioso.En la actualidad, se usa para actividades hípicas con niños y niñas. Formado por una capa de pelos rojizos y blancos entremezclados, generalmente, sobre piel clara."));
         retorno.add(new Caballo(9,"ambar","mestizo","alazan tostado",R.drawable.ambar_mestizo_cruza_arabe_alazan_tostado,R.raw.pelaje_alazan_tostado,R.raw.raza_mestizo,R.raw.razaconpelaje_mestizo_cruza_arabe_alazan_tostado, ""));
         retorno.add(new Caballo(1,"angola","spc","zainocolorado",R.drawable.angola_spc_zainocolorado,R.raw.pelaje_zaino,R.raw.raza_spc,R.raw.razaconpelaje_spc_zaina_colorada, ""));
         retorno.add(new Caballo(10,"antu","mestizo","oveiro zaino",R.drawable.antu_mestizo_overo_zaino,R.raw.pelaje_overo_zaino,R.raw.raza_mestizo,R.raw.razaconpelaje_mestizo_overo_zaino, ""));
@@ -29,7 +29,7 @@ public class Repositorio {
         retorno.add(new Caballo(4,"bionda","cruza arabe","alazan ruano",R.drawable.bionda_cruzaarabe_alazanruano,R.raw.pelaje_alazan_ruano,R.raw.nohayaudio ,R.raw.nohayaudio,""));
         retorno.add(new Caballo(5,"bonita","mestizo criollo","overo azulejo",R.drawable.bonita_mestizo_criollo_overo_azulejo,R.raw.pelaje_overo_azulejo,R.raw.raza_mestizo,R.raw.nohayaudio,""));
         retorno.add(new Caballo(7,"juana","cuarto de milla","bayo",R.drawable.juana_cuartodemilla_bayo,R.raw.pelaje_bayo,R.raw.raza_cuartodemilla,R.raw.razaconpelaje_cuartodemilla_bayo,""));
-        retorno.add(new Caballo(15,"mora","petiso argentino","tordillo moro",R.drawable.mora_petiso_argentino_tordillo_moro,R.raw.nohayaudio,R.raw.raza_petiso_argentino,R.raw.nohayaudio, ""));
+        retorno.add(new Caballo(15,"mora","petiso argentino","tordillo moro",R.drawable.mora_petiso_argentino_tordillo_moro,R.raw.nohayaudio,R.raw.raza_petizo_argentino,R.raw.nohayaudio, ""));
         retorno.add(new Caballo(16,"muneco","mestizo","overo rosado",R.drawable.muneco_mestizo_overo_rosado,R.raw.pelaje_overo_rosado,R.raw.raza_mestizo,R.raw.razaconpelaje_mestizo_over_rosado, ""));
         retorno.add(new Caballo(17,"nala","mestizo","mora",R.drawable.nala_mestizo_moro,R.raw.pelaje_mora,R.raw.raza_mestizo,R.raw.razaconpelaje_mestizo_mora, ""));
         retorno.add(new Caballo(18,"pamperito","petiso argentino","zaino",R.drawable.pamperito_petiso_argentino_zaino,R.raw.pelaje_zaino,R.raw.raza_mestizo,R.raw.razaconpelaje_petizo_argentino_zaino, ""));

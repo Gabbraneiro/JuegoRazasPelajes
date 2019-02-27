@@ -23,6 +23,7 @@
     <dimen name="imagen_lista_heigth">180sp</dimen>
     <dimen name="imagen_lista_ml">45sp</dimen>
     <dimen name="imagen_lista_mt">35sp</dimen>
+    <dimen name="lista_text_size_2">20sp</dimen>
     <dimen name="lista_text_size">40sp</dimen>
     <dimen name="lista_text_ml">45sp</dimen>
     <dimen name="lista_text_mt">100sp</dimen>
