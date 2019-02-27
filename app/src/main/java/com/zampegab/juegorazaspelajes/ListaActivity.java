@@ -19,6 +19,7 @@ public class ListaActivity  extends AppCompatActivity{
 
     private List<Caballo> caballos;
     private SoundPool soundPool;
+    private int sonido_actual;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,7 +27,6 @@ public class ListaActivity  extends AppCompatActivity{
         caballos = Repositorio.getCaballos();
         setContentView(R.layout.activity_lista);
         int row = 1;
-        int frame = 1;
         for (int i = 0; i < caballos.size(); i++) {
             LinearLayout linear_layout = findViewById(getResources().getIdentifier("linear_row_" + row,"id",ListaActivity.this.getPackageName()));
             ImageView img = findViewById(getResources().getIdentifier("image_" + row,"id",ListaActivity.this.getPackageName()));
@@ -40,8 +40,11 @@ public class ListaActivity  extends AppCompatActivity{
             img_talk.setOnClickListener(new View.OnClickListener(){
                 @Override
                 public void onClick(View v) {
-                    int sonido = soundPool.load(ListaActivity.this, sonido_caballo, 1);
-                    soundPool.play(sonido,1,1,0,0,1);
+                    sonido_actual = soundPool.load(ListaActivity.this, sonido_caballo, 1);
+                    int streamID = -1;
+                    do {
+                        streamID = soundPool.play(sonido_actual, 1, 1, 0, 0, 1);
+                    } while(streamID==0);
                 }
             });
             text2.setText(caballos.get(i).getDescripcion());
