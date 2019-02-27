@@ -440,6 +440,570 @@
 
             </LinearLayout>
 
+            <LinearLayout
+                android:id="@+id/horiz_grilla_4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <FrameLayout
+                    android:id="@+id/row_4_frame_1"
+                    android:layout_width="@dimen/grilla_frame_width"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/grilla_frame_ml"
+                    android:layout_marginLeft="@dimen/grilla_frame_ml"
+                    android:layout_marginTop="@dimen/grilla_frame_mt"
+                    android:layout_marginEnd="@dimen/grilla_frame_mr"
+                    android:layout_marginRight="@dimen/grilla_frame_mr"
+                    android:visibility="invisible">
+
+                    <ImageView
+                        android:id="@+id/image_4_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/grilla_imagen_heigth"
+                        android:layout_marginStart="@dimen/grilla_imagen_ml"
+                        android:layout_marginLeft="@dimen/grilla_imagen_ml"
+                        android:layout_marginTop="@dimen/grilla_imagen_mt"
+                        android:layout_marginEnd="@dimen/grilla_imagen_mr"
+                        android:layout_marginRight="@dimen/grilla_imagen_mr"
+                        android:contentDescription="@string/caballo" />
+
+                    <TextView
+                        android:id="@+id/texto_4_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/grilla_texto_ml"
+                        android:layout_marginLeft="@dimen/grilla_texto_ml"
+                        android:layout_marginTop="@dimen/grilla_texto_mt"
+                        android:textSize="@dimen/grilla_texto_size"
+                        android:textStyle="bold"
+                        app:fontFamily="serif" />
+
+                    <ImageButton
+                        android:id="@+id/talk_4_1"
+                        android:layout_width="@dimen/grilla_imagen_voz_width"
+                        android:layout_height="@dimen/grilla_imagen_voz_heigth"
+                        android:layout_marginStart="@dimen/grilla_imagen_voz_ml"
+                        android:layout_marginLeft="@dimen/grilla_imagen_voz_ml"
+                        android:layout_marginTop="@dimen/grilla_imagen_voz_mt"
+                        android:contentDescription="@string/talking"
+                        app:srcCompat="@drawable/audio_regular" />
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/row_4_frame_2"
+                    android:layout_width="@dimen/grilla_frame_width"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/grilla_frame_ml"
+                    android:layout_marginLeft="@dimen/grilla_frame_ml"
+                    android:layout_marginTop="@dimen/grilla_frame_mt"
+                    android:layout_marginEnd="@dimen/grilla_frame_mr"
+                    android:layout_marginRight="@dimen/grilla_frame_mr"
+                    android:visibility="invisible">
+
+                    <ImageView
+                        android:id="@+id/image_4_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/grilla_imagen_heigth"
+                        android:layout_marginStart="@dimen/grilla_imagen_ml"
+                        android:layout_marginLeft="@dimen/grilla_imagen_ml"
+                        android:layout_marginTop="@dimen/grilla_imagen_mt"
+                        android:layout_marginEnd="@dimen/grilla_imagen_mr"
+                        android:layout_marginRight="@dimen/grilla_imagen_mr"
+                        android:contentDescription="@string/caballo" />
+
+                    <TextView
+                        android:id="@+id/texto_4_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/grilla_texto_ml"
+                        android:layout_marginLeft="@dimen/grilla_texto_ml"
+                        android:layout_marginTop="@dimen/grilla_texto_mt"
+                        android:textSize="@dimen/grilla_texto_size"
+                        android:textStyle="bold"
+                        app:fontFamily="serif" />
+
+                    <ImageButton
+                        android:id="@+id/talk_4_2"
+                        android:layout_width="@dimen/grilla_imagen_voz_width"
+                        android:layout_height="@dimen/grilla_imagen_voz_heigth"
+                        android:layout_marginStart="@dimen/grilla_imagen_voz_ml"
+                        android:layout_marginLeft="@dimen/grilla_imagen_voz_ml"
+                        android:layout_marginTop="@dimen/grilla_imagen_voz_mt"
+                        android:contentDescription="@string/talking"
+                        app:srcCompat="@drawable/audio_regular" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/row_4_frame_3"
+                    android:layout_width="@dimen/grilla_frame_width"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/grilla_frame_ml"
+                    android:layout_marginLeft="@dimen/grilla_frame_ml"
+                    android:layout_marginTop="@dimen/grilla_frame_mt"
+                    android:layout_marginEnd="@dimen/grilla_frame_mr"
+                    android:layout_marginRight="@dimen/grilla_frame_mr"
+                    android:visibility="invisible">
+
+                    <ImageView
+                        android:id="@+id/image_4_3"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/grilla_imagen_heigth"
+                        android:layout_marginStart="@dimen/grilla_imagen_ml"
+                        android:layout_marginLeft="@dimen/grilla_imagen_ml"
+                        android:layout_marginTop="@dimen/grilla_imagen_mt"
+                        android:layout_marginEnd="@dimen/grilla_imagen_mr"
+                        android:layout_marginRight="@dimen/grilla_imagen_mr"
+                        android:contentDescription="@string/caballo" />
+
+                    <TextView
+                        android:id="@+id/texto_4_3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/grilla_texto_ml"
+                        android:layout_marginLeft="@dimen/grilla_texto_ml"
+                        android:layout_marginTop="@dimen/grilla_texto_mt"
+                        android:textSize="@dimen/grilla_texto_size"
+                        android:textStyle="bold"
+                        app:fontFamily="serif" />
+
+                    <ImageButton
+                        android:id="@+id/talk_4_3"
+                        android:layout_width="@dimen/grilla_imagen_voz_width"
+                        android:layout_height="@dimen/grilla_imagen_voz_heigth"
+                        android:layout_marginStart="@dimen/grilla_imagen_voz_ml"
+                        android:layout_marginLeft="@dimen/grilla_imagen_voz_ml"
+                        android:layout_marginTop="@dimen/grilla_imagen_voz_mt"
+                        android:contentDescription="@string/talking"
+                        app:srcCompat="@drawable/audio_regular" />
+                </FrameLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/horiz_grilla_5"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <FrameLayout
+                    android:id="@+id/row_5_frame_1"
+                    android:layout_width="@dimen/grilla_frame_width"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/grilla_frame_ml"
+                    android:layout_marginLeft="@dimen/grilla_frame_ml"
+                    android:layout_marginTop="@dimen/grilla_frame_mt"
+                    android:layout_marginEnd="@dimen/grilla_frame_mr"
+                    android:layout_marginRight="@dimen/grilla_frame_mr"
+                    android:visibility="invisible">
+
+                    <ImageView
+                        android:id="@+id/image_5_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/grilla_imagen_heigth"
+                        android:layout_marginStart="@dimen/grilla_imagen_ml"
+                        android:layout_marginLeft="@dimen/grilla_imagen_ml"
+                        android:layout_marginTop="@dimen/grilla_imagen_mt"
+                        android:layout_marginEnd="@dimen/grilla_imagen_mr"
+                        android:layout_marginRight="@dimen/grilla_imagen_mr"
+                        android:contentDescription="@string/caballo" />
+
+                    <TextView
+                        android:id="@+id/texto_5_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/grilla_texto_ml"
+                        android:layout_marginLeft="@dimen/grilla_texto_ml"
+                        android:layout_marginTop="@dimen/grilla_texto_mt"
+                        android:textSize="@dimen/grilla_texto_size"
+                        android:textStyle="bold"
+                        app:fontFamily="serif" />
+
+                    <ImageButton
+                        android:id="@+id/talk_5_1"
+                        android:layout_width="@dimen/grilla_imagen_voz_width"
+                        android:layout_height="@dimen/grilla_imagen_voz_heigth"
+                        android:layout_marginStart="@dimen/grilla_imagen_voz_ml"
+                        android:layout_marginLeft="@dimen/grilla_imagen_voz_ml"
+                        android:layout_marginTop="@dimen/grilla_imagen_voz_mt"
+                        android:contentDescription="@string/talking"
+                        app:srcCompat="@drawable/audio_regular" />
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/row_5_frame_2"
+                    android:layout_width="@dimen/grilla_frame_width"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/grilla_frame_ml"
+                    android:layout_marginLeft="@dimen/grilla_frame_ml"
+                    android:layout_marginTop="@dimen/grilla_frame_mt"
+                    android:layout_marginEnd="@dimen/grilla_frame_mr"
+                    android:layout_marginRight="@dimen/grilla_frame_mr"
+                    android:visibility="invisible">
+
+                    <ImageView
+                        android:id="@+id/image_5_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/grilla_imagen_heigth"
+                        android:layout_marginStart="@dimen/grilla_imagen_ml"
+                        android:layout_marginLeft="@dimen/grilla_imagen_ml"
+                        android:layout_marginTop="@dimen/grilla_imagen_mt"
+                        android:layout_marginEnd="@dimen/grilla_imagen_mr"
+                        android:layout_marginRight="@dimen/grilla_imagen_mr"
+                        android:contentDescription="@string/caballo" />
+
+                    <TextView
+                        android:id="@+id/texto_5_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/grilla_texto_ml"
+                        android:layout_marginLeft="@dimen/grilla_texto_ml"
+                        android:layout_marginTop="@dimen/grilla_texto_mt"
+                        android:textSize="@dimen/grilla_texto_size"
+                        android:textStyle="bold"
+                        app:fontFamily="serif" />
+
+                    <ImageButton
+                        android:id="@+id/talk_5_2"
+                        android:layout_width="@dimen/grilla_imagen_voz_width"
+                        android:layout_height="@dimen/grilla_imagen_voz_heigth"
+                        android:layout_marginStart="@dimen/grilla_imagen_voz_ml"
+                        android:layout_marginLeft="@dimen/grilla_imagen_voz_ml"
+                        android:layout_marginTop="@dimen/grilla_imagen_voz_mt"
+                        android:contentDescription="@string/talking"
+                        app:srcCompat="@drawable/audio_regular" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/row_5_frame_3"
+                    android:layout_width="@dimen/grilla_frame_width"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/grilla_frame_ml"
+                    android:layout_marginLeft="@dimen/grilla_frame_ml"
+                    android:layout_marginTop="@dimen/grilla_frame_mt"
+                    android:layout_marginEnd="@dimen/grilla_frame_mr"
+                    android:layout_marginRight="@dimen/grilla_frame_mr"
+                    android:visibility="invisible">
+
+                    <ImageView
+                        android:id="@+id/image_5_3"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/grilla_imagen_heigth"
+                        android:layout_marginStart="@dimen/grilla_imagen_ml"
+                        android:layout_marginLeft="@dimen/grilla_imagen_ml"
+                        android:layout_marginTop="@dimen/grilla_imagen_mt"
+                        android:layout_marginEnd="@dimen/grilla_imagen_mr"
+                        android:layout_marginRight="@dimen/grilla_imagen_mr"
+                        android:contentDescription="@string/caballo" />
+
+                    <TextView
+                        android:id="@+id/texto_5_3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/grilla_texto_ml"
+                        android:layout_marginLeft="@dimen/grilla_texto_ml"
+                        android:layout_marginTop="@dimen/grilla_texto_mt"
+                        android:textSize="@dimen/grilla_texto_size"
+                        android:textStyle="bold"
+                        app:fontFamily="serif" />
+
+                    <ImageButton
+                        android:id="@+id/talk_5_3"
+                        android:layout_width="@dimen/grilla_imagen_voz_width"
+                        android:layout_height="@dimen/grilla_imagen_voz_heigth"
+                        android:layout_marginStart="@dimen/grilla_imagen_voz_ml"
+                        android:layout_marginLeft="@dimen/grilla_imagen_voz_ml"
+                        android:layout_marginTop="@dimen/grilla_imagen_voz_mt"
+                        android:contentDescription="@string/talking"
+                        app:srcCompat="@drawable/audio_regular" />
+                </FrameLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/horiz_grilla_6"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <FrameLayout
+                    android:id="@+id/row_6_frame_1"
+                    android:layout_width="@dimen/grilla_frame_width"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/grilla_frame_ml"
+                    android:layout_marginLeft="@dimen/grilla_frame_ml"
+                    android:layout_marginTop="@dimen/grilla_frame_mt"
+                    android:layout_marginEnd="@dimen/grilla_frame_mr"
+                    android:layout_marginRight="@dimen/grilla_frame_mr"
+                    android:visibility="invisible">
+
+                    <ImageView
+                        android:id="@+id/image_6_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/grilla_imagen_heigth"
+                        android:layout_marginStart="@dimen/grilla_imagen_ml"
+                        android:layout_marginLeft="@dimen/grilla_imagen_ml"
+                        android:layout_marginTop="@dimen/grilla_imagen_mt"
+                        android:layout_marginEnd="@dimen/grilla_imagen_mr"
+                        android:layout_marginRight="@dimen/grilla_imagen_mr"
+                        android:contentDescription="@string/caballo" />
+
+                    <TextView
+                        android:id="@+id/texto_6_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/grilla_texto_ml"
+                        android:layout_marginLeft="@dimen/grilla_texto_ml"
+                        android:layout_marginTop="@dimen/grilla_texto_mt"
+                        android:textSize="@dimen/grilla_texto_size"
+                        android:textStyle="bold"
+                        app:fontFamily="serif" />
+
+                    <ImageButton
+                        android:id="@+id/talk_6_1"
+                        android:layout_width="@dimen/grilla_imagen_voz_width"
+                        android:layout_height="@dimen/grilla_imagen_voz_heigth"
+                        android:layout_marginStart="@dimen/grilla_imagen_voz_ml"
+                        android:layout_marginLeft="@dimen/grilla_imagen_voz_ml"
+                        android:layout_marginTop="@dimen/grilla_imagen_voz_mt"
+                        android:contentDescription="@string/talking"
+                        app:srcCompat="@drawable/audio_regular" />
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/row_6_frame_2"
+                    android:layout_width="@dimen/grilla_frame_width"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/grilla_frame_ml"
+                    android:layout_marginLeft="@dimen/grilla_frame_ml"
+                    android:layout_marginTop="@dimen/grilla_frame_mt"
+                    android:layout_marginEnd="@dimen/grilla_frame_mr"
+                    android:layout_marginRight="@dimen/grilla_frame_mr"
+                    android:visibility="invisible">
+
+                    <ImageView
+                        android:id="@+id/image_6_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/grilla_imagen_heigth"
+                        android:layout_marginStart="@dimen/grilla_imagen_ml"
+                        android:layout_marginLeft="@dimen/grilla_imagen_ml"
+                        android:layout_marginTop="@dimen/grilla_imagen_mt"
+                        android:layout_marginEnd="@dimen/grilla_imagen_mr"
+                        android:layout_marginRight="@dimen/grilla_imagen_mr"
+                        android:contentDescription="@string/caballo" />
+
+                    <TextView
+                        android:id="@+id/texto_6_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/grilla_texto_ml"
+                        android:layout_marginLeft="@dimen/grilla_texto_ml"
+                        android:layout_marginTop="@dimen/grilla_texto_mt"
+                        android:textSize="@dimen/grilla_texto_size"
+                        android:textStyle="bold"
+                        app:fontFamily="serif" />
+
+                    <ImageButton
+                        android:id="@+id/talk_6_2"
+                        android:layout_width="@dimen/grilla_imagen_voz_width"
+                        android:layout_height="@dimen/grilla_imagen_voz_heigth"
+                        android:layout_marginStart="@dimen/grilla_imagen_voz_ml"
+                        android:layout_marginLeft="@dimen/grilla_imagen_voz_ml"
+                        android:layout_marginTop="@dimen/grilla_imagen_voz_mt"
+                        android:contentDescription="@string/talking"
+                        app:srcCompat="@drawable/audio_regular" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/row_6_frame_3"
+                    android:layout_width="@dimen/grilla_frame_width"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/grilla_frame_ml"
+                    android:layout_marginLeft="@dimen/grilla_frame_ml"
+                    android:layout_marginTop="@dimen/grilla_frame_mt"
+                    android:layout_marginEnd="@dimen/grilla_frame_mr"
+                    android:layout_marginRight="@dimen/grilla_frame_mr"
+                    android:visibility="invisible">
+
+                    <ImageView
+                        android:id="@+id/image_6_3"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/grilla_imagen_heigth"
+                        android:layout_marginStart="@dimen/grilla_imagen_ml"
+                        android:layout_marginLeft="@dimen/grilla_imagen_ml"
+                        android:layout_marginTop="@dimen/grilla_imagen_mt"
+                        android:layout_marginEnd="@dimen/grilla_imagen_mr"
+                        android:layout_marginRight="@dimen/grilla_imagen_mr"
+                        android:contentDescription="@string/caballo" />
+
+                    <TextView
+                        android:id="@+id/texto_6_3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/grilla_texto_ml"
+                        android:layout_marginLeft="@dimen/grilla_texto_ml"
+                        android:layout_marginTop="@dimen/grilla_texto_mt"
+                        android:textSize="@dimen/grilla_texto_size"
+                        android:textStyle="bold"
+                        app:fontFamily="serif" />
+
+                    <ImageButton
+                        android:id="@+id/talk_6_3"
+                        android:layout_width="@dimen/grilla_imagen_voz_width"
+                        android:layout_height="@dimen/grilla_imagen_voz_heigth"
+                        android:layout_marginStart="@dimen/grilla_imagen_voz_ml"
+                        android:layout_marginLeft="@dimen/grilla_imagen_voz_ml"
+                        android:layout_marginTop="@dimen/grilla_imagen_voz_mt"
+                        android:contentDescription="@string/talking"
+                        app:srcCompat="@drawable/audio_regular" />
+                </FrameLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/horiz_grilla_7"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <FrameLayout
+                    android:id="@+id/row_7_frame_1"
+                    android:layout_width="@dimen/grilla_frame_width"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/grilla_frame_ml"
+                    android:layout_marginLeft="@dimen/grilla_frame_ml"
+                    android:layout_marginTop="@dimen/grilla_frame_mt"
+                    android:layout_marginEnd="@dimen/grilla_frame_mr"
+                    android:layout_marginRight="@dimen/grilla_frame_mr"
+                    android:visibility="invisible">
+
+                    <ImageView
+                        android:id="@+id/image_7_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/grilla_imagen_heigth"
+                        android:layout_marginStart="@dimen/grilla_imagen_ml"
+                        android:layout_marginLeft="@dimen/grilla_imagen_ml"
+                        android:layout_marginTop="@dimen/grilla_imagen_mt"
+                        android:layout_marginEnd="@dimen/grilla_imagen_mr"
+                        android:layout_marginRight="@dimen/grilla_imagen_mr"
+                        android:contentDescription="@string/caballo" />
+
+                    <TextView
+                        android:id="@+id/texto_7_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/grilla_texto_ml"
+                        android:layout_marginLeft="@dimen/grilla_texto_ml"
+                        android:layout_marginTop="@dimen/grilla_texto_mt"
+                        android:textSize="@dimen/grilla_texto_size"
+                        android:textStyle="bold"
+                        app:fontFamily="serif" />
+
+                    <ImageButton
+                        android:id="@+id/talk_7_1"
+                        android:layout_width="@dimen/grilla_imagen_voz_width"
+                        android:layout_height="@dimen/grilla_imagen_voz_heigth"
+                        android:layout_marginStart="@dimen/grilla_imagen_voz_ml"
+                        android:layout_marginLeft="@dimen/grilla_imagen_voz_ml"
+                        android:layout_marginTop="@dimen/grilla_imagen_voz_mt"
+                        android:contentDescription="@string/talking"
+                        app:srcCompat="@drawable/audio_regular" />
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/row_7_frame_2"
+                    android:layout_width="@dimen/grilla_frame_width"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/grilla_frame_ml"
+                    android:layout_marginLeft="@dimen/grilla_frame_ml"
+                    android:layout_marginTop="@dimen/grilla_frame_mt"
+                    android:layout_marginEnd="@dimen/grilla_frame_mr"
+                    android:layout_marginRight="@dimen/grilla_frame_mr"
+                    android:visibility="invisible">
+
+                    <ImageView
+                        android:id="@+id/image_7_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/grilla_imagen_heigth"
+                        android:layout_marginStart="@dimen/grilla_imagen_ml"
+                        android:layout_marginLeft="@dimen/grilla_imagen_ml"
+                        android:layout_marginTop="@dimen/grilla_imagen_mt"
+                        android:layout_marginEnd="@dimen/grilla_imagen_mr"
+                        android:layout_marginRight="@dimen/grilla_imagen_mr"
+                        android:contentDescription="@string/caballo" />
+
+                    <TextView
+                        android:id="@+id/texto_7_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/grilla_texto_ml"
+                        android:layout_marginLeft="@dimen/grilla_texto_ml"
+                        android:layout_marginTop="@dimen/grilla_texto_mt"
+                        android:textSize="@dimen/grilla_texto_size"
+                        android:textStyle="bold"
+                        app:fontFamily="serif" />
+
+                    <ImageButton
+                        android:id="@+id/talk_7_2"
+                        android:layout_width="@dimen/grilla_imagen_voz_width"
+                        android:layout_height="@dimen/grilla_imagen_voz_heigth"
+                        android:layout_marginStart="@dimen/grilla_imagen_voz_ml"
+                        android:layout_marginLeft="@dimen/grilla_imagen_voz_ml"
+                        android:layout_marginTop="@dimen/grilla_imagen_voz_mt"
+                        android:contentDescription="@string/talking"
+                        app:srcCompat="@drawable/audio_regular" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/row_7_frame_3"
+                    android:layout_width="@dimen/grilla_frame_width"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/grilla_frame_ml"
+                    android:layout_marginLeft="@dimen/grilla_frame_ml"
+                    android:layout_marginTop="@dimen/grilla_frame_mt"
+                    android:layout_marginEnd="@dimen/grilla_frame_mr"
+                    android:layout_marginRight="@dimen/grilla_frame_mr"
+                    android:visibility="invisible">
+
+                    <ImageView
+                        android:id="@+id/image_7_3"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/grilla_imagen_heigth"
+                        android:layout_marginStart="@dimen/grilla_imagen_ml"
+                        android:layout_marginLeft="@dimen/grilla_imagen_ml"
+                        android:layout_marginTop="@dimen/grilla_imagen_mt"
+                        android:layout_marginEnd="@dimen/grilla_imagen_mr"
+                        android:layout_marginRight="@dimen/grilla_imagen_mr"
+                        android:contentDescription="@string/caballo" />
+
+                    <TextView
+                        android:id="@+id/texto_7_3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/grilla_texto_ml"
+                        android:layout_marginLeft="@dimen/grilla_texto_ml"
+                        android:layout_marginTop="@dimen/grilla_texto_mt"
+                        android:textSize="@dimen/grilla_texto_size"
+                        android:textStyle="bold"
+                        app:fontFamily="serif" />
+
+                    <ImageButton
+                        android:id="@+id/talk_7_3"
+                        android:layout_width="@dimen/grilla_imagen_voz_width"
+                        android:layout_height="@dimen/grilla_imagen_voz_heigth"
+                        android:layout_marginStart="@dimen/grilla_imagen_voz_ml"
+                        android:layout_marginLeft="@dimen/grilla_imagen_voz_ml"
+                        android:layout_marginTop="@dimen/grilla_imagen_voz_mt"
+                        android:contentDescription="@string/talking"
+                        app:srcCompat="@drawable/audio_regular" />
+                </FrameLayout>
+
+            </LinearLayout>
+
         </LinearLayout>
     </ScrollView>
 
