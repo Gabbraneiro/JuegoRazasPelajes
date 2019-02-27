@@ -48,9 +48,10 @@ public class MainActivity extends AppCompatActivity {
                 imagen.setImageResource(R.drawable.reconocimiento_click);
                // new CuadroDialogo(context, 1, "correcta", 1);
                 String pref_reconocimiento = sharedPreferences.getString("modo_reconocimiento", "1");
+                String tipo_reconocimiento = sharedPreferences.getString("tipo_reconocimiento", "1");
+                Intent intent = null;
                 if (pref_reconocimiento.equals("1")) {
-                    Intent intent = null;
-                    String tipo_reconocimiento = sharedPreferences.getString("tipo_reconocimiento", "1");
+
                     if(tipo_reconocimiento.equals("1")){
                         intent = new Intent(MainActivity.this, ListaActivity.class);
                     }
@@ -62,7 +63,15 @@ public class MainActivity extends AppCompatActivity {
                     }
                     startActivity(intent);
                 } else {
-                    Intent intent = new Intent(MainActivity.this, GrillaActivity.class);
+                    if(tipo_reconocimiento.equals("1")){
+                        intent = new Intent(MainActivity.this, GrillaActivity.class);
+                    }
+                    else if(tipo_reconocimiento.equals("2")){
+                        intent = new Intent(MainActivity.this, GrillaPelajeActivity.class);
+                    }
+                    else{
+                        intent = new Intent(MainActivity.this, ListaCruzaActivity.class);
+                    }
                     startActivity(intent);
                 }
                 imagen.setImageResource(R.drawable.reconocimiento_regular);
@@ -74,8 +83,6 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 ImageButton imagen = findViewById(R.id.btn_jugar);
                 imagen.setImageResource(R.drawable.jugar_click);
-
-                //List<Caballo> caballos = Repositorio.getCaballosRandom(getCantCaballos(sharedPreferences));
                 String pref_interaccion = sharedPreferences.getString("modo_interaccion", "A");
                 Minijuego minijuego = Minijuego.getMinijuego();
                 Intent intent = null;
@@ -115,10 +122,11 @@ public class MainActivity extends AppCompatActivity {
                             intent = new Intent(MainActivity.this, InteraccionBRazaPelajeActivity.class);
                         }
                         break;
+                    case "C":
+                        intent = new Intent(MainActivity.this, InteraccionCActivity.class);
+                        break;
                 }
-                if(minijuego.getActual() == 3){
-                    intent = new Intent(MainActivity.this, InteraccionCActivity.class);
-                }
+
                 //intent.putExtra("caballos", getCantCaballos(sharedPreferences));
                 startActivity(intent);
                 imagen.setImageResource(R.drawable.jugar_regular);

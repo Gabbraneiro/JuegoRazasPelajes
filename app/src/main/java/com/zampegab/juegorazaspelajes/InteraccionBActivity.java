@@ -23,9 +23,12 @@ public class InteraccionBActivity  extends AppCompatActivity {
     private SoundPool  soundPool;
     private int sonido_raza, correcto_relincho, incorrecto_resoplido,cant_correctas, cant_rondas;
     private ImageButton btnRaza;
+    private String voz;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        final SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
+        voz = sharedPreferences.getString("voz","m");
         soundPool = new SoundPool(6, AudioManager.STREAM_MUSIC, 0);
         correcto_relincho = soundPool.load(this, R.raw.relincho, 1);
         incorrecto_resoplido = soundPool.load(this, R.raw.resoplido, 1);
@@ -48,7 +51,7 @@ public class InteraccionBActivity  extends AppCompatActivity {
         final Caballo c = caballos.get(random);
         TextView raza = findViewById(R.id.a_raza);
         raza.setText(c.getRaza());
-        sonido_raza = soundPool.load(InteraccionBActivity.this, c.getAudio_raza(), 1);
+        sonido_raza = soundPool.load(InteraccionBActivity.this, c.getAudio_raza(voz), 1);
         btnRaza = findViewById(R.id.a_sonido);
         btnRaza.setOnClickListener(new View.OnClickListener() {
             @Override

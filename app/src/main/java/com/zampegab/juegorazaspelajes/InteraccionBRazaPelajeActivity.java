@@ -22,9 +22,13 @@ public class InteraccionBRazaPelajeActivity extends AppCompatActivity {
     private SoundPool soundPool;
     private int sonido_raza_pelaje, correcto_relincho, incorrecto_resoplido,cant_correctas, cant_rondas;
     private ImageButton btnRazaPelaje;
+    private String voz;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        final SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
+        voz = sharedPreferences.getString("voz","m");
+
         soundPool = new SoundPool(6, AudioManager.STREAM_MUSIC, 0);
         correcto_relincho = soundPool.load(this, R.raw.relincho, 1);
         incorrecto_resoplido = soundPool.load(this, R.raw.resoplido, 1);
@@ -48,7 +52,7 @@ public class InteraccionBRazaPelajeActivity extends AppCompatActivity {
         TextView raza_pelaje = findViewById(R.id.a_raza);
         String str = c.getRaza() + " " + c.getPelaje();
         raza_pelaje.setText(str);
-        sonido_raza_pelaje = soundPool.load(InteraccionBRazaPelajeActivity.this, c.getAudio_raza_pelaje(), 1);
+        sonido_raza_pelaje = soundPool.load(InteraccionBRazaPelajeActivity.this, c.getAudio_raza_pelaje(voz), 1);
         btnRazaPelaje = findViewById(R.id.a_sonido);
         btnRazaPelaje.setOnClickListener(new View.OnClickListener() {
             @Override

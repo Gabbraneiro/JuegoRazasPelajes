@@ -1,8 +1,10 @@
 package com.zampegab.juegorazaspelajes;
 
+import android.content.SharedPreferences;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.media.SoundPool;
+import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -21,8 +23,11 @@ public class GrillaActivity extends AppCompatActivity{
         private List<Caballo> caballos;
         private SoundPool soundPool;
         private int sonido_actual;
+    private String voz;
         @Override
         protected void onCreate(Bundle savedInstanceState) {
+            final SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
+            voz = sharedPreferences.getString("voz","m");
             super.onCreate(savedInstanceState);
             soundPool = new SoundPool(8, AudioManager.STREAM_MUSIC, 0);
             caballos = Repositorio.getCaballos();
@@ -37,7 +42,7 @@ public class GrillaActivity extends AppCompatActivity{
 
                 img.setImageResource(caballos.get(i).getImg());
                 text.setText(caballos.get(i).getRaza());
-                final int sonido_caballo =caballos.get(i).getAudio_raza();
+                final int sonido_caballo =caballos.get(i).getAudio_raza(voz);
                 img_talk.setOnClickListener(new View.OnClickListener(){
                     @Override
                     public void onClick(View v) {

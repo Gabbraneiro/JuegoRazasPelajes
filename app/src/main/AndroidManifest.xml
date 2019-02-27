@@ -61,6 +61,22 @@
             android:name="SettingsActivity"
             android:screenOrientation="landscape">
         </activity>
+        <activity
+            android:name="ListaPelajeActivity"
+            android:screenOrientation="landscape">
+        </activity>
+        <activity
+            android:name="GrillaPelajeActivity"
+            android:screenOrientation="landscape">
+        </activity>
+        <activity
+            android:name="GrillaCruzaActivity"
+            android:screenOrientation="landscape">
+        </activity>
+        <activity
+            android:name="ListaCruzaActivity"
+            android:screenOrientation="landscape">
+        </activity>
     </application>
 
 </manifest>

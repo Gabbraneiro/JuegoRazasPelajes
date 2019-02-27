@@ -1,5 +1,6 @@
 package com.zampegab.juegorazaspelajes;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.drawable.AnimationDrawable;
 import android.media.AudioManager;
@@ -21,8 +22,7 @@ import java.util.List;
 public class InteraccionCActivity  extends AppCompatActivity {
 
     private SoundPool  soundPool;
-    private int sonido_raza, correcto_relincho, incorrecto_resoplido,cant_correctas, cant_rondas;
-    private ImageButton btnRaza;
+    private int correcto_relincho, incorrecto_resoplido,cant_correctas, cant_rondas;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,26 +38,26 @@ public class InteraccionCActivity  extends AppCompatActivity {
     private void jugarInteraccionC(){
         final SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
         int cantCaballos = MainActivity.getCantCaballos(sharedPreferences);
-        final List<Caballo> caballos = Repositorio.getCaballosRandom(cantCaballos);
-        final Caballo c = caballos.get((int) (Math.random() * (caballos.size() - 1)));
+        final List<CaballoCruza> caballos = Repositorio.getCaballosCruzaRandom(cantCaballos);
+        final CaballoCruza c = caballos.get((int) (Math.random() * (caballos.size() - 1)));
         ImageView caballo_correcto = findViewById(R.id.c_caballo_correcto);
-        caballo_correcto.setImageResource(c.getImg());
+        caballo_correcto.setImageResource(c.getImgPadres());
 
         ImageView opcion1 = findViewById(R.id.c_opcion_2);
-        opcion1.setImageResource(caballos.get(0).getImg());
+        opcion1.setImageResource(caballos.get(0).getImgId());
         ImageView opcion2 = findViewById(R.id.c_opcion_3);
-        opcion2.setImageResource(caballos.get(1).getImg());
+        opcion2.setImageResource(caballos.get(1).getImgId());
 
 
         if (caballos.size() > 2) {
             ImageView opcion3 = findViewById(R.id.c_opcion_1);
-            opcion3.setImageResource(caballos.get(2).getImg());
+            opcion3.setImageResource(caballos.get(2).getImgId());
             ImageView opcion4 = findViewById(R.id.c_opcion_4);
-            opcion4.setImageResource(caballos.get(3).getImg());
+            opcion4.setImageResource(caballos.get(3).getImgId());
             opcion3.setOnClickListener(new View.OnClickListener(){
                 @Override
                 public void onClick(View v) {
-                    if(caballos.get(2).getRaza() == c.getRaza()){
+                    if(caballos.get(2).getImgPadres() == c.getImgPadres()){
                         //RESPUESTA CORRECTA.
                         cant_correctas++;
                         soundPool.play(correcto_relincho,1,1,0,0,1);
@@ -73,7 +73,7 @@ public class InteraccionCActivity  extends AppCompatActivity {
             opcion4.setOnClickListener(new View.OnClickListener(){
                 @Override
                 public void onClick(View v) {
-                    if(caballos.get(3).getRaza() == c.getRaza()){
+                    if(caballos.get(3).getImgPadres() == c.getImgPadres()){
                         //RESPUESTA CORRECTA.
                         cant_correctas++;
                         soundPool.play(correcto_relincho,1,1,0,0,1);
@@ -90,7 +90,7 @@ public class InteraccionCActivity  extends AppCompatActivity {
         opcion1.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                if(caballos.get(0).getRaza() == c.getRaza()){
+                if(caballos.get(0).getImgPadres() == c.getImgPadres()){
                     //RESPUESTA CORRECTA.
                     cant_correctas++;
                     soundPool.play(correcto_relincho,1,1,0,0,1);
@@ -107,7 +107,7 @@ public class InteraccionCActivity  extends AppCompatActivity {
         opcion2.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                if(caballos.get(1).getRaza() == c.getRaza()){
+                if(caballos.get(1).getImgPadres() == c.getImgPadres()){
                     //RESPUESTA CORRECTA.
                     cant_correctas++;
                     soundPool.play(correcto_relincho,1,1,0,0,1);
@@ -145,28 +145,30 @@ public class InteraccionCActivity  extends AppCompatActivity {
             final Button accion = findViewById(R.id.c_accion_nivel);
             final FrameLayout modal = findViewById(R.id.c_div_fin_nivel);
             if(cant_correctas >= 3){
-                // SE DA LA OPCION DE PASAR AL SIGUIENTE MINIJUEGO
+                // SE DA LA OPCION DE VOLVER AL MAIN
                 copa();
-                accion.setText("Volver al home");
+                accion.setText("Volver al inicio");
                 accion.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
                 modal.setVisibility(View.VISIBLE);
                 accion.setOnClickListener(new View.OnClickListener() {
                     public void onClick(View v){
-                        // ELIMINA LA ACTIVITY
+                        modal.setVisibility(View.GONE);
+                        Intent intent = new Intent(InteraccionCActivity.this, MainActivity.class);
+                        startActivity(intent);
                         finish();
                     }
                 });
 
             }
             else{
-                //SE DA LA OPCION DE VOLVER A JUGAR LA INTERACCION B
+                //SE DA LA OPCION DE VOLVER A JUGAR LA INTERACCION C
                 accion.setText(R.string.retry);
                 accion.setBackgroundColor(getResources().getColor(R.color.colorAccent));
                 modal.setVisibility(View.VISIBLE);
                 accion.setOnClickListener(new View.OnClickListener() {
                     public void onClick(View v){
-                        interaccionC.setVisibility(View.VISIBLE);
                         modal.setVisibility(View.GONE);
+                        interaccionC.setVisibility(View.VISIBLE);
                         jugarInteraccionC();
                     }
                 });
@@ -182,9 +184,9 @@ public class InteraccionCActivity  extends AppCompatActivity {
     }
 
     private void updateViewContadores(){
-        TextView correctas = findViewById(R.id.correctas2);
+        TextView correctas = findViewById(R.id.c_correctas2);
         correctas.setText("Correctas: "+cant_correctas);
-        TextView ronda = findViewById(R.id.rondas);
+        TextView ronda = findViewById(R.id.c_rondas);
         ronda.setText("Rondas: "+cant_rondas);
     }
 
