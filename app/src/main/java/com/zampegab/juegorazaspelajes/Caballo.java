@@ -45,17 +45,26 @@ public class Caballo implements Serializable {
     }
 
 
-    public int getAudio_pelaje() {
+    public int getAudio_pelaje(String g) {
+        if (g.equals("f")) {
+            return audio_pelaje;
+        }
         return audio_pelaje;
     }
 
 
-    public int getAudio_raza() {
+    public int getAudio_raza(String g) {
+        if (g.equals("f")) {
+            return audio_raza;
+        }
         return audio_raza;
     }
 
 
-    public int getAudio_raza_pelaje() {
+    public int getAudio_raza_pelaje(String g) {
+        if(g.equals("f")){
+            return audio_raza_pelaje;
+        }
         return audio_raza_pelaje;
     }
 

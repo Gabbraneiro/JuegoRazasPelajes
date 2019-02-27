@@ -1,5 +1,9 @@
 package com.zampegab.juegorazaspelajes;
 
+import android.content.SharedPreferences;
+import android.preference.Preference;
+import android.preference.PreferenceManager;
+
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
@@ -7,6 +11,8 @@ import java.util.List;
 
 public class Repositorio {
     private static List<Caballo> caballos;
+    private static List<CaballoCruza> caballosCruzas;
+    private static String voz;
 
     private static List<Caballo> hardcodeCaballos(){
         List<Caballo> retorno = new ArrayList<>();
@@ -19,6 +25,25 @@ public class Repositorio {
         retorno.add(new Caballo(7,"juana","cuarto    de milla","bayo",R.drawable.juana_cuartodemilla_bayo,R.raw.pelaje_bayo,R.raw.raza_cuartodemilla,R.raw.razaconpelaje_cuartodemilla_bayo,""));
         return retorno;
     }
+
+    public static List<CaballoCruza> harcodeCaballosCruza(){
+        List<CaballoCruza> retorno = new ArrayList<>();
+        retorno.add(new CaballoCruza(1,"bella",R.drawable.bella,"apapaloosa","bonita", R.drawable.bella_padres));
+        retorno.add(new CaballoCruza(2,"huayra",R.drawable.huayra, "apapaloosa", "pocha", R.drawable.huayra_padres));
+        retorno.add(new CaballoCruza(3,"mancha",R.drawable.mancha, "apapaloosa", "pintada", R.drawable.mancha_padres));
+        retorno.add(new CaballoCruza(4, "nalito",R.drawable.nalito, "silla argentino", "nala", R.drawable.nalito_padres));
+        retorno.add(new CaballoCruza(5, "orita", R.drawable.orita, "alazan tostado", "petra", R.drawable.orita_padres));
+        retorno.add(new CaballoCruza(6, "pirata", R.drawable.pirata, "tobiano", "kika", R.drawable.pirata_padres));
+        return retorno;
+    }
+
+    public static List<CaballoCruza> getCaballosCruza(){
+        if(caballosCruzas == null){
+            caballosCruzas = harcodeCaballosCruza();
+        }
+        Collections.shuffle(caballosCruzas);
+        return caballosCruzas;
+    }
     public static List<Caballo> getCaballos(){
         if(caballos == null){
             caballos = hardcodeCaballos();
@@ -26,6 +51,23 @@ public class Repositorio {
         Collections.shuffle(caballos);
         return caballos;
     }
+
+    public static List<CaballoCruza> getCaballosCruzaRandom(int cantidad){
+        List<CaballoCruza> var_caballos_cruza = getCaballosCruza();
+        List<CaballoCruza> retorno = new ArrayList<>();
+        int max = getCaballos().size() -1;
+        for (int i = 0; i < cantidad; i++) {
+            int random = (int)(Math.random()*max);
+            retorno.add(var_caballos_cruza.get(random));
+            var_caballos_cruza.remove(random);
+            max--;
+        }
+        caballosCruzas = null;
+        return retorno;
+    }
+
+
+
 
     public static List<Caballo> getCaballosRandom(int cantidad){
         List<Caballo> var_caballos = getCaballos();
@@ -39,8 +81,8 @@ public class Repositorio {
         }
         caballos = null;
         return retorno;
-
     }
+
     public static Caballo findCaballoBy(String by, Object str_filtro){
         Caballo caballo = null;
         switch (by){
@@ -105,7 +147,7 @@ public class Repositorio {
     private static Caballo findCaballoByStrAudioPelaje(int audio_pelaje){
         Caballo caballo = null;
         for (Caballo c: getCaballos()) {
-            if(c.getAudio_pelaje() == audio_pelaje){
+            if(c.getAudio_pelaje(voz) == audio_pelaje){
                 caballo = c;
             }
         }
@@ -115,7 +157,7 @@ public class Repositorio {
     private static Caballo findCaballoByStrAudioRaza(int audio_raza){
         Caballo caballo = null;
         for (Caballo c: getCaballos()) {
-            if(c.getAudio_raza() == audio_raza){
+            if(c.getAudio_raza(voz) == audio_raza){
                 caballo = c;
             }
         }
@@ -125,12 +167,11 @@ public class Repositorio {
     private static Caballo findCaballoByStrAudioRazaPelaje(int audio_raza_pelaje){
         Caballo caballo = null;
         for (Caballo c: getCaballos()) {
-            if(c.getAudio_raza_pelaje() == audio_raza_pelaje){
+            if(c.getAudio_raza_pelaje(voz) == audio_raza_pelaje){
                 caballo = c;
             }
         }
         return caballo;
     }
-
 
 }
