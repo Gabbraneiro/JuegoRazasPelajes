@@ -165,6 +165,7 @@ public class InteraccionBActivity  extends AppCompatActivity {
                     public void onClick(View v){
                         final SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(InteraccionBActivity.this);
                         Intent intent = Minijuego.getMinijuego().nextLevel(2,InteraccionBActivity.this,sharedPreferences);
+                        System.gc();
                         startActivity(intent);
                         finish();
                     }

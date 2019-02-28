@@ -75,7 +75,7 @@ public class Repositorio {
     public static List<CaballoCruza> getCaballosCruzaRandom(int cantidad){
         List<CaballoCruza> var_caballos_cruza = getCaballosCruza();
         List<CaballoCruza> retorno = new ArrayList<>();
-        int max = getCaballos().size() -1;
+        int max = getCaballosCruza().size() -1;
         for (int i = 0; i < cantidad; i++) {
             int random = (int)(Math.random()*max);
             retorno.add(var_caballos_cruza.get(random));

@@ -123,9 +123,9 @@ public class InteraccionCActivity  extends AppCompatActivity {
     }
     private void copa(){
         ImageView iv = findViewById(R.id.copa);
-        AnimationDrawable animationCopa = (AnimationDrawable)iv.getBackground();
+        //AnimationDrawable animationCopa = (AnimationDrawable)iv.getBackground();
         iv.setVisibility(View.VISIBLE);
-        animationCopa.start();
+        //animationCopa.start();
     }
 
     @Override
