@@ -125,7 +125,7 @@
         android:id="@+id/copa"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/copa"
+        android:background="@drawable/copa_rotando_12"
         android:visibility="invisible" />
 
     <FrameLayout

@@ -168,6 +168,7 @@ public class InteraccionBRazaPelajeActivity extends AppCompatActivity {
                     public void onClick(View v){
                         final SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(InteraccionBRazaPelajeActivity.this);
                         Intent intent = Minijuego.getMinijuego().nextLevel(3,InteraccionBRazaPelajeActivity.this,sharedPreferences);
+                        System.gc();
                         startActivity(intent);
                         finish();
                     }
