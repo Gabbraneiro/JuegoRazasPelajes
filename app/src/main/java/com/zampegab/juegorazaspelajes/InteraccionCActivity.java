@@ -146,6 +146,7 @@ public class InteraccionCActivity  extends AppCompatActivity {
             final FrameLayout modal = findViewById(R.id.c_div_fin_nivel);
             if(cant_correctas >= 3){
                 // SE DA LA OPCION DE VOLVER AL MAIN
+                Minijuego.getMinijuego().setActual(1);
                 copa();
                 accion.setText("Volver al inicio");
                 accion.setBackgroundColor(getResources().getColor(R.color.colorPrimary));

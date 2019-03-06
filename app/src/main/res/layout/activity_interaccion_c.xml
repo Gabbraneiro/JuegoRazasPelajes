@@ -27,19 +27,19 @@
                     android:layout_marginLeft="25sp">
 
                     <TextView
-                        android:id="@+id/c_correctas2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="20sp"
-                        android:text="Correctas: 0"
-                        android:textSize="30sp" />
-
-                    <TextView
                         android:id="@+id/c_rondas"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="70sp"
+                        android:layout_marginTop="20sp"
                         android:text="Rondas: 0"
+                        android:textSize="30sp" />
+
+                    <TextView
+                        android:id="@+id/c_correctas2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="70sp"
+                        android:text="Correctas: 0"
                         android:textSize="30sp" />
                 </FrameLayout>
 
