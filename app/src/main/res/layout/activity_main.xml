@@ -78,4 +78,17 @@
         android:layout_toRightOf="@+id/img_logo_app"
         app:srcCompat="@drawable/logo_facultad_informatica" />
 
+    <ImageView
+        android:id="@+id/img_cedica"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/cedica" />
+
+    <ImageView
+        android:id="@+id/img_unlp"
+        android:layout_width="335dp"
+        android:layout_height="162dp"
+        android:layout_marginTop="590dp"
+        app:srcCompat="@drawable/logo_unlp" />
+
 </RelativeLayout>
